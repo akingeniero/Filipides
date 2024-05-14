@@ -10,6 +10,18 @@ from project.ui.command_line.command_line_ui import CommandLineUi
 
 
 async def main():
+    """
+    Asynchronous main function that sets up and runs tweet analysis.
+
+    This function reads the configuration, initializes the required instances,
+    and performs tweet analysis for a specific user.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
     config = ConfigurationManager.read_config('config/recourses/config.properties')
     ui_manager = CommandLineUi()
     ConfigurationManager.add_user_config(ui_manager, config)
