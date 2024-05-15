@@ -1,4 +1,5 @@
 from twscrape import gather
+import asyncio
 
 class TwitterClient:
     """
@@ -17,7 +18,7 @@ class TwitterClient:
         """
         self.api = api
 
-    def get_user_tweets(self, user_id, limit=20):
+    async def get_user_tweets(self, user_id, limit=20):
         """
         Fetches tweets for a given user.
 
@@ -28,5 +29,5 @@ class TwitterClient:
         Returns:
             list: A list of tweets fetched for the specified user.
         """
-        self.api.user_by_id(user_id)
+        await self.api.user_by_id(user_id)
         return gather(self.api.user_tweets(user_id, limit=limit))

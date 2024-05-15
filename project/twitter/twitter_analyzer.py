@@ -29,13 +29,13 @@ class TweetAnalyzer:
             None
         """
         tweets = await self.twitter_client.get_user_tweets(user_id)
-        tweet_data_list = self.process_tweets(tweets)
+        tweet_data_list = await self.process_tweets(tweets)
         review = self.generate_review(tweet_data_list)
         analysis = self.openai_client.analyze_tweets(review)
         self.save_analysis(analysis, "analisis_sentimiento.txt")
 
     @staticmethod
-    def process_tweets(tweets):
+    async def process_tweets(tweets_coroutine):
         """
         Processes a list of tweets and extracts relevant data.
 
@@ -46,6 +46,7 @@ class TweetAnalyzer:
             list: A list of dictionaries containing processed tweet data.
         """
         tweet_data_list = []
+        tweets = await tweets_coroutine
         for tweet in tweets:
             tweet_data = {
                 "id": tweet.id_str,
