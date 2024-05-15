@@ -1,3 +1,4 @@
+import asyncio
 import configparser
 from twscrape import API
 from project.model.account_config import AccountConfig
@@ -39,7 +40,7 @@ class ConfigurationManager:
             config.read_file(config_file)
         return config
 
-    def add_user_config(self: UiManager, config: configparser.ConfigParser):
+    async def add_user_config(self: UiManager, config: configparser.ConfigParser):
         """
         Adds user-specific configuration and initializes the API.
 
@@ -63,9 +64,9 @@ class ConfigurationManager:
 
         api = API()
 
-        api.pool.add_account(account_config.get_username(), account_config.get_password(),
+        await api.pool.add_account(account_config.get_username(), account_config.get_password(),
                              account_config.get_email(), account_config.get_account_password())
-        api.pool.login_all()
+        await api.pool.login_all()
 
         self.user_save()
 

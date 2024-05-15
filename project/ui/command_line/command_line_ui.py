@@ -82,3 +82,24 @@ class CommandLineUi(UiManager):
         This method guides the user through setting up the initial configuration options for the API.
         """
         print("Initial api configuration Started")
+
+    def prompt_select(self, prompts) -> str:
+        """
+        Allows the user to select a section from the configuration.
+
+        Args:
+            prompts (dict): A dictionary of prompts for different tasks.
+
+        Returns:
+            str: The key of the selected prompt.
+        """
+        while True:
+            print("Available prompts:")
+            for key in prompts.keys():
+                print(f"- {key}")
+
+            prompt_key = input("Please enter the key of the prompt you want to use: ")
+            if prompt_key in prompts:
+                return prompts[prompt_key]
+            else:
+                print("Invalid prompt key. Please try again.")

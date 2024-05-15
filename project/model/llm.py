@@ -26,3 +26,12 @@ class Llm:
             str: The API key.
         """
         return self.api_key
+
+    def get_prompts(self) -> dict:
+        """
+        Retrieves the dictionary of prompts.
+
+        Returns:
+            dict: The dictionary of prompts.
+        """
+        return self.prompts
