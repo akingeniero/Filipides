@@ -38,7 +38,7 @@ class CommandLineUi(UiManager):
         Returns:
             str: The name of the selected section.
         """
-        available_sections = [section for section in config.sections() if section not in ["OpenAI", "DEFAULT"]]
+        available_sections = [section for section in config.sections() if section not in ["openAI"]]
 
         if not available_sections:
             raise ValueError("No available sections to select from.")
