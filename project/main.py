@@ -22,12 +22,12 @@ async def main():
     Returns:
         None
     """
-    config = ConfigurationManager.read_config('config/recourses/config.properties')
+    config = ConfigurationManager.read_config('project/config/recourses/config.properties')
     ui_manager = CommandLineUi()
-    ConfigurationManager.add_user_config(ui_manager, config)
+    await ConfigurationManager.add_user_config(ui_manager, config)
     llm_clas = ConfigurationManager.add_llm_config(ui_manager, config)
     twitter_client = TwitterClient(twscrape.API())
-    openai_client = OpenAIClient(llm_clas.get_api_key())
+    openai_client = OpenAIClient(llm_clas, ui_manager)
     tweet_analyzer = TweetAnalyzer(twitter_client, openai_client)
     user_id = 68740712
     await tweet_analyzer.fetch_and_analyze_tweets(user_id)
