@@ -1,3 +1,8 @@
+import os
+
+import aiofiles
+
+
 class TweetAnalyzer:
     """
     TweetAnalyzer is responsible for fetching, processing, and analyzing tweets.
@@ -32,7 +37,7 @@ class TweetAnalyzer:
         tweet_data_list = await self.process_tweets(tweets)
         review = self.generate_review(tweet_data_list)
         analysis = self.openai_client.analyze_tweets(review)
-        self.save_analysis(analysis, "analisis_sentimiento.txt")
+        self.save_analysis(analysis, f"{user_id}.txt")
 
     @staticmethod
     async def process_tweets(tweets_coroutine):
@@ -40,7 +45,7 @@ class TweetAnalyzer:
         Processes a list of tweets and extracts relevant data.
 
         Args:
-            tweets (list): A list of tweet objects.
+            tweets_coroutine (list): A list of tweet objects.
 
         Returns:
             list: A list of dictionaries containing processed tweet data.
@@ -86,16 +91,24 @@ class TweetAnalyzer:
         return review[:2000]
 
     @staticmethod
-    def save_analysis(analysis, file_path):
+    def save_analysis(analysis, filename):
         """
         Saves the analysis result to a file.
 
         Args:
             analysis (str): The analysis result to be saved.
-            file_path (str): The path of the file where the analysis will be saved.
+            filename (str): The path of the file where the analysis will be saved.
 
         Returns:
             None
         """
-        with open(file_path, "w") as file:
+        file_path = filename
+        if os.path.exists(file_path):
+            base, ext = os.path.splitext(filename)
+            counter = 1
+            while os.path.exists(file_path):
+                file_path = f"{base}_{counter}{ext}"
+                counter += 1
+
+        with open(file_path, 'w') as file:
             file.write(analysis.strip())
