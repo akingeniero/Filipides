@@ -97,8 +97,6 @@
 </li>
       <li><a href="config/configuration_manager.html#project.config.configuration_manager.ConfigurationManager.add_user_config">add_user_config() (project.config.configuration_manager.ConfigurationManager method)</a>
 </li>
-      <li><a href="client/openia_client.html#project.client.openia_client.OpenAIClient.analyze_tweets">analyze_tweets() (project.client.openia_client.OpenAIClient method)</a>
-</li>
       <li><a href="client/twitter_client.html#project.client.twitter_client.TwitterClient.api">api (project.client.twitter_client.TwitterClient attribute)</a>
 </li>
   </ul></td>
@@ -123,18 +121,16 @@
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="client/openia_client.html#project.client.openia_client.OpenAIClient.client">client (project.client.openia_client.OpenAIClient attribute)</a>
-</li>
       <li><a href="ui/command_line/command_line_ui.html#project.ui.command_line.command_line_ui.CommandLineUi">CommandLineUi (class in project.ui.command_line.command_line_ui)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="model/account_config.html#project.model.account_config.AccountConfig.config">config (project.model.account_config.AccountConfig attribute)</a>
 
       <ul>
         <li><a href="model/llm_config.html#project.model.llm_config.LlmConfig.config">(project.model.llm_config.LlmConfig attribute)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="config/configuration_manager.html#project.config.configuration_manager.ConfigurationManager">ConfigurationManager (class in project.config.configuration_manager)</a>
 </li>
   </ul></td>
@@ -161,14 +157,18 @@
         <li><a href="model/llm_config.html#project.model.llm_config.LlmConfig.get_api_key">(project.model.llm_config.LlmConfig method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="model/account_config.html#project.model.account_config.AccountConfig.get_email">get_email() (project.model.account_config.AccountConfig method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="model/account_config.html#project.model.account_config.AccountConfig.get_password">get_password() (project.model.account_config.AccountConfig method)</a>
 </li>
-      <li><a href="model/llm_config.html#project.model.llm_config.LlmConfig.get_prompts">get_prompts() (project.model.llm_config.LlmConfig method)</a>
+      <li><a href="model/llm.html#project.model.llm.Llm.get_prompts">get_prompts() (project.model.llm.Llm method)</a>
+
+      <ul>
+        <li><a href="model/llm_config.html#project.model.llm_config.LlmConfig.get_prompts">(project.model.llm_config.LlmConfig method)</a>
 </li>
+      </ul></li>
       <li><a href="client/twitter_client.html#project.client.twitter_client.TwitterClient.get_user_tweets">get_user_tweets() (project.client.twitter_client.TwitterClient method)</a>
 </li>
       <li><a href="model/account_config.html#project.model.account_config.AccountConfig.get_username">get_username() (project.model.account_config.AccountConfig method)</a>
@@ -206,8 +206,6 @@
       <ul>
         <li><a href="main.html#module-main">main</a>
 </li>
-        <li><a href="client/openia_client.html#module-project.client.openia_client">project.client.openia_client</a>
-</li>
         <li><a href="client/twitter_client.html#module-project.client.twitter_client">project.client.twitter_client</a>
 </li>
         <li><a href="config/configuration_manager.html#module-project.config.configuration_manager">project.config.configuration_manager</a>
@@ -234,10 +232,6 @@
       <li><a href="twitter/twitter_analyzer.html#project.twitter.twitter_analyzer.TweetAnalyzer.openai_client">openai_client (project.twitter.twitter_analyzer.TweetAnalyzer attribute)</a>
 </li>
   </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="client/openia_client.html#project.client.openia_client.OpenAIClient">OpenAIClient (class in project.client.openia_client)</a>
-</li>
-  </ul></td>
 </tr></table>
 
 <h2 id="P">P</h2>
@@ -245,13 +239,6 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="twitter/twitter_analyzer.html#project.twitter.twitter_analyzer.TweetAnalyzer.process_tweets">process_tweets() (project.twitter.twitter_analyzer.TweetAnalyzer static method)</a>
 </li>
-      <li>
-    project.client.openia_client
-
-      <ul>
-        <li><a href="client/openia_client.html#module-project.client.openia_client">module</a>
-</li>
-      </ul></li>
       <li>
     project.client.twitter_client
 
@@ -310,6 +297,8 @@
         <li><a href="ui/ui_manager.html#module-project.ui.ui_manager">module</a>
 </li>
       </ul></li>
+      <li><a href="ui/command_line/command_line_ui.html#project.ui.command_line.command_line_ui.CommandLineUi.prompt_select">prompt_select() (project.ui.command_line.command_line_ui.CommandLineUi method)</a>
+</li>
       <li><a href="model/llm.html#project.model.llm.Llm.prompts">prompts (project.model.llm.Llm attribute)</a>
 </li>
   </ul></td>
@@ -370,14 +359,16 @@
         <li><a href="ui/ui_manager.html#id1">(project.ui.ui_manager.UiManager method)</a>, <a href="ui/ui_manager.html#project.ui.ui_manager.UiManager.user_initial_configuration">[1]</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="ui/command_line/command_line_ui.html#id2">user_save() (project.ui.command_line.command_line_ui.CommandLineUi method)</a>, <a href="ui/command_line/command_line_ui.html#project.ui.command_line.command_line_ui.CommandLineUi.user_save">[1]</a>
 
       <ul>
         <li><a href="ui/ui_manager.html#id2">(project.ui.ui_manager.UiManager method)</a>, <a href="ui/ui_manager.html#project.ui.ui_manager.UiManager.user_save">[1]</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="ui/command_line/command_line_ui.html#project.ui.command_line.command_line_ui.CommandLineUi.user_select">user_select() (project.ui.command_line.command_line_ui.CommandLineUi static method)</a>
+</li>
       <li><a href="ui/command_line/command_line_ui.html#project.ui.command_line.command_line_ui.CommandLineUi.user_select_section">user_select_section() (project.ui.command_line.command_line_ui.CommandLineUi method)</a>
 
       <ul>

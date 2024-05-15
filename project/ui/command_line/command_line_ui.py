@@ -38,10 +38,18 @@ class CommandLineUi(UiManager):
         Returns:
             str: The name of the selected section.
         """
-        print("Available sections:",
-              ', '.join(section for section in config.sections() if section not in ["OpenAI", "DEFAULT"]))
-        section = input("Enter the section to use for setup: ").strip()
-        return section
+        available_sections = [section for section in config.sections() if section not in ["OpenAI", "DEFAULT"]]
+
+        if not available_sections:
+            raise ValueError("No available sections to select from.")
+
+        while True:
+            print("Available sections:", ', '.join(available_sections))
+            section = input("Enter the section to use for setup: ").strip()
+            if section in available_sections:
+                return section
+            else:
+                print("Invalid section. Please select a valid section from the list.")
 
     def section_not_found(self):
         """
@@ -103,3 +111,21 @@ class CommandLineUi(UiManager):
                 return prompts[prompt_key]
             else:
                 print("Invalid prompt key. Please try again.")
+
+    @staticmethod
+    def user_select():
+        """
+        Prompts the user to enter a target user number and ensures the input is numeric.
+
+        Continuously prompts the user until a valid numeric input is provided.
+        Converts the input to an integer before returning.
+
+        Returns:
+            int: The target user number entered by the user.
+        """
+        while True:
+            user_input = input("Enter the target user (numbers only): ")
+            if user_input.isdigit():
+                return int(user_input)
+            else:
+                print("Invalid input. Please enter a number.")
