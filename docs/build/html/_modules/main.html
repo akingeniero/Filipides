@@ -76,7 +76,7 @@
 
 <span class="kn">import</span> <span class="nn">twscrape</span>
 
-<span class="kn">from</span> <span class="nn">project.client.openia_client</span> <span class="kn">import</span> <span class="n">OpenAIClient</span>
+<span class="kn">from</span> <span class="nn">project.client.openai_client</span> <span class="kn">import</span> <span class="n">OpenAIClient</span>
 <span class="kn">from</span> <span class="nn">project.client.twitter_client</span> <span class="kn">import</span> <span class="n">TwitterClient</span>
 <span class="kn">from</span> <span class="nn">project.config.configuration_manager</span> <span class="kn">import</span> <span class="n">ConfigurationManager</span>
 <span class="kn">from</span> <span class="nn">project.twitter.twitter_analyzer</span> <span class="kn">import</span> <span class="n">TweetAnalyzer</span>
@@ -98,14 +98,14 @@
 <span class="sd">    Returns:</span>
 <span class="sd">        None</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">config</span> <span class="o">=</span> <span class="n">ConfigurationManager</span><span class="o">.</span><span class="n">read_config</span><span class="p">(</span><span class="s1">&#39;config/recourses/config.properties&#39;</span><span class="p">)</span>
+    <span class="n">config</span> <span class="o">=</span> <span class="n">ConfigurationManager</span><span class="o">.</span><span class="n">read_config</span><span class="p">(</span><span class="s1">&#39;project/config/recourses/config.properties&#39;</span><span class="p">)</span>
     <span class="n">ui_manager</span> <span class="o">=</span> <span class="n">CommandLineUi</span><span class="p">()</span>
-    <span class="n">ConfigurationManager</span><span class="o">.</span><span class="n">add_user_config</span><span class="p">(</span><span class="n">ui_manager</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
+    <span class="k">await</span> <span class="n">ConfigurationManager</span><span class="o">.</span><span class="n">add_user_config</span><span class="p">(</span><span class="n">ui_manager</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
     <span class="n">llm_clas</span> <span class="o">=</span> <span class="n">ConfigurationManager</span><span class="o">.</span><span class="n">add_llm_config</span><span class="p">(</span><span class="n">ui_manager</span><span class="p">,</span> <span class="n">config</span><span class="p">)</span>
     <span class="n">twitter_client</span> <span class="o">=</span> <span class="n">TwitterClient</span><span class="p">(</span><span class="n">twscrape</span><span class="o">.</span><span class="n">API</span><span class="p">())</span>
-    <span class="n">openai_client</span> <span class="o">=</span> <span class="n">OpenAIClient</span><span class="p">(</span><span class="n">llm_clas</span><span class="o">.</span><span class="n">get_api_key</span><span class="p">())</span>
+    <span class="n">openai_client</span> <span class="o">=</span> <span class="n">OpenAIClient</span><span class="p">(</span><span class="n">llm_clas</span><span class="p">,</span> <span class="n">ui_manager</span><span class="p">)</span>
     <span class="n">tweet_analyzer</span> <span class="o">=</span> <span class="n">TweetAnalyzer</span><span class="p">(</span><span class="n">twitter_client</span><span class="p">,</span> <span class="n">openai_client</span><span class="p">)</span>
-    <span class="n">user_id</span> <span class="o">=</span> <span class="mi">68740712</span>
+    <span class="n">user_id</span> <span class="o">=</span> <span class="n">ui_manager</span><span class="o">.</span><span class="n">user_select</span><span class="p">()</span>
     <span class="k">await</span> <span class="n">tweet_analyzer</span><span class="o">.</span><span class="n">fetch_and_analyze_tweets</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span></div>
 
 

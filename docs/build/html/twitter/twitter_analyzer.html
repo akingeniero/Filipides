@@ -114,7 +114,7 @@
 <dd><p>An instance of an OpenAI client for analyzing tweets.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="../client/openia_client.html#project.client.openia_client.OpenAIClient" title="project.client.openia_client.OpenAIClient">OpenAIClient</a></p>
+<dd class="field-odd"><p>OpenAIClient</p>
 </dd>
 </dl>
 </dd></dl>
@@ -135,11 +135,11 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="project.twitter.twitter_analyzer.TweetAnalyzer.process_tweets">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">process_tweets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tweets</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project/twitter/twitter_analyzer.html#TweetAnalyzer.process_tweets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project.twitter.twitter_analyzer.TweetAnalyzer.process_tweets" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">async</span><span class="w"> </span><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">process_tweets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tweets_coroutine</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project/twitter/twitter_analyzer.html#TweetAnalyzer.process_tweets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project.twitter.twitter_analyzer.TweetAnalyzer.process_tweets" title="Link to this definition"></a></dt>
 <dd><p>Processes a list of tweets and extracts relevant data.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>tweets</strong> (<em>list</em>) – A list of tweet objects.</p>
+<dd class="field-odd"><p><strong>tweets_coroutine</strong> (<em>list</em>) – A list of tweet objects.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A list of dictionaries containing processed tweet data.</p>
@@ -169,13 +169,13 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="project.twitter.twitter_analyzer.TweetAnalyzer.save_analysis">
-<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">save_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analysis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project/twitter/twitter_analyzer.html#TweetAnalyzer.save_analysis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project.twitter.twitter_analyzer.TweetAnalyzer.save_analysis" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">save_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">analysis</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project/twitter/twitter_analyzer.html#TweetAnalyzer.save_analysis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project.twitter.twitter_analyzer.TweetAnalyzer.save_analysis" title="Link to this definition"></a></dt>
 <dd><p>Saves the analysis result to a file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>analysis</strong> (<em>str</em>) – The analysis result to be saved.</p></li>
-<li><p><strong>file_path</strong> (<em>str</em>) – The path of the file where the analysis will be saved.</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – The path of the file where the analysis will be saved.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>

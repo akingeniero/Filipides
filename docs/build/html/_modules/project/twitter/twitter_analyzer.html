@@ -72,9 +72,14 @@
            <div itemprop="articleBody">
              
   <h1>Source code for project.twitter.twitter_analyzer</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">import</span> <span class="nn">aiofiles</span>
+
+
 <div class="viewcode-block" id="TweetAnalyzer">
-<a class="viewcode-back" href="../../../twitter/project.twitter.twitter_analyzer.html#project.twitter.twitter_analyzer.TweetAnalyzer">[docs]</a>
-<span></span><span class="k">class</span> <span class="nc">TweetAnalyzer</span><span class="p">:</span>
+<a class="viewcode-back" href="../../../twitter/twitter_analyzer.html#project.twitter.twitter_analyzer.TweetAnalyzer">[docs]</a>
+<span class="k">class</span> <span class="nc">TweetAnalyzer</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    TweetAnalyzer is responsible for fetching, processing, and analyzing tweets.</span>
 
@@ -95,7 +100,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">openai_client</span> <span class="o">=</span> <span class="n">openai_client</span>
 
 <div class="viewcode-block" id="TweetAnalyzer.fetch_and_analyze_tweets">
-<a class="viewcode-back" href="../../../twitter/project.twitter.twitter_analyzer.html#project.twitter.twitter_analyzer.TweetAnalyzer.fetch_and_analyze_tweets">[docs]</a>
+<a class="viewcode-back" href="../../../twitter/twitter_analyzer.html#project.twitter.twitter_analyzer.TweetAnalyzer.fetch_and_analyze_tweets">[docs]</a>
     <span class="k">async</span> <span class="k">def</span> <span class="nf">fetch_and_analyze_tweets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_id</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Fetches tweets for a given user and performs sentiment analysis on them.</span>
@@ -107,26 +112,27 @@
 <span class="sd">            None</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">tweets</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">twitter_client</span><span class="o">.</span><span class="n">get_user_tweets</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
-        <span class="n">tweet_data_list</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_tweets</span><span class="p">(</span><span class="n">tweets</span><span class="p">)</span>
+        <span class="n">tweet_data_list</span> <span class="o">=</span> <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_tweets</span><span class="p">(</span><span class="n">tweets</span><span class="p">)</span>
         <span class="n">review</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">generate_review</span><span class="p">(</span><span class="n">tweet_data_list</span><span class="p">)</span>
         <span class="n">analysis</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">openai_client</span><span class="o">.</span><span class="n">analyze_tweets</span><span class="p">(</span><span class="n">review</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">save_analysis</span><span class="p">(</span><span class="n">analysis</span><span class="p">,</span> <span class="s2">&quot;analisis_sentimiento.txt&quot;</span><span class="p">)</span></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">save_analysis</span><span class="p">(</span><span class="n">analysis</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">user_id</span><span class="si">}</span><span class="s2">.txt&quot;</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="TweetAnalyzer.process_tweets">
-<a class="viewcode-back" href="../../../twitter/project.twitter.twitter_analyzer.html#project.twitter.twitter_analyzer.TweetAnalyzer.process_tweets">[docs]</a>
+<a class="viewcode-back" href="../../../twitter/twitter_analyzer.html#project.twitter.twitter_analyzer.TweetAnalyzer.process_tweets">[docs]</a>
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">process_tweets</span><span class="p">(</span><span class="n">tweets</span><span class="p">):</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">process_tweets</span><span class="p">(</span><span class="n">tweets_coroutine</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Processes a list of tweets and extracts relevant data.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            tweets (list): A list of tweet objects.</span>
+<span class="sd">            tweets_coroutine (list): A list of tweet objects.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            list: A list of dictionaries containing processed tweet data.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">tweet_data_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">tweets</span> <span class="o">=</span> <span class="k">await</span> <span class="n">tweets_coroutine</span>
         <span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">tweets</span><span class="p">:</span>
             <span class="n">tweet_data</span> <span class="o">=</span> <span class="p">{</span>
                 <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">tweet</span><span class="o">.</span><span class="n">id_str</span><span class="p">,</span>
@@ -150,7 +156,7 @@
 
 
 <div class="viewcode-block" id="TweetAnalyzer.generate_review">
-<a class="viewcode-back" href="../../../twitter/project.twitter.twitter_analyzer.html#project.twitter.twitter_analyzer.TweetAnalyzer.generate_review">[docs]</a>
+<a class="viewcode-back" href="../../../twitter/twitter_analyzer.html#project.twitter.twitter_analyzer.TweetAnalyzer.generate_review">[docs]</a>
     <span class="nd">@staticmethod</span>
     <span class="k">def</span> <span class="nf">generate_review</span><span class="p">(</span><span class="n">tweet_data_list</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
@@ -170,20 +176,28 @@
 
 
 <div class="viewcode-block" id="TweetAnalyzer.save_analysis">
-<a class="viewcode-back" href="../../../twitter/project.twitter.twitter_analyzer.html#project.twitter.twitter_analyzer.TweetAnalyzer.save_analysis">[docs]</a>
+<a class="viewcode-back" href="../../../twitter/twitter_analyzer.html#project.twitter.twitter_analyzer.TweetAnalyzer.save_analysis">[docs]</a>
     <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">save_analysis</span><span class="p">(</span><span class="n">analysis</span><span class="p">,</span> <span class="n">file_path</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">save_analysis</span><span class="p">(</span><span class="n">analysis</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Saves the analysis result to a file.</span>
 
 <span class="sd">        Args:</span>
 <span class="sd">            analysis (str): The analysis result to be saved.</span>
-<span class="sd">            file_path (str): The path of the file where the analysis will be saved.</span>
+<span class="sd">            filename (str): The path of the file where the analysis will be saved.</span>
 
 <span class="sd">        Returns:</span>
 <span class="sd">            None</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">file_path</span> <span class="o">=</span> <span class="n">filename</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+            <span class="n">base</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+            <span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>
+            <span class="k">while</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">file_path</span><span class="p">):</span>
+                <span class="n">file_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">counter</span><span class="si">}{</span><span class="n">ext</span><span class="si">}</span><span class="s2">&quot;</span>
+                <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
             <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">analysis</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span></div>
 </div>
 

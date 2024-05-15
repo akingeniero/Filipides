@@ -57,9 +57,6 @@ class ConfigurationManager:
         """
         self.user_initial_configuration()
         section = self.user_select_section(config)
-        while section not in config.sections():
-            self.section_not_found()
-            section = self.user_select_section(config)
         account_config = AccountConfig(config, section)
 
         api = API()
