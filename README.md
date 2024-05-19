@@ -49,7 +49,7 @@ llm_dict = {
 
 For detailed documentation on each module and additional configuration options, open the `index.html` file in the `docs/build/html` directory in a web browser:
 
-\`\`\`bash
+```bash
 open docs/build/html/index.html
-\`\`\`
+```
 
