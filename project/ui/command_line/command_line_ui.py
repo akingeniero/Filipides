@@ -1,106 +1,19 @@
-import configparser
 from project.ui.ui_manager import UiManager
 
 
 class CommandLineUi(UiManager):
-    """
-    CommandLineUi is a concrete implementation of UiManager that interacts
-    with the user through the command line interface.
 
-    Methods:
-        user_select_section(config: configparser.ConfigParser) -> str:
-            Allows the user to select a section from the configuration.
-
-        section_not_found():
-            Handles the case when a section is not found in the configuration.
-
-        user_initial_configuration():
-            Handles the initial configuration process for the user.
-
-        user_save():
-            Saves the user-specific configuration.
-
-        api_save():
-            Saves the API-specific configuration.
-
-        api_initial_configuration():
-            Handles the initial configuration process for the API.
-    """
-
-    def user_select_section(self, config: configparser.ConfigParser) -> str:
-        """
-        Allows the user to select a section from the configuration.
-
-        Args:
-            config (configparser.ConfigParser): The configuration parser
-            instance containing all sections and options.
-
-        Returns:
-            str: The name of the selected section.
-        """
-        available_sections = [section for section in config.sections() if section not in ["openAI"]]
-
-        if not available_sections:
-            raise ValueError("No available sections to select from.")
-
+    def personal_user_select(self, users: dict) -> str:
+        available_users = users.keys()
         while True:
-            print("Available sections:", ', '.join(available_sections))
-            section = input("Enter the section to use for setup: ").strip()
-            if section in available_sections:
-                return section
+            print("Available user:", ', '.join(available_users))
+            user = input("Enter the user for setup: ").strip()
+            if user in available_users:
+                return users[user]
             else:
-                print("Invalid section. Please select a valid section from the list.")
-
-    def section_not_found(self):
-        """
-        Handles the case when a section is not found in the configuration.
-
-        This method informs the user that the requested section is not available.
-        """
-        print("Section not found")
-
-    def user_initial_configuration(self):
-        """
-        Handles the initial configuration process for the user.
-
-        This method guides the user through setting up their initial configuration options.
-        """
-        print("Initial user configuration Started")
-
-    def user_save(self):
-        """
-        Saves the user-specific configuration.
-
-        This method handles saving any changes made to the user's configuration settings.
-        """
-        print("User saved")
-
-    def api_save(self):
-        """
-        Saves the API-specific configuration.
-
-        This method handles saving any changes made to the API configuration settings.
-        """
-        print("API saved")
-
-    def api_initial_configuration(self):
-        """
-        Handles the initial configuration process for the API.
-
-        This method guides the user through setting up the initial configuration options for the API.
-        """
-        print("Initial api configuration Started")
+                print("Invalid user. Please select a valid user from the list.")
 
     def prompt_select(self, prompts) -> str:
-        """
-        Allows the user to select a section from the configuration.
-
-        Args:
-            prompts (dict): A dictionary of prompts for different tasks.
-
-        Returns:
-            str: The key of the selected prompt.
-        """
         while True:
             print("Available prompts:")
             for key in prompts.keys():
@@ -112,17 +25,7 @@ class CommandLineUi(UiManager):
             else:
                 print("Invalid prompt key. Please try again.")
 
-    @staticmethod
-    def user_select():
-        """
-        Prompts the user to enter a target user number and ensures the input is numeric.
-
-        Continuously prompts the user until a valid numeric input is provided.
-        Converts the input to an integer before returning.
-
-        Returns:
-            int: The target user number entered by the user.
-        """
+    def target_user_select(self) -> int:
         while True:
             user_input = input("Enter the target user (numbers only): ")
             if user_input.isdigit():

@@ -1,37 +1,32 @@
 import asyncio
 
-import twscrape
-
 from project.client.openai_client import OpenAIClient
 from project.client.twitter_client import TwitterClient
-from project.config.configuration_manager import ConfigurationManager
-from project.twitter.twitter_analyzer import TweetAnalyzer
 from project.ui.command_line.command_line_ui import CommandLineUi
+from project.utils.config import Config
+from project.utils.utils import fetch_and_analyze_tweets
+import logging
+
+logging.basicConfig(filename='project.log',
+                    encoding='utf-8',
+                    level=logging.DEBUG,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    datefmt='%Y-%m-%d %H:%M:%S')
+
+logger = logging.getLogger(__name__)
 
 
 async def main():
-    """
-    Asynchronous main function that sets up and runs tweet analysis.
-
-    This function reads the configuration, initializes the required instances,
-    and performs tweet analysis for a specific user.
-
-    Args:
-        None
-
-    Returns:
-        None
-    """
-    config = ConfigurationManager.read_config('project/config/recourses/config.properties')
-    ui_manager = CommandLineUi()
-    await ConfigurationManager.add_user_config(ui_manager, config)
-    llm_clas = ConfigurationManager.add_llm_config(ui_manager, config)
-    twitter_client = TwitterClient(twscrape.API())
-    openai_client = OpenAIClient(llm_clas, ui_manager)
-    tweet_analyzer = TweetAnalyzer(twitter_client, openai_client)
-    user_id = ui_manager.user_select()
-    await tweet_analyzer.fetch_and_analyze_tweets(user_id)
+    logger.info("Program started")
+    twitter_client = TwitterClient()
+    await TwitterClient().register()
+    openai_client = OpenAIClient()
+    user_id = ui_manager.target_user_select()
+    await fetch_and_analyze_tweets(twitter_client, openai_client, user_id)
+    logger.info("Program ended")
 
 
 if __name__ == "__main__":
+    ui_manager = CommandLineUi()
+    config_manager = Config()
     asyncio.run(main())
