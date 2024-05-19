@@ -73,115 +73,68 @@
              
   <h1>Source code for project.ui.ui_manager</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">abc</span>
-<span class="kn">import</span> <span class="nn">configparser</span>
-
+<span class="kn">from</span> <span class="nn">project.utils.singleton_abc_meta</span> <span class="kn">import</span> <span class="n">SingletonABCMeta</span>
 
 <div class="viewcode-block" id="UiManager">
 <a class="viewcode-back" href="../../../ui/ui_manager.html#project.ui.ui_manager.UiManager">[docs]</a>
-<span class="k">class</span> <span class="nc">UiManager</span><span class="p">(</span><span class="n">abc</span><span class="o">.</span><span class="n">ABC</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">UiManager</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">SingletonABCMeta</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Abstract base class for UI management. Defines the interface for</span>
-<span class="sd">    interacting with the user interface, handling configuration, and</span>
-<span class="sd">    saving settings.</span>
+<span class="sd">    Abstract base class for UI management. Ensures that only one instance</span>
+<span class="sd">    of UiManager is created (singleton pattern) and enforces implementation</span>
+<span class="sd">    of essential UI selection methods.</span>
 
 <span class="sd">    Methods:</span>
-<span class="sd">        user_select_section(config: configparser.ConfigParser) -&gt; str:</span>
-<span class="sd">            Allows the user to select a section from the configuration.</span>
+<span class="sd">        personal_user_select(users: dict) -&gt; str:</span>
+<span class="sd">            Abstract method to select a personal user from a dictionary of users.</span>
 
-<span class="sd">        section_not_found():</span>
-<span class="sd">            Handles the case when a section is not found in the configuration.</span>
+<span class="sd">        prompt_select(prompts: list) -&gt; str:</span>
+<span class="sd">            Abstract method to select a prompt from a list of prompts.</span>
 
-<span class="sd">        user_initial_configuration():</span>
-<span class="sd">            Handles the initial configuration process for the user.</span>
-
-<span class="sd">        user_save():</span>
-<span class="sd">            Saves the user-specific configuration.</span>
-
-<span class="sd">        api_save():</span>
-<span class="sd">            Saves the API-specific configuration.</span>
-
-<span class="sd">        api_initial_configuration():</span>
-<span class="sd">            Handles the initial configuration process for the API.</span>
+<span class="sd">        target_user_select() -&gt; int:</span>
+<span class="sd">            Abstract method to select a target user by returning their user ID.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="UiManager.user_select_section">
-<a class="viewcode-back" href="../../../ui/ui_manager.html#project.ui.ui_manager.UiManager.user_select_section">[docs]</a>
+<div class="viewcode-block" id="UiManager.personal_user_select">
+<a class="viewcode-back" href="../../../ui/ui_manager.html#project.ui.ui_manager.UiManager.personal_user_select">[docs]</a>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
-    <span class="k">def</span> <span class="nf">user_select_section</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">:</span> <span class="n">configparser</span><span class="o">.</span><span class="n">ConfigParser</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">personal_user_select</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">users</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Allows the user to select a section from the configuration.</span>
+<span class="sd">        Selects a personal user from the given dictionary of users.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            config (configparser.ConfigParser): The configuration parser</span>
-<span class="sd">            instance containing all sections and options.</span>
+<span class="sd">            users (dict): Dictionary of users where keys are user IDs and values are user details.</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            str: The name of the selected section.</span>
+<span class="sd">            str: Selected user&#39;s ID.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 
-<div class="viewcode-block" id="UiManager.section_not_found">
-<a class="viewcode-back" href="../../../ui/ui_manager.html#project.ui.ui_manager.UiManager.section_not_found">[docs]</a>
+<div class="viewcode-block" id="UiManager.prompt_select">
+<a class="viewcode-back" href="../../../ui/ui_manager.html#project.ui.ui_manager.UiManager.prompt_select">[docs]</a>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
-    <span class="k">def</span> <span class="nf">section_not_found</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">prompt_select</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">prompts</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Handles the case when a section is not found in the configuration.</span>
+<span class="sd">        Selects a prompt from the given list of prompts.</span>
 
-<span class="sd">        This method should inform the user that the requested section is</span>
-<span class="sd">        not available.</span>
+<span class="sd">        Args:</span>
+<span class="sd">            prompts (list): List of available prompts.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: Selected prompt.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 
 
-<div class="viewcode-block" id="UiManager.user_initial_configuration">
-<a class="viewcode-back" href="../../../ui/ui_manager.html#project.ui.ui_manager.UiManager.user_initial_configuration">[docs]</a>
+<div class="viewcode-block" id="UiManager.target_user_select">
+<a class="viewcode-back" href="../../../ui/ui_manager.html#project.ui.ui_manager.UiManager.target_user_select">[docs]</a>
     <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
-    <span class="k">def</span> <span class="nf">user_initial_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">target_user_select</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Handles the initial configuration process for the user.</span>
+<span class="sd">        Selects a target user and returns their user ID.</span>
 
-<span class="sd">        This method should guide the user through setting up their initial</span>
-<span class="sd">        configuration options.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">pass</span></div>
-
-
-<div class="viewcode-block" id="UiManager.user_save">
-<a class="viewcode-back" href="../../../ui/ui_manager.html#project.ui.ui_manager.UiManager.user_save">[docs]</a>
-    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
-    <span class="k">def</span> <span class="nf">user_save</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Saves the user-specific configuration.</span>
-
-<span class="sd">        This method should handle saving any changes made to the user&#39;s</span>
-<span class="sd">        configuration settings.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">pass</span></div>
-
-
-<div class="viewcode-block" id="UiManager.api_save">
-<a class="viewcode-back" href="../../../ui/ui_manager.html#project.ui.ui_manager.UiManager.api_save">[docs]</a>
-    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
-    <span class="k">def</span> <span class="nf">api_save</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Saves the API-specific configuration.</span>
-
-<span class="sd">        This method should handle saving any changes made to the API</span>
-<span class="sd">        configuration settings.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">pass</span></div>
-
-
-<div class="viewcode-block" id="UiManager.api_initial_configuration">
-<a class="viewcode-back" href="../../../ui/ui_manager.html#project.ui.ui_manager.UiManager.api_initial_configuration">[docs]</a>
-    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
-    <span class="k">def</span> <span class="nf">api_initial_configuration</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Handles the initial configuration process for the API.</span>
-
-<span class="sd">        This method should guide the user through setting up the initial</span>
-<span class="sd">        configuration options for the API.</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            int: Selected target user&#39;s ID.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
 </div>

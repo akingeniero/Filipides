@@ -21,8 +21,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="config" href="../config/index.html" />
-    <link rel="prev" title="project.client.openia_client" href="openia_client.html" /> 
+    <link rel="next" title="ui" href="../ui/index.html" />
+    <link rel="prev" title="project.client.openai_client" href="openai_client.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -48,17 +48,15 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../modules.html">project</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">client</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="openia_client.html">project.client.openia_client</a></li>
+<li class="toctree-l3"><a class="reference internal" href="openai_client.html">project.client.openai_client</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">project.client.twitter_client</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#project.client.twitter_client.TwitterClient"><code class="docutils literal notranslate"><span class="pre">TwitterClient</span></code></a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../config/index.html">config</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../model/index.html">model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../twitter/index.html">twitter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ui/index.html">ui</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../utils/index.html">config</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../main.html">main</a></li>
 </ul>
 </li>
@@ -95,13 +93,13 @@
 <span id="project-client-twitter-client"></span><h1>project.client.twitter_client<a class="headerlink" href="#module-project.client.twitter_client" title="Link to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="project.client.twitter_client.TwitterClient">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">project.client.twitter_client.</span></span><span class="sig-name descname"><span class="pre">TwitterClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project/client/twitter_client.html#TwitterClient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project.client.twitter_client.TwitterClient" title="Link to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">project.client.twitter_client.</span></span><span class="sig-name descname"><span class="pre">TwitterClient</span></span><a class="reference internal" href="../_modules/project/client/twitter_client.html#TwitterClient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project.client.twitter_client.TwitterClient" title="Link to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>TwitterClient provides methods to interact with the Twitter API for fetching user tweets.</p>
+<p>Client to interact with the Twitter API using twscrape.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="project.client.twitter_client.TwitterClient.api">
 <span class="sig-name descname"><span class="pre">api</span></span><a class="headerlink" href="#project.client.twitter_client.TwitterClient.api" title="Link to this definition"></a></dt>
-<dd><p>An instance of the Twitter API client.</p>
+<dd><p>The API client from twscrape.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>API</p>
@@ -109,19 +107,45 @@
 </dl>
 </dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="project.client.twitter_client.TwitterClient.config">
+<span class="sig-name descname"><span class="pre">config</span></span><a class="headerlink" href="#project.client.twitter_client.TwitterClient.config" title="Link to this definition"></a></dt>
+<dd><p>Configuration object to fetch user settings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="../utils/config.html#project.utils.config.Config" title="project.utils.config.Config">Config</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="project.client.twitter_client.TwitterClient.register">
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/project/client/twitter_client.html#TwitterClient.register"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project.client.twitter_client.TwitterClient.register" title="Link to this definition"></a></dt>
+<dd><p>Registers the user accounts for the Twitter API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>self</strong> – Instance of TwitterClient.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="project.client.twitter_client.TwitterClient.get_user_tweets">
-<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_user_tweets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project/client/twitter_client.html#TwitterClient.get_user_tweets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project.client.twitter_client.TwitterClient.get_user_tweets" title="Link to this definition"></a></dt>
-<dd><p>Fetches tweets for a given user.</p>
+<em class="property"><span class="pre">async</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_user_tweets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="reference internal" href="../_modules/project/client/twitter_client.html#TwitterClient.get_user_tweets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project.client.twitter_client.TwitterClient.get_user_tweets" title="Link to this definition"></a></dt>
+<dd><p>Retrieves tweets for a given user ID up to the specified limit.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>user_id</strong> (<em>int</em>) – The ID of the user whose tweets are to be fetched.</p></li>
-<li><p><strong>limit</strong> (<em>int</em><em>, </em><em>optional</em>) – The maximum number of tweets to fetch. Defaults to 20.</p></li>
+<li><p><strong>self</strong> – Instance of TwitterClient.</p></li>
+<li><p><strong>user_id</strong> (<em>str</em>) – The user ID to fetch tweets for.</p></li>
+<li><p><strong>limit</strong> (<em>int</em>) – The maximum number of tweets to retrieve. Default is 20.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A list of tweets fetched for the specified user.</p>
+<dd class="field-even"><p>A list of tweets for the specified user.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>list</p>
@@ -137,8 +161,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="openia_client.html" class="btn btn-neutral float-left" title="project.client.openia_client" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../config/index.html" class="btn btn-neutral float-right" title="config" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="openai_client.html" class="btn btn-neutral float-left" title="project.client.openai_client" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../ui/index.html" class="btn btn-neutral float-right" title="ui" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

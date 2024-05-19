@@ -4,5 +4,5 @@ client
 .. toctree::
    :maxdepth: 2
 
-   openia_client
+   openai_client
    twitter_client
