@@ -1,15 +1,15 @@
 user_dic = {
-    "x": {
-        "username": "x",
-        "password": "x",
-        "email": "x",
-        "account_password": "x"
+    "twitter_user": {
+        "username": "YOUR_TWITTER_USERNAME",
+        "password": "YOUR_TWITTER_PASSWORD",
+        "email": "YOUR_EMAIL",
+        "account_password": "YOUR_EMAIL_PASSWORD"
     }
 }
 
 llm_dict = {
     "openAI": {
-        "key": "x",
+        "key": "YOUR_OPENAI_API_KEY",
         "content": "You are an expert assistant specialized in analyzing tweets. Your task is to provide a "
                    "comprehensive analysis based on the given prompt and tweet content. Be detailed and precise in "
                    "your response.",

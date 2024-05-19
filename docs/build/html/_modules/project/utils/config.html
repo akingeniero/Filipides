@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>project.utils.config &mdash; Filipides 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Filipides
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../main.html">main</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Filipides</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">project.utils.config</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for project.utils.config</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">project.conf.conf</span> <span class="kn">import</span> <span class="n">user_dic</span><span class="p">,</span> <span class="n">llm_dict</span>
+<span class="kn">from</span> <span class="nn">project.ui.command_line.command_line_ui</span> <span class="kn">import</span> <span class="n">CommandLineUi</span>
+<span class="kn">from</span> <span class="nn">project.utils.singleton_meta</span> <span class="kn">import</span> <span class="n">SingletonMeta</span>
+<span class="kn">import</span> <span class="nn">logging</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Config">
+<a class="viewcode-back" href="../../../utils/config.html#project.utils.config.Config">[docs]</a>
+<span class="k">class</span> <span class="nc">Config</span><span class="p">(</span><span class="n">metaclass</span><span class="o">=</span><span class="n">SingletonMeta</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Configuration manager class that implements the singleton pattern to ensure a single instance.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        user_dic (dict): Dictionary containing user configuration.</span>
+<span class="sd">        llm_dict (dict): Dictionary containing language model configuration.</span>
+<span class="sd">        ui_managers (CommandLineUi): Instance of the command line UI manager.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="s1">&#39;Config&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the Config class with user and language model dictionaries, and the command line UI manager.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            self: Instance of Config.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user_dic</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">user_dic</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">llm_dict</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">llm_dict</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ui_managers</span><span class="p">:</span> <span class="n">CommandLineUi</span> <span class="o">=</span> <span class="n">CommandLineUi</span><span class="p">()</span>
+
+<div class="viewcode-block" id="Config.get_user_config">
+<a class="viewcode-back" href="../../../utils/config.html#project.utils.config.Config.get_user_config">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_user_config</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="s1">&#39;Config&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieves the user configuration by selecting a personal user through the UI manager.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            self: Instance of Config.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: Selected user&#39;s ID.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ui_managers</span><span class="o">.</span><span class="n">personal_user_select</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">user_dic</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Config.get_llm_key">
+<a class="viewcode-back" href="../../../utils/config.html#project.utils.config.Config.get_llm_key">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_llm_key</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="s1">&#39;Config&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieves the API key for the language model.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            self: Instance of Config.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: API key for the language model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">llm_dict</span><span class="p">[</span><span class="s2">&quot;openAI&quot;</span><span class="p">][</span><span class="s2">&quot;key&quot;</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="Config.get_llm_prompt">
+<a class="viewcode-back" href="../../../utils/config.html#project.utils.config.Config.get_llm_prompt">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_llm_prompt</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="s1">&#39;Config&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieves the prompt for the language model by selecting through the UI manager.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            self: Instance of Config.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: Selected prompt.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ui_managers</span><span class="o">.</span><span class="n">prompt_select</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">llm_dict</span><span class="p">[</span><span class="s2">&quot;openAI&quot;</span><span class="p">][</span><span class="s2">&quot;prompts&quot;</span><span class="p">])</span></div>
+
+
+<div class="viewcode-block" id="Config.get_llm_content">
+<a class="viewcode-back" href="../../../utils/config.html#project.utils.config.Config.get_llm_content">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_llm_content</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="s1">&#39;Config&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Retrieves the system content for the language model.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            self: Instance of Config.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: System content for the language model.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">llm_dict</span><span class="p">[</span><span class="s2">&quot;openAI&quot;</span><span class="p">][</span><span class="s2">&quot;content&quot;</span><span class="p">]</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

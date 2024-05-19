@@ -72,42 +72,70 @@
            <div itemprop="articleBody">
              
   <h1>Source code for project.client.twitter_client</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">twscrape</span> <span class="kn">import</span> <span class="n">gather</span>
-<span class="kn">import</span> <span class="nn">asyncio</span>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">from</span> <span class="nn">twscrape</span> <span class="kn">import</span> <span class="n">gather</span><span class="p">,</span> <span class="n">API</span>
+<span class="kn">from</span> <span class="nn">project.utils.config</span> <span class="kn">import</span> <span class="n">Config</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
 <div class="viewcode-block" id="TwitterClient">
 <a class="viewcode-back" href="../../../client/twitter_client.html#project.client.twitter_client.TwitterClient">[docs]</a>
 <span class="k">class</span> <span class="nc">TwitterClient</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    TwitterClient provides methods to interact with the Twitter API for fetching user tweets.</span>
+<span class="sd">    Client to interact with the Twitter API using twscrape.</span>
 
 <span class="sd">    Attributes:</span>
-<span class="sd">        api (API): An instance of the Twitter API client.</span>
+<span class="sd">        api (API): The API client from twscrape.</span>
+<span class="sd">        config (Config): Configuration object to fetch user settings.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">api</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="s1">&#39;TwitterClient&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Initializes the TwitterClient with the given API client.</span>
+<span class="sd">        Initializes the TwitterClient with the necessary configurations and API client.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            api (API): An instance of the Twitter API client.</span>
+<span class="sd">            self: Instance of TwitterClient.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">api</span> <span class="o">=</span> <span class="n">api</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">api</span><span class="p">:</span> <span class="n">API</span> <span class="o">=</span> <span class="n">API</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">:</span> <span class="n">Config</span> <span class="o">=</span> <span class="n">Config</span><span class="p">()</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;TwitterClient initialized&quot;</span><span class="p">)</span>
+
+<div class="viewcode-block" id="TwitterClient.register">
+<a class="viewcode-back" href="../../../client/twitter_client.html#project.client.twitter_client.TwitterClient.register">[docs]</a>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="s1">&#39;TwitterClient&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Registers the user accounts for the Twitter API.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            self: Instance of TwitterClient.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            None</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">users</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">get_user_config</span><span class="p">()</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">pool</span><span class="o">.</span><span class="n">add_account</span><span class="p">(</span><span class="n">users</span><span class="p">[</span><span class="s2">&quot;username&quot;</span><span class="p">],</span> <span class="n">users</span><span class="p">[</span><span class="s2">&quot;password&quot;</span><span class="p">],</span> <span class="n">users</span><span class="p">[</span><span class="s2">&quot;email&quot;</span><span class="p">],</span> <span class="n">users</span><span class="p">[</span><span class="s2">&quot;account_password&quot;</span><span class="p">])</span>
+        <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">pool</span><span class="o">.</span><span class="n">login_all</span><span class="p">()</span></div>
+
 
 <div class="viewcode-block" id="TwitterClient.get_user_tweets">
 <a class="viewcode-back" href="../../../client/twitter_client.html#project.client.twitter_client.TwitterClient.get_user_tweets">[docs]</a>
-    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_user_tweets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">user_id</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">get_user_tweets</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="s1">&#39;TwitterClient&#39;</span><span class="p">,</span> <span class="n">user_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">limit</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">        Fetches tweets for a given user.</span>
+<span class="sd">        Retrieves tweets for a given user ID up to the specified limit.</span>
 
 <span class="sd">        Args:</span>
-<span class="sd">            user_id (int): The ID of the user whose tweets are to be fetched.</span>
-<span class="sd">            limit (int, optional): The maximum number of tweets to fetch. Defaults to 20.</span>
+<span class="sd">            self: Instance of TwitterClient.</span>
+<span class="sd">            user_id (str): The user ID to fetch tweets for.</span>
+<span class="sd">            limit (int): The maximum number of tweets to retrieve. Default is 20.</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            list: A list of tweets fetched for the specified user.</span>
+<span class="sd">            list: A list of tweets for the specified user.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">await</span> <span class="bp">self</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">user_by_id</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
+        <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Extract tweets of: </span><span class="si">{</span><span class="n">user_id</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">gather</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">user_tweets</span><span class="p">(</span><span class="n">user_id</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="n">limit</span><span class="p">))</span></div>
 </div>
 
