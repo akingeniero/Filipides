@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>project.config.configuration_manager &mdash; Filipides 1.0.0 documentation</title>
+  <title>project.utils.config &mdash; Filipides 1.0.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
 
@@ -21,7 +21,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="project.config.configuration_manager" href="singleton_abc_meta.html" />
+    <link rel="next" title="project.utils.singleton_abc_meta" href="singleton_abc_meta.html" />
     <link rel="prev" title="config" href="index.html" /> 
 </head>
 
@@ -50,13 +50,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../client/index.html">client</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ui/index.html">ui</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">config</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">project.config.configuration_manager</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">project.utils.config</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#project.utils.config.Config"><code class="docutils literal notranslate"><span class="pre">Config</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="singleton_abc_meta.html">project.config.configuration_manager</a></li>
-<li class="toctree-l3"><a class="reference internal" href="singleton_meta.html">project.config.configuration_manager</a></li>
-<li class="toctree-l3"><a class="reference internal" href="utils.html">project.config.configuration_manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="singleton_abc_meta.html">project.utils.singleton_abc_meta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="singleton_meta.html">project.utils.singleton_meta</a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html">project.utils.utils</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../main.html">main</a></li>
@@ -81,7 +81,7 @@
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../modules.html">project</a></li>
           <li class="breadcrumb-item"><a href="index.html">config</a></li>
-      <li class="breadcrumb-item active">project.config.configuration_manager</li>
+      <li class="breadcrumb-item active">project.utils.config</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/utils/config.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -92,7 +92,7 @@
            <div itemprop="articleBody">
              
   <section id="module-project.utils.config">
-<span id="project-config-configuration-manager"></span><h1>project.config.configuration_manager<a class="headerlink" href="#module-project.utils.config" title="Link to this heading"></a></h1>
+<span id="project-utils-config"></span><h1>project.utils.config<a class="headerlink" href="#module-project.utils.config" title="Link to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="project.utils.config.Config">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">project.utils.config.</span></span><span class="sig-name descname"><span class="pre">Config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/project/utils/config.html#Config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project.utils.config.Config" title="Link to this definition"></a></dt>
@@ -133,7 +133,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="project.utils.config.Config.get_user_config">
-<span class="sig-name descname"><span class="pre">get_user_config</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="../_modules/project/utils/config.html#Config.get_user_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project.utils.config.Config.get_user_config" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">get_user_config</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="../_modules/project/utils/config.html#Config.get_user_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#project.utils.config.Config.get_user_config" title="Link to this definition"></a></dt>
 <dd><p>Retrieves the user configuration by selecting a personal user through the UI manager.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -208,7 +208,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="config" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="singleton_abc_meta.html" class="btn btn-neutral float-right" title="project.config.configuration_manager" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="singleton_abc_meta.html" class="btn btn-neutral float-right" title="project.utils.singleton_abc_meta" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

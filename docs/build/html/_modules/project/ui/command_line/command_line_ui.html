@@ -74,6 +74,7 @@
   <h1>Source code for project.ui.command_line.command_line_ui</h1><div class="highlight"><pre>
 <span></span><span class="kn">from</span> <span class="nn">project.ui.ui_manager</span> <span class="kn">import</span> <span class="n">UiManager</span>
 
+
 <div class="viewcode-block" id="CommandLineUi">
 <a class="viewcode-back" href="../../../../ui/command_line/command_line_ui.html#project.ui.command_line.command_line_ui.CommandLineUi">[docs]</a>
 <span class="k">class</span> <span class="nc">CommandLineUi</span><span class="p">(</span><span class="n">UiManager</span><span class="p">):</span>
@@ -81,7 +82,7 @@
 <span class="sd">    Command-line interface for user interaction, inheriting from UiManager.</span>
 
 <span class="sd">    Methods:</span>
-<span class="sd">        personal_user_select(users: dict) -&gt; str:</span>
+<span class="sd">        personal_user_select(users: dict) -&gt; dict:</span>
 <span class="sd">            Allows user to select a personal user from a provided dictionary of users.</span>
 
 <span class="sd">        prompt_select(prompts: dict) -&gt; str:</span>
@@ -93,7 +94,7 @@
 
 <div class="viewcode-block" id="CommandLineUi.personal_user_select">
 <a class="viewcode-back" href="../../../../ui/command_line/command_line_ui.html#project.ui.command_line.command_line_ui.CommandLineUi.personal_user_select">[docs]</a>
-    <span class="k">def</span> <span class="nf">personal_user_select</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="s1">&#39;CommandLineUi&#39;</span><span class="p">,</span> <span class="n">users</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">personal_user_select</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="s1">&#39;CommandLineUi&#39;</span><span class="p">,</span> <span class="n">users</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Allows the user to select a personal user from the given dictionary of users.</span>
 
@@ -102,7 +103,7 @@
 <span class="sd">            users (dict): Dictionary of users where keys are user IDs and values are user details.</span>
 
 <span class="sd">        Returns:</span>
-<span class="sd">            str: Selected user&#39;s ID.</span>
+<span class="sd">            dict: Selected user&#39;s ID.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">available_users</span> <span class="o">=</span> <span class="n">users</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>

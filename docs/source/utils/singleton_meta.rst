@@ -1,5 +1,5 @@
-project.config.configuration_manager
-====================================
+project.utils.singleton_meta
+============================
 
 .. automodule:: project.utils.singleton_meta
    :members:
