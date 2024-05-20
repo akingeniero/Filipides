@@ -1,5 +1,5 @@
-project.config.configuration_manager
-====================================
+project.utils.config
+====================
 
 .. automodule:: project.utils.config
    :members:
