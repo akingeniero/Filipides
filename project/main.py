@@ -10,7 +10,7 @@ from project.utils.utils import fetch_and_analyze_tweets
 logging.basicConfig(filename='project.log',
                     encoding='utf-8',
                     level=logging.DEBUG,
-                    format='%(asctime)s - %(name)s - %(levellevel)s - %(message)s',
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S')
 
 logger = logging.getLogger(__name__)
