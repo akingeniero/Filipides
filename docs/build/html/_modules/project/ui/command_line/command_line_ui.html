@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>project.ui.command_line.command_line_ui &mdash; Filipides 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=8d563738"></script>
+        <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Filipides
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modules.html">project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../main.html">main</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Filipides</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">project.ui.command_line.command_line_ui</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for project.ui.command_line.command_line_ui</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">project.ui.ui_manager</span> <span class="kn">import</span> <span class="n">UiManager</span>
+
+
+<div class="viewcode-block" id="CommandLineUi">
+<a class="viewcode-back" href="../../../../ui/command_line/command_line_ui.html#project.ui.command_line.command_line_ui.CommandLineUi">[docs]</a>
+<span class="k">class</span> <span class="nc">CommandLineUi</span><span class="p">(</span><span class="n">UiManager</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Command-line interface for user interaction, inheriting from UiManager.</span>
+
+<span class="sd">    Methods:</span>
+<span class="sd">        personal_user_select(users: dict) -&gt; dict:</span>
+<span class="sd">            Allows user to select a personal user from a provided dictionary of users.</span>
+
+<span class="sd">        prompt_select(prompts: dict) -&gt; str:</span>
+<span class="sd">            Allows user to select a prompt from a provided dictionary of prompts.</span>
+
+<span class="sd">        target_user_select() -&gt; int:</span>
+<span class="sd">            Allows user to enter a target user&#39;s ID.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="CommandLineUi.personal_user_select">
+<a class="viewcode-back" href="../../../../ui/command_line/command_line_ui.html#project.ui.command_line.command_line_ui.CommandLineUi.personal_user_select">[docs]</a>
+    <span class="k">def</span> <span class="nf">personal_user_select</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="s1">&#39;CommandLineUi&#39;</span><span class="p">,</span> <span class="n">users</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Allows the user to select a personal user from the given dictionary of users.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            self: Instance of CommandLineUi.</span>
+<span class="sd">            users (dict): Dictionary of users where keys are user IDs and values are user details.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            dict: Selected user&#39;s ID.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">available_users</span> <span class="o">=</span> <span class="n">users</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Available users:&quot;</span><span class="p">,</span> <span class="s1">&#39;, &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">available_users</span><span class="p">))</span>
+            <span class="n">user</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the user for setup: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">user</span> <span class="ow">in</span> <span class="n">available_users</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">users</span><span class="p">[</span><span class="n">user</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid user. Please select a valid user from the list.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="CommandLineUi.prompt_select">
+<a class="viewcode-back" href="../../../../ui/command_line/command_line_ui.html#project.ui.command_line.command_line_ui.CommandLineUi.prompt_select">[docs]</a>
+    <span class="k">def</span> <span class="nf">prompt_select</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="s1">&#39;CommandLineUi&#39;</span><span class="p">,</span> <span class="n">prompts</span><span class="p">:</span> <span class="nb">dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Allows the user to select a prompt from the given list of prompts.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            self: Instance of CommandLineUi.</span>
+<span class="sd">            prompts (dict): Dictionary of available prompts.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: Selected prompt.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Available prompts:&quot;</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">prompts</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- </span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="n">prompt_key</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter the key of the prompt you want to use: &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">prompt_key</span> <span class="ow">in</span> <span class="n">prompts</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">prompts</span><span class="p">[</span><span class="n">prompt_key</span><span class="p">]</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid prompt key. Please try again.&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="CommandLineUi.target_user_select">
+<a class="viewcode-back" href="../../../../ui/command_line/command_line_ui.html#project.ui.command_line.command_line_ui.CommandLineUi.target_user_select">[docs]</a>
+    <span class="k">def</span> <span class="nf">target_user_select</span><span class="p">(</span><span class="bp">self</span><span class="p">:</span> <span class="s1">&#39;CommandLineUi&#39;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Allows the user to enter a target user&#39;s ID.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            self: Instance of CommandLineUi.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            int: Selected target user&#39;s ID.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">user_input</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the target user (numbers only): &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">user_input</span><span class="o">.</span><span class="n">isdigit</span><span class="p">():</span>
+                <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">user_input</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid input. Please enter a number.&quot;</span><span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
