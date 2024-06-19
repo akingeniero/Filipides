@@ -1,4 +1,4 @@
-from project.conf.conf import user_dic, llm_dict
+from project.conf.conf import user_dic, openai_dict
 from project.ui.command_line.command_line_ui import CommandLineUi
 from project.utils.singleton_meta import SingletonMeta
 import logging
@@ -9,11 +9,6 @@ logger = logging.getLogger(__name__)
 class Config(metaclass=SingletonMeta):
     """
     Configuration manager class that implements the singleton pattern to ensure a single instance.
-
-    Attributes:
-        user_dic (dict): Dictionary containing user configuration.
-        llm_dict (dict): Dictionary containing language model configuration.
-        ui_managers (CommandLineUi): Instance of the command line UI manager.
     """
 
     def __init__(self: 'Config') -> None:
@@ -27,7 +22,7 @@ class Config(metaclass=SingletonMeta):
             None
         """
         self.user_dic: dict = user_dic
-        self.llm_dict: dict = llm_dict
+        self.openai_dict: dict = openai_dict
         self.ui_managers: CommandLineUi = CommandLineUi()
 
     def get_user_config(self: 'Config') -> dict:
@@ -42,7 +37,7 @@ class Config(metaclass=SingletonMeta):
         """
         return self.ui_managers.personal_user_select(self.user_dic)
 
-    def get_llm_key(self: 'Config') -> str:
+    def get_openai_key(self: 'Config') -> str:
         """
         Retrieves the API key for the language model.
 
@@ -52,9 +47,9 @@ class Config(metaclass=SingletonMeta):
         Returns:
             str: API key for the language model.
         """
-        return self.llm_dict["openAI"]["key"]
+        return self.openai_dict["openAI"]["key"]
 
-    def get_llm_prompt(self: 'Config') -> str:
+    def get_openai_prompt(self: 'Config', type_prompt: str) -> str:
         """
         Retrieves the prompt for the language model by selecting through the UI manager.
 
@@ -63,10 +58,11 @@ class Config(metaclass=SingletonMeta):
 
         Returns:
             str: Selected prompt.
+            :param type_prompt:
         """
-        return self.ui_managers.prompt_select(self.llm_dict["openAI"]["prompts"])
+        return self.ui_managers.prompt_select(self.openai_dict["openAI"]["prompts"][type_prompt])
 
-    def get_llm_content(self: 'Config') -> str:
+    def get_openai_content(self: 'Config') -> str:
         """
         Retrieves the system content for the language model.
 
@@ -76,4 +72,4 @@ class Config(metaclass=SingletonMeta):
         Returns:
             str: System content for the language model.
         """
-        return self.llm_dict["openAI"]["content"]
+        return self.openai_dict["openAI"]["content"]
