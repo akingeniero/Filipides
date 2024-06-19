@@ -1,55 +1,64 @@
+import logging
+
 import requests
 from bs4 import BeautifulSoup
+from project.utils.singleton_meta import SingletonMeta
+
+logger = logging.getLogger(__name__)
 
 
-def extract_main_news(url):
-    """
-    Extracts the main news headline and content from a given URL.
+class NewsClient(metaclass=SingletonMeta):
 
-    Args:
-        url (str): The URL of the webpage containing the news.
+    def __init__(self: 'NewsClient') -> None:
+        """
+        Initializes the TwitterClient with the necessary configurations and API client.
 
-    Returns:
-        dict: A dictionary containing the main news headline and content.
-              Keys: 'headline', 'content'
-    """
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
+        Args:
+            self: Instance of TwitterClient.
 
-        soup = BeautifulSoup(response.content, 'html.parser')
+        Returns:
+            None
+        """
+        logger.info("NewsClient initialized")
 
-        headline = soup.find('h1').text.strip()
+    async def extract_main_news(self: 'TwitterClient', url_data: str) -> str | None:
+        try:
+            response = requests.get(url_data)
+            response.raise_for_status()
 
-        content = ""
+            soup = BeautifulSoup(response.content, 'html.parser')
 
-        content_div = soup.find('div', class_='a_c', attrs={'data-dtm-region': 'articulo_cuerpo'})
-        if content_div:
-            content = content_div.text.strip()
+            headline = soup.find('h1').text.strip()
 
-        if not content:
-            content_paragraph = soup.find('p', class_='ue-c-article__paragraph',
-                                          attrs={'data-mrf-recirculation': 'Links Párrafos'})
-            if content_paragraph:
-                content = content_paragraph.text.strip()
+            content = ""
 
-        if not content:
-            content_body = soup.find('div', class_='article-body__content')
-            if content_body:
-                paragraphs = content_body.find_all('p')
-                content = ' '.join([p.text.strip() for p in paragraphs])
+            content_div = soup.find('div', class_='a_c', attrs={'data-dtm-region': 'articulo_cuerpo'})
+            if content_div:
+                content = content_div.text.strip()
 
-        if not content:
-            ue_l_article_body = soup.find('div', class_='ue-l-article__body')
-            if ue_l_article_body:
-                paragraphs = ue_l_article_body.find_all('p')
-                content = ' '.join([p.text.strip() for p in paragraphs])
+            if not content:
+                content_paragraph = soup.find('p', class_='ue-c-article__paragraph',
+                                              attrs={'data-mrf-recirculation': 'Links Párrafos'})
+                if content_paragraph:
+                    content = content_paragraph.text.strip()
 
-        return {'headline': headline, 'content': content}
+            if not content:
+                content_body = soup.find('div', class_='article-body__content')
+                if content_body:
+                    paragraphs = content_body.find_all('p')
+                    content = ' '.join([p.text.strip() for p in paragraphs])
 
-    except requests.exceptions.RequestException as e:
-        print(f"Error al hacer la solicitud HTTP: {e}")
-        return None
-    except AttributeError:
-        print("No se pudo encontrar el elemento deseado en la página")
-        return None
+            if not content:
+                ue_l_article_body = soup.find('div', class_='ue-l-article__body')
+                if ue_l_article_body:
+                    paragraphs = ue_l_article_body.find_all('p')
+                    content = ' '.join([p.text.strip() for p in paragraphs])
+
+            return f"Titulo: {headline} Contenido: {content}"
+
+        except requests.exceptions.RequestException as e:
+            logger.info(f"Error al hacer la solicitud HTTP: {e}")
+            return None
+        except AttributeError:
+            logger.info("No se pudo encontrar el elemento deseado en la página")
+            return None
