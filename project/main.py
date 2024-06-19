@@ -1,11 +1,12 @@
 import asyncio
 import logging
 
+from project.client.news_client import NewsClient
 from project.client.openai_client import OpenAIClient
 from project.client.twitter_client import TwitterClient
 from project.ui.command_line.command_line_ui import CommandLineUi
 from project.utils.config import Config
-from project.utils.utils import fetch_and_analyze_tweets
+from project.utils.utils import fetch_and_analyze_tweets, fetch_and_analyze_news
 
 logging.basicConfig(filename='project.log',
                     encoding='utf-8',
@@ -22,12 +23,23 @@ async def main() -> None:
 
     Initializes clients, registers the Twitter client, selects a user, and performs tweet fetching and analysis.
     """
-    logger.info("Program started")
-    twitter_client = TwitterClient()
-    await twitter_client.register()
-    openai_client = OpenAIClient()
-    user_id = ui_manager.target_user_select()
-    await fetch_and_analyze_tweets(twitter_client, openai_client, user_id)
+    while True:
+        mode_selection = ui_manager.mode_select()
+
+        if mode_selection == 'Twitter':
+            await twitter_client.register()
+            user_id = ui_manager.target_user_select()
+            await fetch_and_analyze_tweets(user_id)
+        elif mode_selection == 'News':
+            url = ui_manager.target_url_select()
+            await fetch_and_analyze_news(url)
+
+        logger.info("Operation completed")
+
+        continue_choice = ui_manager.continue_select()
+        if continue_choice != 'y':
+            break
+
     logger.info("Program ended")
 
 
@@ -36,5 +48,9 @@ if __name__ == "__main__":
     Entry point of the program. Initializes UI and configuration managers and runs the main async function.
     """
     ui_manager = CommandLineUi()
+    twitter_client = TwitterClient()
+    news_client = NewsClient()
     config_manager = Config()
+    openai_client = OpenAIClient()
+
     asyncio.run(main())
