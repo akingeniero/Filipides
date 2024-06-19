@@ -54,3 +54,43 @@ class UiManager(metaclass=SingletonABCMeta):
             int: Selected target user's ID.
         """
         pass
+
+    @abc.abstractmethod
+    def continue_select(self) -> int:
+        """
+        Selects a target user and returns their user ID.
+
+        Returns:
+            int: Selected target user's ID.
+        """
+        pass
+
+    @abc.abstractmethod
+    def target_url_select(self) -> int:
+        """
+        Selects a target user and returns their user ID.
+
+        Returns:
+            int: Selected target user's ID.
+        """
+        pass
+
+    @abc.abstractmethod
+    def target_url_select(self) -> int:
+        """
+        Selects a target user and returns their user ID.
+
+        Returns:
+            int: Selected target user's ID.
+        """
+        pass
+
+    @abc.abstractmethod
+    def mode_select(self) -> int:
+        """
+        Selects a target user and returns their user ID.
+
+        Returns:
+            int: Selected target user's ID.
+        """
+        pass
