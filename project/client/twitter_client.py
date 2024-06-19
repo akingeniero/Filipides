@@ -1,12 +1,15 @@
 import logging
+from asyncio import sleep
+
 from twscrape import gather, API
 
 from project.utils.config import Config
+from project.utils.singleton_meta import SingletonMeta
 
 logger = logging.getLogger(__name__)
 
 
-class TwitterClient:
+class TwitterClient(metaclass=SingletonMeta):
     """
     Client to interact with the Twitter API using twscrape.
 
@@ -42,6 +45,7 @@ class TwitterClient:
         users: dict = self.config.get_user_config()
         await self.api.pool.add_account(users["username"], users["password"], users["email"], users["account_password"])
         await self.api.pool.login_all()
+        await sleep(0.1)
 
     async def get_user_tweets(self: 'TwitterClient', user_id: int, limit: int = 20):
         """

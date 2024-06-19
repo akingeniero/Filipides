@@ -1,7 +1,11 @@
 import os
 
+from project.client.news_client import NewsClient
+from project.client.openai_client import OpenAIClient
+from project.client.twitter_client import TwitterClient
 
-async def fetch_and_analyze_tweets(twitter_client, openai_client, user_id: int) -> None:
+
+async def fetch_and_analyze_tweets(user_id: int) -> None:
     """
     Fetches tweets for a given user ID, processes the tweets, generates a review, and analyzes it using OpenAI.
 
@@ -13,11 +17,33 @@ async def fetch_and_analyze_tweets(twitter_client, openai_client, user_id: int) 
     Returns:
         None
     """
+    twitter_client = TwitterClient()
+    openai_client = OpenAIClient()
     tweets = await twitter_client.get_user_tweets(user_id)
     tweet_data_list = await process_tweets(tweets)
     review = generate_review(tweet_data_list)
     analysis = openai_client.analyze_tweets(review)
     save_analysis(analysis, f"{user_id}.md")
+
+
+async def fetch_and_analyze_news(url_news: str) -> None:
+    """
+    Fetches tweets for a given user ID, processes the tweets, generates a review, and analyzes it using OpenAI.
+_and_analyze_news
+    Args:
+        twitter_client: An instance of the TwitterClient to fetch tweets.
+        openai_client: An instance of the OpenAIClient to analyze tweets.
+        user_id (str): The user ID to fetch tweets for.
+
+    Returns:
+        None
+        :param url_news:
+    """
+    news_client = NewsClient()
+    openai_client = OpenAIClient()
+    review = await news_client.extract_main_news(url_news)
+    analysis = openai_client.analyze_news(review[:2000])
+    save_analysis(analysis, f"notice.md")
 
 
 async def process_tweets(tweets_coroutine) -> list:
