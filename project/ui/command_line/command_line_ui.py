@@ -16,6 +16,30 @@ class CommandLineUi(UiManager):
             Allows user to enter a target user's ID.
     """
 
+    def mode_select(self: 'CommandLineUi') -> str:
+        """
+        Allows the user to select a mode (Twitter or News) and a personal user from the given dictionary of users.
+
+        Args:
+            self: Instance of CommandLineUi.
+            users (dict): Dictionary of users where keys are user IDs and values are user details.
+
+        Returns:
+            dict or None: Selected user's details (ID and mode).
+        """
+        while True:
+            print("Select mode:")
+            print("1. Twitter mode")
+            print("2. News mode")
+            mode_choice = input("Enter mode choice (1 or 2): ").strip()
+
+            if mode_choice == '1':
+                return 'Twitter'
+            elif mode_choice == '2':
+                return 'News'
+            else:
+                print("Invalid mode choice. Please enter 1 or 2.")
+
     def personal_user_select(self: 'CommandLineUi', users: dict) -> dict:
         """
         Allows the user to select a personal user from the given dictionary of users.
@@ -74,3 +98,31 @@ class CommandLineUi(UiManager):
                 return int(user_input)
             else:
                 print("Invalid input. Please enter a number.")
+
+    def target_url_select(self: 'CommandLineUi') -> str:
+        """
+        Allows the user to enter a target url.
+
+        Args:
+            self: Instance of CommandLineUi.
+
+        Returns:
+            str: Selected target url.
+        """
+        while True:
+            url_input = input("Enter the target url: ").strip()
+            return url_input
+
+    def continue_select(self) -> str:
+        """
+        Asks the user if they want to perform another operation.
+
+        Returns:
+            str: The user's response in lowercase.
+        """
+        while True:
+            response = input("Do you want to perform another operation? (y/n): ").strip().lower()
+            if response in ['y', 'n']:
+                return response
+            else:
+                print("Invalid answer. Please enter 'y' for yes or 'n' for no.")
