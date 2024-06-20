@@ -25,17 +25,20 @@ async def main() -> None:
     """
     while True:
         mode_selection = ui_manager.mode_select()
-
-        if mode_selection == 'Twitter':
-            register_status = await twitter_client.register()
-            if register_status:
-                user_id = ui_manager.target_user_select()
-                await fetch_and_analyze_tweets(user_id)
-            else:
-                ui_manager.error_register()
-        elif mode_selection == 'News':
-            url = ui_manager.target_url_select()
-            await fetch_and_analyze_news(url)
+        if openai_client.verify_api_key():
+            if mode_selection == 'Twitter':
+                register_status = await twitter_client.register()
+                if register_status:
+                    user_id = ui_manager.target_user_select()
+                    await fetch_and_analyze_tweets(user_id)
+                else:
+                    ui_manager.error("Failed to register user")
+            elif mode_selection == 'News':
+                url = ui_manager.target_url_select()
+                if openai_client.verify_api_key():
+                    await fetch_and_analyze_news(url)
+        else:
+            ui_manager.error("Invalid OpenAI API key")
 
         logger.info("Operation completed")
 
