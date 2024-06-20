@@ -1,5 +1,5 @@
 from openai import OpenAI
-from project.ui.command_line.command_line_ui import CommandLineUi
+from project.ui.ui_manager import UiManager
 from project.utils.config import Config
 import logging
 from project.utils.singleton_meta import SingletonMeta
@@ -21,7 +21,7 @@ class OpenAIClient(metaclass=SingletonMeta):
         """
         Initializes the OpenAIClient with the necessary configurations.
         """
-        self.ui_managers = CommandLineUi()
+        self.ui_managers = UiManager()
         self.config = Config()
         self.client = OpenAI(api_key=self.config.get_openai_key())
         self.content = self.config.get_openai_content()
@@ -90,7 +90,7 @@ class OpenAIClient(metaclass=SingletonMeta):
         """
         try:
             self.client.models.list()
-        except Exception as e:
+        except:
             return False
         else:
             return True
