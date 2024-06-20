@@ -1,5 +1,6 @@
 from project.conf.conf import user_dic, openai_dict
 from project.ui.command_line.command_line_ui import CommandLineUi
+from project.ui.ui_manager import UiManager
 from project.utils.singleton_meta import SingletonMeta
 import logging
 
@@ -23,7 +24,7 @@ class Config(metaclass=SingletonMeta):
         """
         self.user_dic: dict = user_dic
         self.openai_dict: dict = openai_dict
-        self.ui_managers: CommandLineUi = CommandLineUi()
+        self.ui_managers = UiManager()
 
     def get_user_config(self: 'Config') -> dict:
         """
