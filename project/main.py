@@ -27,9 +27,12 @@ async def main() -> None:
         mode_selection = ui_manager.mode_select()
 
         if mode_selection == 'Twitter':
-            await twitter_client.register()
-            user_id = ui_manager.target_user_select()
-            await fetch_and_analyze_tweets(user_id)
+            register_status = await twitter_client.register()
+            if register_status:
+                user_id = ui_manager.target_user_select()
+                await fetch_and_analyze_tweets(user_id)
+            else:
+                ui_manager.error_register()
         elif mode_selection == 'News':
             url = ui_manager.target_url_select()
             await fetch_and_analyze_news(url)
@@ -38,6 +41,7 @@ async def main() -> None:
 
         continue_choice = ui_manager.continue_select()
         if continue_choice != 'y':
+            await twitter_client.close()
             break
 
     logger.info("Program ended")
