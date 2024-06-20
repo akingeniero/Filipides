@@ -96,7 +96,7 @@ class UiManager(metaclass=SingletonABCMeta):
         pass
 
     @abc.abstractmethod
-    def error_register(self) -> int:
+    def error(self, error_text: str) -> int:
         """
         Selects a target user and returns their user ID.
 

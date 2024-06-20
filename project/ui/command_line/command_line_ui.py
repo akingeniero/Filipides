@@ -127,6 +127,6 @@ class CommandLineUi(UiManager):
             else:
                 print("Invalid answer. Please enter 'y' for yes or 'n' for no.")
 
-    def error_register(self):
-        print("Invalid user. If there is a problem with the user credential,please check the configuration file.")
+    def error(self, error_text: str):
+        print(str)
         pass
