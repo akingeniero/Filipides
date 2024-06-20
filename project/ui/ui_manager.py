@@ -1,106 +1,35 @@
-import abc
-from project.utils.singleton_abc_meta import SingletonABCMeta
+from project.ui.command_line.command_line_ui import CommandLineUi
+from project.ui.tkinter.tkinter_ui import TkinterUi
+from project.utils.singleton_meta import SingletonMeta
 
 
-class UiManager(metaclass=SingletonABCMeta):
-    """
-    Abstract base class for UI management. Ensures that only one instance
-    of UiManager is created (singleton pattern) and enforces implementation
-    of essential UI selection methods.
+class UiManager(metaclass=SingletonMeta):
+    def __init__(self):
+        self.ui_instance = None
 
-    Methods:
-        personal_user_select(users: dict) -> dict:
-            Abstract method to select a personal information user from a dictionary of users.
+    def setup_command_line_ui(self):
+        self.ui_instance = CommandLineUi()
 
-        prompt_select(prompts: list) -> str:
-            Abstract method to select a prompt from a list of prompts.
+    def setup_tkinter_ui(self):
+        self.ui_instance = TkinterUi()
 
-        target_user_select() -> int:
-            Abstract method to select a target user by returning their user ID.
-    """
+    def mode_select(self) -> str:
+        return self.ui_instance.mode_select()
 
-    @abc.abstractmethod
     def personal_user_select(self, users: dict) -> dict:
-        """
-        Selects a personal user from the given dictionary of users.
+        return self.ui_instance.personal_user_select(users)
 
-        Args:
-            users (dict): Dictionary of users where keys are user IDs and values are user details.
+    def prompt_select(self, prompts: dict) -> str:
+        return self.ui_instance.prompt_select(prompts)
 
-        Returns:
-            dict: Selected user's details.
-        """
-        pass
-
-    @abc.abstractmethod
-    def prompt_select(self, prompts: list) -> str:
-        """
-        Selects a prompt from the given list of prompts.
-
-        Args:
-            prompts (list): List of available prompts.
-
-        Returns:
-            str: Selected prompt.
-        """
-        pass
-
-    @abc.abstractmethod
     def target_user_select(self) -> int:
-        """
-        Selects a target user and returns their user ID.
+        return self.ui_instance.target_user_select()
 
-        Returns:
-            int: Selected target user's ID.
-        """
-        pass
+    def target_url_select(self) -> str:
+        return self.ui_instance.target_url_select()
 
-    @abc.abstractmethod
-    def continue_select(self) -> int:
-        """
-        Selects a target user and returns their user ID.
+    def continue_select(self) -> str:
+        return self.ui_instance.continue_select()
 
-        Returns:
-            int: Selected target user's ID.
-        """
-        pass
-
-    @abc.abstractmethod
-    def target_url_select(self) -> int:
-        """
-        Selects a target user and returns their user ID.
-
-        Returns:
-            int: Selected target user's ID.
-        """
-        pass
-
-    @abc.abstractmethod
-    def target_url_select(self) -> int:
-        """
-        Selects a target user and returns their user ID.
-
-        Returns:
-            int: Selected target user's ID.
-        """
-        pass
-
-    @abc.abstractmethod
-    def mode_select(self) -> int:
-        """
-        Selects a target user and returns their user ID.
-
-        Returns:
-            int: Selected target user's ID.
-        """
-        pass
-
-    @abc.abstractmethod
-    def error(self, error_text: str) -> int:
-        """
-        Selects a target user and returns their user ID.
-
-        Returns:
-            int: Selected target user's ID.
-        """
-        pass
+    def error(self, error_text: str):
+        self.ui_instance.error(error_text)
