@@ -14,8 +14,6 @@ class TwitterClient(metaclass=SingletonMeta):
     Client to interact with the Twitter API using twscrape.
 
     Attributes:
-        api (API): The API client from twscrape.
-        config (Config): Configuration object to fetch user settings.
     """
 
     def __init__(self: 'TwitterClient') -> None:
@@ -52,8 +50,8 @@ class TwitterClient(metaclass=SingletonMeta):
             return False
         else:
             logger.info("User registered")
+            await sleep(0.1)
             return True
-        await sleep(0.1)
 
     async def get_user_tweets(self: 'TwitterClient', user_id: int, limit: int = 20):
         """
