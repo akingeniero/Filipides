@@ -31,8 +31,9 @@ class TwitterClient(metaclass=SingletonMeta):
         self.api: API = API()
         self.config: Config = Config()
         logger.info("TwitterClient initialized")
+        self.users: dict = {}
 
-    async def register(self: 'TwitterClient') -> None:
+    async def register(self: 'TwitterClient') -> bool:
         """
         Registers the user accounts for the Twitter API.
 
@@ -42,9 +43,16 @@ class TwitterClient(metaclass=SingletonMeta):
         Returns:
             None
         """
-        users: dict = self.config.get_user_config()
-        await self.api.pool.add_account(users["username"], users["password"], users["email"], users["account_password"])
-        await self.api.pool.login_all()
+        self.users: dict = self.config.get_user_config()
+        await self.api.pool.add_account(self.users["username"], self.users["password"], self.users["email"],
+                                        self.users["account_password"])
+        user = await self.api.pool.login_all()
+        if user["failed"] == 1:
+            logger.error("Failed to register user")
+            return False
+        else:
+            logger.info("User registered")
+            return True
         await sleep(0.1)
 
     async def get_user_tweets(self: 'TwitterClient', user_id: int, limit: int = 20):
@@ -62,3 +70,7 @@ class TwitterClient(metaclass=SingletonMeta):
         await self.api.user_by_id(user_id)
         logger.info(f"Extract tweets of: {user_id}")
         return gather(self.api.user_tweets(user_id, limit=limit))
+
+    async def close(self):
+        await self.api.pool.delete_accounts(self.users["username"])
+        pass

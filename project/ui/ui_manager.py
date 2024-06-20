@@ -94,3 +94,13 @@ class UiManager(metaclass=SingletonABCMeta):
             int: Selected target user's ID.
         """
         pass
+
+    @abc.abstractmethod
+    def error_register(self) -> int:
+        """
+        Selects a target user and returns their user ID.
+
+        Returns:
+            int: Selected target user's ID.
+        """
+        pass
