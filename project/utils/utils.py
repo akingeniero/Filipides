@@ -10,8 +10,6 @@ async def fetch_and_analyze_tweets(user_id: int) -> None:
     Fetches tweets for a given user ID, processes the tweets, generates a review, and analyzes it using OpenAI.
 
     Args:
-        twitter_client: An instance of the TwitterClient to fetch tweets.
-        openai_client: An instance of the OpenAIClient to analyze tweets.
         user_id (str): The user ID to fetch tweets for.
 
     Returns:
