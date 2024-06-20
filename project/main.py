@@ -4,7 +4,7 @@ import logging
 from project.client.news_client import NewsClient
 from project.client.openai_client import OpenAIClient
 from project.client.twitter_client import TwitterClient
-from project.ui.command_line.command_line_ui import CommandLineUi
+from project.ui.ui_manager import UiManager
 from project.utils.config import Config
 from project.utils.utils import fetch_and_analyze_tweets, fetch_and_analyze_news
 
@@ -23,10 +23,12 @@ async def main() -> None:
 
     Initializes clients, registers the Twitter client, selects a user, and performs tweet fetching and analysis.
     """
+    global use_twitter
     while True:
         mode_selection = ui_manager.mode_select()
         if openai_client.verify_api_key():
             if mode_selection == 'Twitter':
+                use_twitter = True
                 register_status = await twitter_client.register()
                 if register_status:
                     user_id = ui_manager.target_user_select()
@@ -44,7 +46,8 @@ async def main() -> None:
 
         continue_choice = ui_manager.continue_select()
         if continue_choice != 'y':
-            await twitter_client.close()
+            if use_twitter:
+                await twitter_client.close()
             break
 
     logger.info("Program ended")
@@ -54,10 +57,11 @@ if __name__ == "__main__":
     """
     Entry point of the program. Initializes UI and configuration managers and runs the main async function.
     """
-    ui_manager = CommandLineUi()
+    ui_manager = UiManager()
+    ui_manager.setup_tkinter_ui()
     twitter_client = TwitterClient()
     news_client = NewsClient()
     config_manager = Config()
     openai_client = OpenAIClient()
-
+    use_twitter = False
     asyncio.run(main())
