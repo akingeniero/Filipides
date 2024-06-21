@@ -10,8 +10,9 @@ user_dic = {
 openai_dict = {
     "openAI": {
         "key": "YOUR_OPENAI_API_KEY",
+        "llms": ["gpt-4-turbo", "gpt-4o", "gpt-3.5-turbo"],
         "content": "You are an expert assistant specialized in analyzing tweets. Your task is to provide a "
-                   "comprehensive analysis based on the given prompt and tweet content. Be detailed and precise in "
+                   "comprehensive analysis based on the given prompt and text. Be detailed and precise in "
                    "your response.",
         "prompts": {
             "tweet": {
