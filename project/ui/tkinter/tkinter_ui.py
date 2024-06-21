@@ -135,6 +135,25 @@ class TkinterUi:
 
         return response.get()
 
+    def model_select(self, models: list) -> str:
+        self.init_window()
+        selected_model = tk.StringVar(value=models[0])
+
+        def set_model():
+            self.window.quit()
+
+        tk.Label(self.window, text="Select model:").pack(pady=10)
+
+        model_menu = ttk.Combobox(self.window, textvariable=selected_model, values=models)
+        model_menu.pack(pady=5)
+
+        tk.Button(self.window, text="Select", command=set_model).pack(pady=10)
+
+        self.window.mainloop()
+        self.destroy_window()
+
+        return selected_model.get()
+
     def error(self, error_text: str):
         self.init_window()
         messagebox.showerror("Error", error_text)
