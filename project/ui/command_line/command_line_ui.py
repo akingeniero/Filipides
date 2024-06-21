@@ -1,7 +1,6 @@
-from project.ui.ui_manager import UiManager
 
 
-class CommandLineUi(UiManager):
+class CommandLineUi:
     """
     Command-line interface for user interaction, inheriting from UiManager.
 
@@ -16,7 +15,7 @@ class CommandLineUi(UiManager):
             Allows user to enter a target user's ID.
     """
 
-    def mode_select(self: 'CommandLineUi') -> str:
+    def mode_select(self) -> str:
         """
         Allows the user to select a mode (Twitter or News) and a personal user from the given dictionary of users.
 
@@ -126,6 +125,31 @@ class CommandLineUi(UiManager):
                 return response
             else:
                 print("Invalid answer. Please enter 'y' for yes or 'n' for no.")
+
+    def model_select(self: 'CommandLineUi', models: list) -> str:
+        """
+        Allows the user to select a model from the given list of models.
+
+        Args:
+            self: Instance of CommandLineUi.
+            models (list): List of available models.
+
+        Returns:
+            str: Selected model.
+        """
+        while True:
+            print("Available models:")
+            for i, model in enumerate(models):
+                print(f"{i + 1}: {model}")
+
+            try:
+                model_index = int(input("Please enter the number of the model you want to use: ").strip())
+                if 1 <= model_index <= len(models):
+                    return models[model_index - 1]
+                else:
+                    print("Invalid number. Please try again.")
+            except ValueError:
+                print("Invalid input. Please enter a number.")
 
     def error(self, error_text: str):
         print(str)

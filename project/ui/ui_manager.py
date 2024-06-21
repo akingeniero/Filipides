@@ -1,3 +1,5 @@
+from array import array
+
 from project.ui.command_line.command_line_ui import CommandLineUi
 from project.ui.tkinter.tkinter_ui import TkinterUi
 from project.utils.singleton_meta import SingletonMeta
@@ -33,3 +35,6 @@ class UiManager(metaclass=SingletonMeta):
 
     def error(self, error_text: str):
         self.ui_instance.error(error_text)
+
+    def model_select(self, model: array) -> str:
+        return self.ui_instance.model_select(model)
