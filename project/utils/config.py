@@ -74,3 +74,15 @@ class Config(metaclass=SingletonMeta):
             str: System content for the language model.
         """
         return self.openai_dict["openAI"]["content"]
+
+    def get_openai_llm(self):
+        """
+        Retrieves the prompt for the language model by selecting through the UI manager.
+
+        Args:
+            self: Instance of Config.
+
+        Returns:
+            str: Selected model.
+        """
+        return self.ui_managers.model_select(self.openai_dict["openAI"]["llms"])
