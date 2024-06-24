@@ -3,10 +3,17 @@ from tkinter import messagebox, ttk
 
 
 class TkinterUi:
+    """
+    Graphical user interface for user interaction using Tkinter.
+    """
+
     def __init__(self):
         self.window = None
 
     def init_window(self):
+        """
+        Initializes the Tkinter window.
+        """
         if self.window is None or not self.window.winfo_exists():
             self.window = tk.Tk()
             self.window.title("UI Manager")
@@ -15,11 +22,20 @@ class TkinterUi:
             self.window.deiconify()
 
     def destroy_window(self):
+        """
+        Destroys the Tkinter window.
+        """
         if self.window and self.window.winfo_exists():
             self.window.destroy()
             self.window = None
 
     def mode_select(self) -> str:
+        """
+        Allows the user to select a mode (Twitter or News).
+
+        Returns:
+            str: Selected mode ('Twitter' or 'News').
+        """
         self.init_window()
         selected_mode = tk.StringVar(value="Twitter")
 
@@ -37,6 +53,15 @@ class TkinterUi:
         return selected_mode.get()
 
     def personal_user_select(self, users: dict) -> dict:
+        """
+        Allows the user to select a personal user from the given dictionary of users.
+
+        Args:
+            users (dict): Dictionary of users where keys are user IDs and values are user details.
+
+        Returns:
+            dict: Selected user's details.
+        """
         self.init_window()
         selected_user = tk.StringVar(value=list(users.keys())[0])
 
@@ -62,6 +87,15 @@ class TkinterUi:
         return users[selected_user.get()]
 
     def prompt_select(self, prompts: dict) -> str:
+        """
+        Allows the user to select a prompt from the given dictionary of prompts.
+
+        Args:
+            prompts (dict): Dictionary of available prompts.
+
+        Returns:
+            str: Selected prompt.
+        """
         self.init_window()
         selected_prompt = tk.StringVar(value=list(prompts.keys())[0])
 
@@ -81,6 +115,12 @@ class TkinterUi:
         return prompts[selected_prompt.get()]
 
     def target_user_select(self) -> int:
+        """
+        Allows the user to enter a target user's ID.
+
+        Returns:
+            int: Selected target user's ID.
+        """
         self.init_window()
         user_id = tk.StringVar()
 
@@ -100,6 +140,12 @@ class TkinterUi:
         return int(user_id.get())
 
     def target_url_select(self) -> str:
+        """
+        Allows the user to enter a target URL.
+
+        Returns:
+            str: Selected target URL.
+        """
         self.init_window()
         url = tk.StringVar()
 
@@ -119,16 +165,22 @@ class TkinterUi:
         return url.get()
 
     def continue_select(self) -> str:
+        """
+        Asks the user if they want to perform another operation.
+
+        Returns:
+            str: The user's response in lowercase ('y' or 'n').
+        """
         self.init_window()
         response = tk.StringVar(value="n")
 
         def set_response():
             self.window.quit()
 
-        tk.Label(self.window, text="¿Desea realizar otra operación? (y/n):").pack(pady=10)
-        tk.Radiobutton(self.window, text="Sí", variable=response, value="y").pack(anchor=tk.W)
+        tk.Label(self.window, text="Do you want to perform another operation? (y/n):").pack(pady=10)
+        tk.Radiobutton(self.window, text="Yes", variable=response, value="y").pack(anchor=tk.W)
         tk.Radiobutton(self.window, text="No", variable=response, value="n").pack(anchor=tk.W)
-        tk.Button(self.window, text="Aceptar", command=set_response).pack(pady=10)
+        tk.Button(self.window, text="Submit", command=set_response).pack(pady=10)
 
         self.window.mainloop()
         self.destroy_window()
@@ -136,6 +188,15 @@ class TkinterUi:
         return response.get()
 
     def model_select(self, models: list) -> str:
+        """
+        Allows the user to select a model from the given list of models.
+
+        Args:
+            models (list): List of available models.
+
+        Returns:
+            str: Selected model.
+        """
         self.init_window()
         selected_model = tk.StringVar(value=models[0])
 
@@ -155,6 +216,15 @@ class TkinterUi:
         return selected_model.get()
 
     def error(self, error_text: str):
+        """
+        Displays an error message.
+
+        Args:
+            error_text (str): The error message to display.
+
+        Returns:
+            None
+        """
         self.init_window()
         messagebox.showerror("Error", error_text)
         self.destroy_window()
