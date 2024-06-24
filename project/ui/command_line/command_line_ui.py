@@ -2,29 +2,18 @@
 
 class CommandLineUi:
     """
-    Command-line interface for user interaction, inheriting from UiManager.
-
-    Methods:
-        personal_user_select(users: dict) -> dict:
-            Allows user to select a personal user from a provided dictionary of users.
-
-        prompt_select(prompts: dict) -> str:
-            Allows user to select a prompt from a provided dictionary of prompts.
-
-        target_user_select() -> int:
-            Allows user to enter a target user's ID.
+    Command-line interface for user interaction.
     """
 
     def mode_select(self) -> str:
         """
-        Allows the user to select a mode (Twitter or News) and a personal user from the given dictionary of users.
+        Allows the user to select a mode (Twitter or News).
 
         Args:
             self: Instance of CommandLineUi.
-            users (dict): Dictionary of users where keys are user IDs and values are user details.
 
         Returns:
-            dict or None: Selected user's details (ID and mode).
+            str: Selected mode ('Twitter' or 'News').
         """
         while True:
             print("Select mode:")
@@ -48,7 +37,7 @@ class CommandLineUi:
             users (dict): Dictionary of users where keys are user IDs and values are user details.
 
         Returns:
-            dict: Selected user's ID.
+            dict: Selected user's details.
         """
         available_users = users.keys()
         while True:
@@ -61,7 +50,7 @@ class CommandLineUi:
 
     def prompt_select(self: 'CommandLineUi', prompts: dict) -> str:
         """
-        Allows the user to select a prompt from the given list of prompts.
+        Allows the user to select a prompt from the given dictionary of prompts.
 
         Args:
             self: Instance of CommandLineUi.
@@ -100,13 +89,13 @@ class CommandLineUi:
 
     def target_url_select(self: 'CommandLineUi') -> str:
         """
-        Allows the user to enter a target url.
+        Allows the user to enter a target URL.
 
         Args:
             self: Instance of CommandLineUi.
 
         Returns:
-            str: Selected target url.
+            str: Selected target URL.
         """
         while True:
             url_input = input("Enter the target url: ").strip()
@@ -117,7 +106,7 @@ class CommandLineUi:
         Asks the user if they want to perform another operation.
 
         Returns:
-            str: The user's response in lowercase.
+            str: The user's response in lowercase ('y' or 'n').
         """
         while True:
             response = input("Do you want to perform another operation? (y/n): ").strip().lower()
@@ -152,5 +141,14 @@ class CommandLineUi:
                 print("Invalid input. Please enter a number.")
 
     def error(self, error_text: str):
-        print(str)
-        pass
+        """
+        Displays an error message.
+
+        Args:
+            self: Instance of CommandLineUi.
+            error_text (str): The error message to display.
+
+        Returns:
+            None
+        """
+        print(error_text)
