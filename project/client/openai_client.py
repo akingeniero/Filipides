@@ -1,5 +1,4 @@
 from openai import OpenAI
-from project.ui.ui_manager import UiManager
 from project.utils.config import Config
 import logging
 from project.utils.singleton_meta import SingletonMeta
@@ -14,17 +13,16 @@ class OpenAIClient(metaclass=SingletonMeta):
     Attributes:
         config (Config): Configuration object to fetch API keys and settings.
         client (OpenAI): OpenAI client initialized with the API key.
-        content (str): System content to guide the OpenAI model.
+        system_context (str): System content to guide the OpenAI model.
     """
 
     def __init__(self) -> None:
         """
         Initializes the OpenAIClient with the necessary configurations.
         """
-        self.ui_managers = UiManager()
         self.config = Config()
         self.client = OpenAI(api_key=self.config.get_openai_key())
-        self.content = self.config.get_openai_content()
+        self.system_context = self.config.get_openai_system_context()
         logger.info("OpenAIClient initialized")
 
     def _generate_response(self, prompt: str, placeholder: str, text: str, model: str) -> str:
@@ -35,6 +33,7 @@ class OpenAIClient(metaclass=SingletonMeta):
             prompt (str): The base prompt template.
             placeholder (str): The placeholder text to be replaced.
             text (str): The text to insert into the placeholder.
+            model (str): The model to use for generating the response.
 
         Returns:
             str: The generated response.
@@ -46,7 +45,7 @@ class OpenAIClient(metaclass=SingletonMeta):
             response = self.client.chat.completions.create(
                 model=model,
                 messages=[
-                    {"role": "system", "content": self.content},
+                    {"role": "system", "content": self.system_context},
                     {"role": "user", "content": final_prompt}
                 ],
                 temperature=0.5,
