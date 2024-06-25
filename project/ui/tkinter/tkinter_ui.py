@@ -228,3 +228,26 @@ class TkinterUi:
         self.init_window()
         messagebox.showerror("Error", error_text)
         self.destroy_window()
+
+    def technology_select(self) -> str:
+        """
+        Allows the user to select a technology (OpenAI or Llama).
+
+        Returns:
+            str: Selected technology ('OpenAI' or 'Llama').
+        """
+        self.init_window()
+        selected_technology = tk.StringVar(value="OpenAI")
+
+        def set_technology():
+            self.window.quit()
+
+        tk.Label(self.window, text="Select technology:").pack(pady=10)
+        tk.Radiobutton(self.window, text="OpenAI", variable=selected_technology, value="OpenAI").pack(anchor=tk.W)
+        tk.Radiobutton(self.window, text="Llama", variable=selected_technology, value="Llama").pack(anchor=tk.W)
+        tk.Button(self.window, text="Select", command=set_technology).pack(pady=10)
+
+        self.window.mainloop()
+        self.destroy_window()
+
+        return selected_technology.get()

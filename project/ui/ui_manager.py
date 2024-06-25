@@ -111,3 +111,13 @@ class UiManager(metaclass=SingletonMeta):
             str: Selected model.
         """
         return self.ui_instance.model_select(model)
+
+    def technology_select(self) -> str:
+        """
+        Allows the user to select a technology (OpenAI or Llama).
+
+        Returns:
+            str: Selected technology ('OpenAI' or 'Llama').
+        """
+        return self.ui_instance.technology_select()
+
