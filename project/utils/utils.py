@@ -10,7 +10,7 @@ async def fetch_and_analyze_tweets(user_id: int) -> None:
     Fetches tweets for a given user ID, processes the tweets, generates a review, and analyzes it using OpenAI.
 
     Args:
-        user_id (str): The user ID to fetch tweets for.
+        user_id (int): The user ID to fetch tweets for.
 
     Returns:
         None
@@ -26,22 +26,19 @@ async def fetch_and_analyze_tweets(user_id: int) -> None:
 
 async def fetch_and_analyze_news(url_news: str) -> None:
     """
-    Fetches tweets for a given user ID, processes the tweets, generates a review, and analyzes it using OpenAI.
-_and_analyze_news
+    Fetches the main news content from a given URL, generates a review, and analyzes it using OpenAI.
+
     Args:
-        twitter_client: An instance of the TwitterClient to fetch tweets.
-        openai_client: An instance of the OpenAIClient to analyze tweets.
-        user_id (str): The user ID to fetch tweets for.
+        url_news (str): The URL of the news article to analyze.
 
     Returns:
         None
-        :param url_news:
     """
     news_client = NewsClient()
     openai_client = OpenAIClient()
     review = await news_client.extract_main_news(url_news)
     analysis = openai_client.analyze_news(review[:2000])
-    save_analysis(analysis, f"notice.md")
+    save_analysis(analysis, "notice.md")
 
 
 async def process_tweets(tweets_coroutine) -> list:

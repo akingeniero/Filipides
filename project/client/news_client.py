@@ -8,20 +8,28 @@ logger = logging.getLogger(__name__)
 
 
 class NewsClient(metaclass=SingletonMeta):
+    """
+    Client to interact with news websites and extract main news content.
+    """
 
     def __init__(self: 'NewsClient') -> None:
         """
-        Initializes the TwitterClient with the necessary configurations and API client.
-
-        Args:
-            self: Instance of TwitterClient.
-
-        Returns:
-            None
+        Initializes the NewsClient with the necessary configurations.
         """
         logger.info("NewsClient initialized")
 
     async def extract_main_news(self: 'TwitterClient', url_data: str) -> str | None:
+        """
+        Extracts the main news headline and content from the given URL.
+
+        Args:
+            self: Instance of NewsClient.
+            url_data (str): URL of the news article to extract content from.
+
+        Returns:
+            str | None: Formatted string containing the headline and content of the news article,
+                        or None if an error occurs.
+        """
         try:
             response = requests.get(url_data)
             response.raise_for_status()

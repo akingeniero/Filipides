@@ -1,5 +1,4 @@
 from project.conf.conf import user_dic, openai_dict
-from project.ui.command_line.command_line_ui import CommandLineUi
 from project.ui.ui_manager import UiManager
 from project.utils.singleton_meta import SingletonMeta
 import logging
@@ -10,11 +9,16 @@ logger = logging.getLogger(__name__)
 class Config(metaclass=SingletonMeta):
     """
     Configuration manager class that implements the singleton pattern to ensure a single instance.
+
+    Attributes:
+        user_dic (dict): Dictionary containing user configurations.
+        openai_dict (dict): Dictionary containing OpenAI configurations.
+        ui_managers (UiManager): Instance of UiManager to handle user interface interactions.
     """
 
     def __init__(self: 'Config') -> None:
         """
-        Initializes the Config class with user and language model dictionaries, and the command line UI manager.
+        Initializes the Config class with the necessary configurations.
 
         Args:
             self: Instance of Config.
@@ -34,7 +38,7 @@ class Config(metaclass=SingletonMeta):
             self: Instance of Config.
 
         Returns:
-            str: Selected user's ID.
+            dict: Selected user's configuration.
         """
         return self.ui_managers.personal_user_select(self.user_dic)
 
@@ -56,14 +60,14 @@ class Config(metaclass=SingletonMeta):
 
         Args:
             self: Instance of Config.
+            type_prompt (str): The type of prompt to retrieve.
 
         Returns:
             str: Selected prompt.
-            :param type_prompt:
         """
         return self.ui_managers.prompt_select(self.openai_dict["openAI"]["prompts"][type_prompt])
 
-    def get_openai_content(self: 'Config') -> str:
+    def get_openai_system_context(self: 'Config') -> str:
         """
         Retrieves the system content for the language model.
 
@@ -75,9 +79,9 @@ class Config(metaclass=SingletonMeta):
         """
         return self.openai_dict["openAI"]["content"]
 
-    def get_openai_llm(self):
+    def get_openai_llm(self: 'Config') -> str:
         """
-        Retrieves the prompt for the language model by selecting through the UI manager.
+        Retrieves the language model by selecting through the UI manager.
 
         Args:
             self: Instance of Config.

@@ -14,17 +14,14 @@ class TwitterClient(metaclass=SingletonMeta):
     Client to interact with the Twitter API using twscrape.
 
     Attributes:
+        api (API): The API client for interacting with Twitter.
+        config (Config): Configuration object to fetch API keys and settings.
+        users (dict): Dictionary containing user account information.
     """
 
     def __init__(self: 'TwitterClient') -> None:
         """
-        Initializes the TwitterClient with the necessary configurations and API client.
-
-        Args:
-            self: Instance of TwitterClient.
-
-        Returns:
-            None
+        Initializes the OpenAIClient with the necessary configurations.
         """
         self.api: API = API()
         self.config: Config = Config()
@@ -39,7 +36,7 @@ class TwitterClient(metaclass=SingletonMeta):
             self: Instance of TwitterClient.
 
         Returns:
-            None
+            bool: True if registration is successful, False otherwise.
         """
         self.users: dict = self.config.get_user_config()
         await self.api.pool.add_account(self.users["username"], self.users["password"], self.users["email"],
@@ -59,7 +56,7 @@ class TwitterClient(metaclass=SingletonMeta):
 
         Args:
             self: Instance of TwitterClient.
-            user_id (str): The user ID to fetch tweets for.
+            user_id (int): The user ID to fetch tweets for.
             limit (int): The maximum number of tweets to retrieve. Default is 20.
 
         Returns:
@@ -70,5 +67,14 @@ class TwitterClient(metaclass=SingletonMeta):
         return gather(self.api.user_tweets(user_id, limit=limit))
 
     async def close(self):
+        """
+        Closes the TwitterClient and deletes the registered user accounts.
+
+        Args:
+            self: Instance of TwitterClient.
+
+        Returns:
+            None
+        """
         await self.api.pool.delete_accounts(self.users["username"])
         pass
