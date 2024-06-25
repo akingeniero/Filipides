@@ -1,7 +1,7 @@
 import os
 
+from project.client.llm_client.llm_manager import LlmManager
 from project.client.news_client import NewsClient
-from project.client.openai_client import OpenAIClient
 from project.client.twitter_client import TwitterClient
 
 
@@ -16,12 +16,12 @@ async def fetch_and_analyze_tweets(user_id: int) -> None:
         None
     """
     twitter_client = TwitterClient()
-    openai_client = OpenAIClient()
+    llm_manager = LlmManager()
     tweets = await twitter_client.get_user_tweets(user_id)
     tweet_data_list = await process_tweets(tweets)
     review = generate_review(tweet_data_list)
-    analysis = openai_client.analyze_tweets(review)
-    save_analysis(analysis, f"{user_id}.md")
+    analysis = llm_manager.analyze_tweets(review)
+    save_analysis(str(analysis), f"{user_id}.md")
 
 
 async def fetch_and_analyze_news(url_news: str) -> None:
@@ -35,10 +35,10 @@ async def fetch_and_analyze_news(url_news: str) -> None:
         None
     """
     news_client = NewsClient()
-    openai_client = OpenAIClient()
+    llm_manager = LlmManager()
     review = await news_client.extract_main_news(url_news)
-    analysis = openai_client.analyze_news(review[:2000])
-    save_analysis(analysis, "notice.md")
+    analysis = llm_manager.analyze_news(review[:2000])
+    save_analysis(str(analysis), "notice.md")
 
 
 async def process_tweets(tweets_coroutine) -> list:
