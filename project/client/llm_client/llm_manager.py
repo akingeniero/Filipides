@@ -1,3 +1,5 @@
+from typing import Any
+
 from project.client.llm_client.llama_client.llama_client import LlamaClient
 from project.client.llm_client.openai_client.openai_client import OpenAIClient
 from project.utils.singleton_meta import SingletonMeta
@@ -31,7 +33,7 @@ class LlmManager(metaclass=SingletonMeta):
         """
         self.ui_instance = LlamaClient()
 
-    def analyze_tweets(self, text: str) -> str:
+    def analyze_tweets(self, text: str) -> tuple[Any, float]:
         """
         Analyzes the given tweet review by generating a response from the Llama API.
 
