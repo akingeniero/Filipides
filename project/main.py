@@ -1,8 +1,8 @@
 import asyncio
 import logging
 
+from project.client.llm_client.llm_manager import LlmManager
 from project.client.news_client import NewsClient
-from project.client.openai_client import OpenAIClient
 from project.client.twitter_client import TwitterClient
 from project.ui.ui_manager import UiManager
 from project.utils.config import Config
@@ -26,7 +26,7 @@ async def main() -> None:
     global use_twitter
     while True:
         mode_selection = ui_manager.mode_select()
-        if openai_client.verify_api_key():
+        if llm_manager.verify_api_key():
             if mode_selection == 'Twitter':
                 use_twitter = True
                 register_status = await twitter_client.register()
@@ -37,7 +37,7 @@ async def main() -> None:
                     ui_manager.error("Failed to register user")
             elif mode_selection == 'News':
                 url = ui_manager.target_url_select()
-                if openai_client.verify_api_key():
+                if llm_manager.verify_api_key():
                     await fetch_and_analyze_news(url)
         else:
             ui_manager.error("Invalid OpenAI API key")
@@ -58,10 +58,11 @@ if __name__ == "__main__":
     Entry point of the program. Initializes UI and configuration managers and runs the main async function.
     """
     ui_manager = UiManager()
+    llm_manager = LlmManager()
     ui_manager.setup_tkinter_ui()
+    llm_manager.setup_llama_client()
     twitter_client = TwitterClient()
     news_client = NewsClient()
     config_manager = Config()
-    openai_client = OpenAIClient()
     use_twitter = False
     asyncio.run(main())
