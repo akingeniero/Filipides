@@ -25,6 +25,11 @@ async def main() -> None:
     """
     global use_twitter
     while True:
+        technology_selection = ui_manager.technology_select()
+        if technology_selection == 'OpenAI':
+            llm_manager.setup_openai_client()
+        else:
+            llm_manager.setup_llama_client()
         mode_selection = ui_manager.mode_select()
         if llm_manager.verify_api_key():
             if mode_selection == 'Twitter':
@@ -60,7 +65,6 @@ if __name__ == "__main__":
     ui_manager = UiManager()
     llm_manager = LlmManager()
     ui_manager.setup_tkinter_ui()
-    llm_manager.setup_llama_client()
     twitter_client = TwitterClient()
     news_client = NewsClient()
     config_manager = Config()
