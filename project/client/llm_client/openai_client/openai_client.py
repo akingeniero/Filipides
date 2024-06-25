@@ -1,7 +1,9 @@
+import time
+from typing import Any
+
 from openai import OpenAI
 from project.utils.config import Config
 import logging
-from project.utils.singleton_meta import SingletonMeta
 
 logger = logging.getLogger(__name__)
 
@@ -25,7 +27,7 @@ class OpenAIClient:
         self.system_context = self.config.get_llm_system_context()
         logger.info("OpenAIClient initialized")
 
-    def _generate_response(self, prompt: str, placeholder: str, text: str, model: str) -> str:
+    def _generate_response(self, prompt: str, placeholder: str, text: str, model: str) -> tuple[Any, float]:
         """
         Generates a response using OpenAI API by replacing a placeholder in the prompt with the given text.
 
@@ -42,6 +44,7 @@ class OpenAIClient:
         logger.info(f"Generating text with prompt: {final_prompt}")
 
         try:
+            start_time = time.time()
             response = self.client.chat.completions.create(
                 model=model,
                 messages=[
@@ -51,12 +54,19 @@ class OpenAIClient:
                 temperature=0.5,
                 max_tokens=1000
             )
-            return response.choices[0].message.content.strip()
+            analysis_text = response.choices[0].message.content.strip()
+            end_time = time.time()
+            elapsed_time = end_time - start_time
+            analysis = {
+                "model": model,
+                "message": {"content": analysis_text}
+            }
+            return analysis, elapsed_time
         except Exception as e:
             logger.error(f"Error generating response: {e}")
-            return "An error occurred while generating the response."
+            return "An error occurred while generating the response.", 0
 
-    def analyze_tweets(self, review: str) -> str:
+    def analyze_tweets(self, review: str) -> tuple[Any, float]:
         """
         Analyzes the given tweet review by generating a response from the OpenAI API.
 
@@ -69,7 +79,7 @@ class OpenAIClient:
         return self._generate_response(self.config.get_llm_prompt("tweet"), "{text_tweet}", review,
                                        self.config.get_openai_llm())
 
-    def analyze_news(self, review: str) -> str:
+    def analyze_news(self, review: str) -> tuple[Any, float]:
         """
         Analyzes the given news review by generating a response from the OpenAI API.
 
