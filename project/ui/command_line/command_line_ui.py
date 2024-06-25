@@ -1,5 +1,3 @@
-
-
 class CommandLineUi:
     """
     Command-line interface for user interaction.
@@ -152,3 +150,26 @@ class CommandLineUi:
             None
         """
         print(error_text)
+
+    def technology_select(self: 'CommandLineUi') -> str:
+        """
+        Allows the user to select a technology (OpenAI or Llama).
+
+        Args:
+            self: Instance of CommandLineUi.
+
+        Returns:
+            str: Selected technology ('OpenAI' or 'Llama').
+        """
+        while True:
+            print("Select technology:")
+            print("1. OpenAI")
+            print("2. Llama")
+            tech_choice = input("Enter technology choice (1 or 2): ").strip()
+
+            if tech_choice == '1':
+                return 'OpenAI'
+            elif tech_choice == '2':
+                return 'Llama'
+            else:
+                print("Invalid technology choice. Please enter 1 or 2.")
