@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: Muere un hombre en la playa de Rodiles (Asturias) Contenido: Un hombre ha fallecido en el arenal de la playa de Rodiles, en Villaviciosa (Asturias), por causas que se desconocen. El Centro de Coordinación de Emergencias del 112 Asturias recibió el aviso a las 19:15 horas. En la llamada se indicaba que una persona acababa de desplomarse en el arenal tras salir del agua. Tras practicarle durante una hora maniobras de reanimación cardiopulmonar avanzada, los servicios sanitarios desplazados al lugar - el equipo de Atención Primaria de la zona con la ambulancia de la playa maliayesa y el Grupo de Rescate de Bomberos de Asturias con el helicóptero del Servicio de Emergencias del Principado de Asturias (SEPA) -, solo pudieron confirmar su fallecimiento. La Guardia Civil se ha hecho cargo de los trámites para proceder al levantamiento del cadáver. Aunque el servicio de salvamento ya había finalizado su horario, el personal aún se encontraba en la playa por lo que acudieron hasta donde se encontraba el afectado. Paralelamente se pasó el aviso al SAMU que envió los medios ya citados y se movilizó al equipo de bomberos con la aeronave del SEPA. También se informó a la Guardia Civil y a la Policía Local. Finalizada la intervención el Grupo de Rescate regresó a su base en La Morgal a las 20.36 horas.",
+    "analysis": {
+        "created": 1719443666,
+        "model": "llama3-70b",
+        "usage": {
+            "prompt_tokens": 592,
+            "completion_tokens": 100,
+            "total_tokens": 692
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "**Análisis de sentimiento**\n\n**1. Emoción principal:** Negativa\n\n**2. Elementos específicos:**\n\n* La noticia comienza con la frase \"Muere un hombre en la playa de Rodiles (Asturias)\", lo que establece un tono sombrío y triste desde el principio.\n* La descripción de la situación, \"una persona acababa de desplomarse en el arenal tras salir del agua\", sugiere una",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 6.227328062057495
+}

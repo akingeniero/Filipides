@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Punto Gofre | Verdaderos gofres belgas (@puntogofre) on 2024-06-26 07:16:00+00:00:\n¡Feliz miércoles! Y que no te veo caer en otra cosa... https://t.co/ghzwNnAkOH\nTweet by Punto Gofre | Verdaderos gofres belgas (@puntogofre) on 2024-06-25 06:47:00+00:00:\nNo es por daros envidia... pero hoy estaré por aquí 😁 https://t.co/ySpcM4D2zr\nTweet by Punto Gofre | Verdaderos gofres belgas (@puntogofre) on 2024-06-24 06:54:00+00:00:\n¡Noche de la cremà! 🔥🔥🔥🔥🔥\nAlicante cierra sus fiestas de Hogueras con su noche mágica: la cremà. Deseamos a todos los festeros la mejor de todas las noches. Disfrutad con esa magia.\n\nPor ese motivo, estamos cerrados: es festivo local.\n\n¡Feliz noche de la cremà! https://t.co/ITc2GbltO7\nTweet by Punto Gofre | Verdaderos gofres belgas (@puntogofre) on 2024-06-21 10:04:00+00:00:\n¡Tenemos ganadora! 🥳\n@neubc_ \n\nFelicidades, escríbenos por privado para hacerte llegar tu premio.\n\nGracias a todos, en julio... en julio otro 😁\nTweet by Punto Gofre | Verdaderos gofres belgas (@puntogofre) on 2024-06-20 10:30:00+00:00:\nHoy es el día más feliz del año y qué feliz eres cuando recibes un Bizum con el concepto: \"Para gofres\".\n\nO cuando ganas un sorteo 👉por ello si haces RT podrás ganar 1 caja de gofres con chocolate. Mañana el ganador.\n\n✅Síguenos y a @Bizum_ES \n✅RT\n✅Comenta con #BIZUMDAY https://t.co/ZzjoXOTmhe\nTweet by Punto Gofre | Verdaderos gofres belgas (@puntogofre) on 2024-06-21 07:57:12+00:00:\nEn 2 horas saco ganador... ¡Corre que áun tienes tiempo de participar!\nTweet by Punto Gofre | Verdaderos gofres belgas (@puntogofre) on 2024-06-21 07:26:00+00:00:\nGofre con chocolate, helado de stracciatella, mini Oreos y nata 🤤🤤🤤🤤🤤\n\nLo sé, me he superado. ¿Lo probaríais? https://t.co/eVSEBb5jXs\nTweet by Punto Gofre | Verdaderos gofres belgas (@puntogofre) on 2024-06-20 07:09:00+00:00:\nBienvenido verano 😊Hoy, oficialmente, comienza el verano.\n\nDecidme vuestros planes, necesito ideas 😀 https://t.co/CJACZB5Q3R\nTweet by Punto Gofre | Verdaderos gofres belgas (@pun",
+  "analysis": {
+    "created": 1719422519,
+    "model": "mixtral-8x22b-instruct",
+    "usage": {
+      "prompt_tokens": 984,
+      "completion_tokens": 82,
+      "total_tokens": 1066
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Análisis de sentimiento:\n\n1. Emoción principal: Positiva\n2. Elementos específicos:\n   - Uso de emojis felices y entusiastas, como 😁, 😊, 🥳, 🤤\n   - Frases motivadoras y alegres, como \"¡Feliz miércoles!\", \"¡Tenemos ganadora!\", \"",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 10.126693725585938
+}

@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Kinder Bueno (@KinderBueno_es) on 2024-06-25 08:19:33+00:00:\nBuenous díuas\nTweet by 🌙 rafa (@screamwxrks_) on 2024-06-21 12:40:45+00:00:\nkindæ buenou https://t.co/KvSrsjtkVv\nTweet by Kinder Bueno (@KinderBueno_es) on 2024-05-04 08:00:01+00:00:\n#maythe4thbewithyou #SacaTuLadoBueno #KinderBueno https://t.co/cwZdoWW2hK\nTweet by Kinder Bueno (@KinderBueno_es) on 2023-11-29 16:10:10+00:00:\nEscribe Kinder Bueno + tu fecha de nacimiento en el buscador de GIFs y pon el primero que te aparezca 😎👇 https://t.co/XMbpdOTsZq\nTweet by Kinder Bueno (@KinderBueno_es) on 2023-11-29 15:30:50+00:00:\nRT @GotTalentES: ¡Solo quedan TRES! ¿Cuál es tu #BuenoChallenge favorito? ¡Tú decides! Vota en la web oficial de #GotTalentEspaña y podrás ganar megapacks de @KinderBueno_es 😋 ¡#SacaTuLadoBueno e imítalos en redes sociales! #publi https://t.co/SUSGeB9Nsh https://t.co/XvFKLpqyFD\nTweet by Got Talent España (@GotTalentES) on 2023-11-28 16:43:37+00:00:\n¡Solo quedan TRES! ¿Cuál es tu #BuenoChallenge favorito? ¡Tú decides! Vota en la web oficial de #GotTalentEspaña y podrás ganar megapacks de @KinderBueno_es 😋 ¡#SacaTuLadoBueno e imítalos en redes sociales! #publi https://t.co/SUSGeB9Nsh https://t.co/XvFKLpqyFD\nTweet by Kinder Bueno (@KinderBueno_es) on 2023-11-21 10:13:44+00:00:\nRT @GotTalentES: Nos sorprendieron con sus #BuenoChallenges y ahora… ¡Te toca votar por tu favorito! Entra en la web oficial de #GotTalentEspaña, vota y podrás ganar megapacks de @KinderBueno_es 😋 ¡#SacaTuLadoBueno e imítalos en redes sociales! 👉 https://t.co/sUDNkDBhmO #publi https://t.co/NZ5m76OTdZ\nTweet by Got Talent España (@GotTalentES) on 2023-11-20 10:27:00+00:00:\nNos sorprendieron con sus #BuenoChallenges y ahora… ¡Te toca votar por tu favorito! Entra en la web oficial de #GotTalentEspaña, vota y podrás ganar megapacks de @KinderBueno_es 😋 ¡#SacaTuLadoBueno e imítalos en redes sociales! 👉 https://t.co/sUDNkDBhmO #publi https://t.co/NZ5m76OTdZ\nTweet by Kinder Bueno (@KinderBueno_es) on 2023-10-31 08:16:31",
+  "analysis": {
+    "created": 1719423847,
+    "model": "mixtral-8x22b-instruct",
+    "usage": {
+      "prompt_tokens": 988,
+      "completion_tokens": 82,
+      "total_tokens": 1070
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Análisis de sentimiento:\n\n1. Emoción principal: Positiva\n2. Elementos específicos:\n   - Uso de emojis y hashtags positivos, como 😎, 😋, #SacaTuLadoBueno, #BuenoChallenge, y #maythe4thbewithyou.\n   - Interacción con los seguidores, como pedir",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 6.086238861083984
+}

@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Defensor del Pueblo (@DefensorPuebloE) on 2024-06-25 20:53:46+00:00:\nÁngel Gabilondo ha participado en la entrega de los #PremiosArchiletras2024, que se ha celebrado en @casamerica \nHa entregado el Premio a la Innovación al proyecto CAREXIL-FR (CArtas de REpublicanos Españoles REfugiados y EXiliados en Francia) @archiletras\nhttps://t.co/SCcquKNQ57 https://t.co/HRF3xChOFW\nTweet by Defensor del Pueblo (@DefensorPuebloE) on 2024-06-21 11:59:03+00:00:\nÁngel Gabilondo se ha reunido con los presidentes de @Confepiscopal  y @MediosConfer a instancias de estas instituciones \n\nLe han presentado las medidas que prevén realizar considerando el Informe sobre abusos sexuales en la Iglesia del @DefensorPuebloE \nhttps://t.co/nUm9bMIgRp https://t.co/No0Sfm5Ab2\nTweet by Defensor del Pueblo (@DefensorPuebloE) on 2024-06-20 07:07:57+00:00:\nEn el #DíaDelRefugiado el @DefensorPuebloE recuerda que la protección internacional de las personas refugiadas es una prioridad para la defensa de los derechos humanos\n#ConLosRefugiados https://t.co/PoT4CKvS7m\nTweet by Defensor del Pueblo (@DefensorPuebloE) on 2024-06-19 12:22:43+00:00:\nEl @DefensorPuebloE, Ángel Gabilondo, ha asistido a los actos de conmemoración del #10AniversarioFelipeVI\n\nLos actos han contado con representantes de los poderes del Estado y 19 ciudadanos han sido condecorados con la medalla de la Orden del Mérito Civil\n\nhttps://t.co/qQruDffTRE https://t.co/6O0Fs7ezE7\nTweet by Defensor del Pueblo (@DefensorPuebloE) on 2024-06-17 15:06:53+00:00:\nÁngel Gabilondo ha mantenido un encuentro institucional con el director general de la\n@guardiacivil, Leonardo Marcos\n\nHan analizado asuntos relacionados con los requerimientos ciudadanos que, desde el @DefensorPuebloE,  se remiten a la @guardiacivil \n\nhttps://t.co/DdfLjNjvRd https://t.co/Zlxdbkmahd\nTweet by Defensor del Pueblo (@DefensorPuebloE) on 2024-06-14 12:09:09+00:00:\nÁngel Gabilondo se ha reunido este viernes con representantes de @MareaResidencia y de la Plataforma Verdad y",
+  "analysis": {
+    "created": 1719426303,
+    "model": "mixtral-8x22b-instruct",
+    "usage": {
+      "prompt_tokens": 846,
+      "completion_tokens": 82,
+      "total_tokens": 928
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "1. Emoción principal: Neutral\n2. Elementos específicos: Los tweets proporcionados son principalmente informativos y no muestran una emoción clara. Se centran en las actividades y reuniones de Ángel Gabilondo, Defensor del Pueblo, con diferentes organizaciones e instituciones. Los temas incluyen la entrega de premios, reuniones con lí",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 19.1999990940094
+}

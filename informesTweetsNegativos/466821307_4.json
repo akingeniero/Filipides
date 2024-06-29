@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by CNE Costa Rica (@CNECostaRica) on 2024-06-26 17:45:13+00:00:\n¡Seguimos trabajando por Costa Rica! ​​\n\nEn seis meses ya hemos finalizamos 13 proyectos en el país 🤓 ​​\n\nY hay mas buenas noticias para muchas comunidades U0001f979 https://t.co/1WsdAxxDfW\nTweet by CNE Costa Rica (@CNECostaRica) on 2024-06-26 17:45:14+00:00:\nLa CNE trabaja con pasos firmes en más de 40 obras que esperamos concluir con pronto💪🏻 ​​\n\nCon ellas brindaremos desarrollo a las personas,  disminuyendo la vulnerabilidad y dejando una Costa Rica cada vez más segura. \n\n#CNEConstruyeDesarrollo\nTweet by CNE Costa Rica (@CNECostaRica) on 2024-06-24 19:08:27+00:00:\nLa CNE emite Alerta Naranja para la Vertiente del Pacífico, Valle Central y Zona Norte, sumado a Alerta Verde para el Caribe 🟢🟠🌧️ https://t.co/jnAAwH8Joj\nTweet by CNE Costa Rica (@CNECostaRica) on 2024-06-24 19:08:27+00:00:\nEsto debido al paso de varias Ondas Tropicales que se espera pasen en los próximos días por el país, además, de la saturación de los suelos que se mantiene debido a las lluvias de los días anteriores.\nTweet by CNE Costa Rica (@CNECostaRica) on 2024-06-24 19:08:28+00:00:\nAnte ello, solicitamos a la población permanecer atenta a los medios oficiales y ante cualquier emergencia, llamar al 9-1-1 para ser atendidos por los Comités Municipales de Emergencia de su localidad.\nTweet by CNE Costa Rica (@CNECostaRica) on 2024-06-22 20:00:00+00:00:\n¿Ya sabías este dato? 👀\n\nDe 1 a  3 ciclones nos podrían afectar directamente o bien, crearnos una condición de inestabilidad debido a fuertes temporales. Por ello, nosotros estamos preparados 💪🏻 https://t.co/aVWzYQaqX7\nTweet by CNE Costa Rica (@CNECostaRica) on 2024-06-22 16:01:00+00:00:\nRefugio, eventos culturales y deportivos llegan a Bagaces con la reconstrucción del Gimnasio en Guayabo.🥳\n\nAdemás, la obra será utilizada como albergue temporal en momento de emergencia con capacidad para la atención integral de  200 personas . https://t.co/drq3UQegSw\nTweet by CNE Costa Rica (@CNECostaRica)",
+  "analysis": {
+    "created": 1719427427,
+    "model": "mixtral-8x22b-instruct",
+    "usage": {
+      "prompt_tokens": 866,
+      "completion_tokens": 80,
+      "total_tokens": 946
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "1. Emoción principal: Positiva\n2. Elementos específicos:\n   - Uso de exclamaciones y emojis positivos (¡Seguimos trabajando por Costa Rica!, 🤓, U0001f979, 💪🏻)\n   - Mención de logros y progreso (13 proyectos finalizados, más de 40 obras en proceso)",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 5.772612810134888
+}

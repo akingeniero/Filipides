@@ -27,7 +27,8 @@ async def fetch_and_analyze_tweets(user_id: int) -> None:
         "analysis": analysis,
         "elapsed_time": elapsed_time
     }
-    save_analysis(str(inform), f"{user_id}.json")
+    inform_str = json.dumps(inform, indent=4, ensure_ascii=False)
+    save_analysis(inform_str, f"{user_id}.json")
 
 
 async def fetch_and_analyze_news(url_news: str) -> None:
@@ -50,7 +51,7 @@ async def fetch_and_analyze_news(url_news: str) -> None:
         "elapsed_time": elapsed_time
     }
     inform_str = json.dumps(inform, indent=4, ensure_ascii=False)
-    save_analysis(inform_str, "notice.json")
+    save_analysis(inform_str, f'{review[8:28]}.json')
 
 
 async def process_tweets(tweets_coroutine) -> list:

@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: Una joven permanece en la UCI tras caerle en la cabeza una farola en Pontevedra que cedió después de que un amigo suyo se subiese encima Contenido: Una joven de 18 años permanece ingresada en la UCI del Hospital Montecelo, con lesiones graves, tras ser golpeada en la cabeza por una farola a la que supuestamente se subió un amigo. Según consta en el atestado de la Policía Local de Pontevedra, el suceso tuvo lugar en la madrugada de este domingo en la calle Barón, junto al Parador Nacional de Turismo, en la zona monumental de Pontevedra. La farola se rompió por la base después de que un amigo de la joven se subiese encima de la luminaria que cedió, golpeando a la chica, tal y como consta en el parte policial. Una ambulancia del 061 trasladó al hospital a la adolescente, consciente y con una herida abierta en la cabeza por la que sangraba de manera abundante. La chica sufre un traumatismo craneoencefálico y una fractura dorsal. Los médicos están valorando la posibilidad de trasladarla a Vigo para ser atendida por especialistas en neurocirugía.",
+    "analysis": {
+        "created": 1719489135,
+        "model": "mixtral-8x22b-instruct",
+        "usage": {
+            "prompt_tokens": 463,
+            "completion_tokens": 86,
+            "total_tokens": 549
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "1. Emoción principal: Negativa\n2. Elementos específicos: La noticia menciona que una joven de 18 años sufrió lesiones graves tras ser golpeada en la cabeza por una farola que se rompió después de que un amigo se subiera encima de ella. La joven fue trasladada al hospital con una herida abierta en la cabeza y sangr",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 4.79584002494812
+}

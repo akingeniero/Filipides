@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: El abogado de éxito que encontró su lugar en África Contenido: ",
+    "analysis": {
+        "created": 1719441407,
+        "model": "mixtral-8x22b-instruct",
+        "usage": {
+            "prompt_tokens": 192,
+            "completion_tokens": 91,
+            "total_tokens": 283
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "1. Emoción principal: Positiva\n2. Elementos específicos: El título y el contenido del tuit destacan el éxito y la realización personal del abogado que encontró su lugar en África. Palabras como \"éxito\" y \"encontró su lugar\" contribuyen a la emoción positiva del tuit.\n3. Explicación del sentimiento: El tuit transm",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 7.645220756530762
+}

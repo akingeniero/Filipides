@@ -1,0 +1,10 @@
+{
+    "review": "Titulo: El abogado de éxito que encontró su lugar en África Contenido: ",
+    "analysis": {
+        "model": "gpt-3.5-turbo",
+        "message": {
+            "content": "Análisis de sentimiento:\n\n1. Emoción principal: Neutral.\n\n2. Elementos específicos:\n- El abogado de éxito.\n- Encontró su lugar en África.\n\n3. Explicación del sentimiento:\nEl texto proporcionado no ofrece suficiente información para determinar una emoción claramente positiva o negativa, por lo tanto, se clasifica como neutral. Los elementos específicos mencionados son el abogado de éxito y su encuentro con África. Estos elementos no presentan connotaciones emocionales fuertes que indiquen una inclinación clara hacia lo positivo o lo negativo. \n\n4. Matices o cambios de tono:\nDado que el texto es breve y no proporciona detalles adicionales, no se identifican matices o cambios de tono en la noticia. Sería necesario contar con más información para poder determinar si hay algún matiz emocional o cambio de tono en el contenido."
+        }
+    },
+    "elapsed_time": 3.186823844909668
+}

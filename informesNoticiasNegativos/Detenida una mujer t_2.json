@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: Detenida una mujer tras hallarse muerto a su recién nacido en su vivienda en Cáceres Contenido: La Guardia Civil ha detenido este viernes a una mujer en Cilleros (Cáceres) que habría dado a luz en su domicilio, tras hallar muerto a su bebé en la vivienda. La Guardia Civil ha confirmado la detención de una persona, pero no ha ofrecido más datos acerca de la edad de la mujer ni de las circunstancias que rodean a la investigación que se ha abierto. La juez de guardia de la zona ha acudido al levantamiento del cadáver del bebé en el domicilio situado en esta localidad de Sierra de Gata.Los agentes acudieron ayer a la vivienda donde vivía la mujer tras ser alertados sobre el nacimiento de un bebé. Según varias fuentes, la mujer ha sido detenido hoy porque tras el parto en casa tuvo que ser atendida en el hospital de Coria.Los agentes acudieron al domicilio acompañados de un equipo de los servicios sanitarios, pero no se pudo hacer nada por el bebé y se certificó la muerte.",
+    "analysis": {
+        "created": 1719444163,
+        "model": "llama3-70b",
+        "usage": {
+            "prompt_tokens": 496,
+            "completion_tokens": 100,
+            "total_tokens": 596
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Análisis de sentimiento:\n\n1. Emoción principal: Negativa\n\n2. Elementos específicos:\n   - La noticia comienza con la detención de una mujer, lo que ya establece un tono negativo.\n   - La muerte del bebé recién nacido es el elemento más impactante y emocionalmente cargado, lo que contribuye a la emoción principal negativa.\n   - La descripción de la escena en la",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 5.85108208656311
+}

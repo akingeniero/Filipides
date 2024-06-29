@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Miss Hamptons (@MissHamptons) on 2019-08-14 14:18:08+00:00:\nEn https://t.co/8RIHwakjx8 seguimos de rebajas😎! Todo a 20€ + envío GRATIS por tiempo limitado! https://t.co/YJeAP8B783\nTweet by Miss Hamptons (@MissHamptons) on 2019-02-05 11:39:49+00:00:\n¿Tienes ya tu regalo de ❤? ¡Entra en https://t.co/r9lSJWvkOf y llévate 2x1! https://t.co/fLLIN1Oiye\nTweet by Miss Hamptons (@MissHamptons) on 2019-02-04 10:12:46+00:00:\n¿Por qué comprar sólo una, cuando puedes llevarte 2x1? ❤ #SanValentín se acerca y tenemos el regalo perfecto en https://t.co/r9lSJWvkOf\nTweet by Miss Hamptons (@MissHamptons) on 2018-11-25 23:14:05+00:00:\nLos lunes, si son Cybermonday, son menos lunes. \nEn https://t.co/cpITYVxa11 2x1 más envío gratis! https://t.co/Q2KKuOGsTe\nTweet by Miss Hamptons (@MissHamptons) on 2018-11-23 10:11:39+00:00:\n¡¡Black friday , últimas horas de 2x1 en https://t.co/r9lSJWvkOf !!\nCompra unas miss y llévate otras gratis ! https://t.co/4r9B6OprhV\nTweet by Miss Hamptons (@MissHamptons) on 2018-11-19 09:05:38+00:00:\nLunes... https://t.co/dvJele9OZ5\nTweet by Miss Hamptons (@MissHamptons) on 2018-11-14 09:04:26+00:00:\nRT @HawkersCo: ¿Os gustaría ir al Gran Premio de Cheste del Mundial de Moto GP? 🏁\n\nEn nuestro perfil de Instagram @hawkersco estamos SORTEANDO 4 ENTRADAS para todo el fin de semana! 🏆\nTweet by HAWKERS CO. (@HawkersCo) on 2018-11-13 16:42:27+00:00:\n¿Os gustaría ir al Gran Premio de Cheste del Mundial de Moto GP? 🏁\n\nEn nuestro perfil de Instagram @hawkersco estamos SORTEANDO 4 ENTRADAS para todo el fin de semana! 🏆\nTweet by Miss Hamptons (@MissHamptons) on 2018-11-12 10:50:24+00:00:\nNo te pierdas el 2x1 que tenemos en https://t.co/YvCyXcleM2, compra dos artículos y paga solo uno!  No hay mejor forma de empezar un lunes... https://t.co/9PYDZi7UnC\nTweet by Miss Hamptons (@MissHamptons) on 2018-11-05 16:52:34+00:00:\nRT @HawkersCo: GRAN SORTEO ESPECIAL🎁\n#HawkersBlackFriday\n\n- Viaje a NY para 2 personas (vuelo + hotel)\n- IPHONE XS\n- GO PRO Hero 7\n- Auriculares BEATS\n",
+  "analysis": {
+    "created": 1719420778,
+    "model": "mixtral-8x22b-instruct",
+    "usage": {
+      "prompt_tokens": 976,
+      "completion_tokens": 83,
+      "total_tokens": 1059
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Análisis de sentimiento:\n\n1. Emoción principal: Positiva\n2. Elementos específicos: Los elementos específicos que contribuyen a la emoción positiva incluyen las ofertas y promociones mencionadas en los tweets, como \"todo a 20€ + envío GRATIS por tiempo limitado\", \"2x1\", \"envío gratis\", y",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 7.4130799770355225
+}

@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by frigo_helados (@frigo_helados) on 2024-05-16 15:28:36+00:00:\nRT @YofuiaEGB: Este verano vuelve el Drácula a los carteles de @frigo_helados https://t.co/pPpvSAsHfZ\nTweet by Yo fuí a EGB (@YofuiaEGB) on 2024-05-10 17:32:27+00:00:\nEste verano vuelve el Drácula a los carteles de @frigo_helados https://t.co/pPpvSAsHfZ\nTweet by frigo_helados (@frigo_helados) on 2024-03-05 11:07:53+00:00:\nRT @Alfon_Arranz: Grandes noticias, nuestros amigos de @frigo_helados traen de regreso a su cartel....El drácula!!! El verano empieza a pintar bien. https://t.co/6KWu2bgJva\nTweet by A l f o n A r r a n z (@Alfon_Arranz) on 2024-03-02 17:45:35+00:00:\nGrandes noticias, nuestros amigos de @frigo_helados traen de regreso a su cartel....El drácula!!! El verano empieza a pintar bien. https://t.co/6KWu2bgJva\nTweet by frigo_helados (@frigo_helados) on 2023-04-03 07:45:06+00:00:\nRT @TrIxebm: ¡Ha vuelto! ¡Ha vuelto! ¡No puedo parar de  llorar de la emoción! Es el regreso más esperado...¡Por fin @frigo_helados ! https://t.co/VwKrsVZgNt\nTweet by ꧁༒☬Tяιѕχιє☬༒꧂,♣️ok (@TrIxebm) on 2023-04-01 10:52:06+00:00:\n¡Ha vuelto! ¡Ha vuelto! ¡No puedo parar de  llorar de la emoción! Es el regreso más esperado...¡Por fin @frigo_helados ! https://t.co/VwKrsVZgNt\nTweet by frigo_helados (@frigo_helados) on 2023-03-20 10:44:07+00:00:\nRT @palencia_ana: Carpe diem!!! https://t.co/ZN8oudazWr\nTweet by Ana Palencia (@palencia_ana) on 2023-03-20 10:30:49+00:00:\nCarpe diem!!! https://t.co/ZN8oudazWr\nTweet by frigo_helados (@frigo_helados) on 2022-08-05 07:33:56+00:00:\nRT @mar7528: Sabores de mi infancia...😊😛\n@frigo_helados \n#Verano2022 #Nostalgia #TeamDracula https://t.co/KE8ZslahKW\nTweet by Mar🇪🇸🖤 (@mar7528) on 2022-08-04 17:56:01+00:00:\nSabores de mi infancia...😊😛\n@frigo_helados \n#Verano2022 #Nostalgia #TeamDracula https://t.co/KE8ZslahKW\nTweet by frigo_helados (@frigo_helados) on 2022-07-27 08:29:07+00:00:\nRT @En_mis_retinas: Qué puede pasar si unes los eternos #flash con los helados favoritos de los #ochenta? Pue",
+  "analysis": {
+    "created": 1719423437,
+    "model": "llama3-70b",
+    "usage": {
+      "prompt_tokens": 1098,
+      "completion_tokens": 100,
+      "total_tokens": 1198
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Análisis de sentimiento del tweet:\n\n**1. Emoción principal:** Positiva\n\n**2. Elementos específicos:**\n\n* La repetición de la noticia sobre el regreso de \"El Drácula\" a los carteles de @frigo_helados, lo que sugiere una gran expectativa y entusiasmo.\n* El uso de expresiones como \"Grandes noticias\", \"¡Ha vuelto!\", \"El verano empie",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 7.897742033004761
+}

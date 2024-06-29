@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: Apps y 5G que ayudan a empezar de cero en otro país Contenido: ",
+    "analysis": {
+        "created": 1719440395,
+        "model": "mixtral-8x22b-instruct",
+        "usage": {
+            "prompt_tokens": 195,
+            "completion_tokens": 88,
+            "total_tokens": 283
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Before proceeding with the sentiment analysis, I would like to clarify that the provided text is a title without any accompanying content. Therefore, the analysis will be based solely on the title and may not be as comprehensive as it would be with additional context.\n\n1. Emoción principal: Neutral\n2. Elementos específicos: The title \"Apps y 5G que ayudan a empezar de cero en otro país\" (Apps",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 7.833988904953003
+}

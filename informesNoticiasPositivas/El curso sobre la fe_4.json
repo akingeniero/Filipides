@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: El curso sobre la felicidad que triunfa en la universidad de Yale Contenido: ",
+    "analysis": {
+        "created": 1719441304,
+        "model": "mixtral-8x22b-instruct",
+        "usage": {
+            "prompt_tokens": 195,
+            "completion_tokens": 85,
+            "total_tokens": 280
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "1. Emoción principal: Positiva\n2. Elementos específicos: El título del artículo es \"El curso sobre la felicidad que triunfa en la universidad de Yale\", lo que indica que el tema del curso es la felicidad y que ha tenido éxito en una prestigiosa universidad. La palabra \"triunfa\" sugiere que el curso ha sido bien",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 5.601337909698486
+}

@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by EmergenciasGuayaquil (@EmergenciasGye) on 2024-06-26 10:11:32+00:00:\nRT @BomberosGYE: #BCBGInforma | Atendemos incendio en fábrica de pallets, ubicada en Km 17 vía a Daule, en la Coop. San Francisco, sector El Chorrillo. \n\nSe despacharon once unidades de combate, dos camiones cisterna, dos ambulancias y un vehículo para recarga de Equipos de Respiración Autónoma. https://t.co/dAEtU4TAtj\nTweet by Bomberos Guayaquil (@BomberosGYE) on 2024-06-26 10:10:11+00:00:\n#BCBGInforma | Atendemos incendio en fábrica de pallets, ubicada en Km 17 vía a Daule, en la Coop. San Francisco, sector El Chorrillo. \n\nSe despacharon once unidades de combate, dos camiones cisterna, dos ambulancias y un vehículo para recarga de Equipos de Respiración Autónoma. https://t.co/dAEtU4TAtj\nTweet by EmergenciasGuayaquil (@EmergenciasGye) on 2024-06-01 22:08:14+00:00:\nRT @danilo_javier: @EmergenciasEc @EmergenciasGye @GyeResponde @ATM_Transito @ATMGuayaquil que verga pasa en la Pedro Menéndez? Llevo una atacando en el mismo tramo hp https://t.co/HhXo0cedTU\nTweet by Danilo. (@danilo_javier) on 2024-06-01 22:07:42+00:00:\n@EmergenciasEc @EmergenciasGye @GyeResponde @ATM_Transito @ATMGuayaquil que verga pasa en la Pedro Menéndez? Llevo una atacando en el mismo tramo hp https://t.co/HhXo0cedTU\nTweet by EmergenciasGuayaquil (@EmergenciasGye) on 2024-04-19 17:39:15+00:00:\nRT @Bombina34: AYUDA URGENTE!! SE CAYERON los postes de energía Electrica @servicioscnelep en la Cdla Naval Norte, al Pie de CNT y Colegio Aguirre Abad. @EmergenciasEc @EmergenciasGye @servicioscnelep @alcaldiagye @luisantonio_r https://t.co/ILnrbWUBSq\nTweet by Bombina34 (@Bombina34) on 2024-04-19 17:34:19+00:00:\nAYUDA URGENTE!! SE CAYERON los postes de energía Electrica @servicioscnelep en la Cdla Naval Norte, al Pie de CNT y Colegio Aguirre Abad. @EmergenciasEc @EmergenciasGye @servicioscnelep @alcaldiagye @luisantonio_r https://t.co/ILnrbWUBSq\nTweet by EmergenciasGuayaquil (@EmergenciasGye) on 2024-02-11 16:17:46+00:00:\nRT @CVil",
+  "analysis": {
+    "created": 1719427571,
+    "model": "llama3-70b",
+    "usage": {
+      "prompt_tokens": 974,
+      "completion_tokens": 100,
+      "total_tokens": 1074
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Análisis de sentimiento del tweet:\n\n**1. Emoción principal:** Neutral\n\n**2. Elementos específicos:**\n\n* La ausencia de palabras o expresiones emocionales fuertes en el texto.\n* La presencia de información objetiva y factual sobre incidentes y situaciones de emergencia.\n* La utilización de hashtags y menciones a cuentas oficiales, lo que sugiere una intención informativa y profesional.\n\n**3. Explicación",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 21.98777198791504
+}

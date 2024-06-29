@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Alerta Catástrofes (@AlerCatastrofes) on 2022-01-06 22:51:17+00:00:\nCorea del Norte lanza un misil balístico hacia el mar de Japón https://t.co/RyVm5KuCKr https://t.co/kflF1QBBw7\nTweet by Alerta Catástrofes (@AlerCatastrofes) on 2022-01-06 21:59:39+00:00:\nUn tigre arranca la mano de una cuidadora en un zoológico en Japón https://t.co/IsQ8ODmoob https://t.co/vF1cUMpBs4\nTweet by Alerta Catástrofes (@AlerCatastrofes) on 2022-01-06 21:41:48+00:00:\nUn hombre muere tras caer en el cráter del volcán Kilauea de Hawái https://t.co/KOeiKBr30x https://t.co/lHxR5pbIhi\nTweet by Alerta Catástrofes (@AlerCatastrofes) on 2022-01-05 22:30:35+00:00:\nBomberos advierten que los gatos son unos pirómanos https://t.co/ZHZJPhSpxa https://t.co/zEz6YhEewP\nTweet by Alerta Catástrofes (@AlerCatastrofes) on 2022-01-05 22:12:13+00:00:\nUn meteorito explota en Estados Unidos con energía equivalente a 30 toneladas de TNT https://t.co/H6fplWj3hC https://t.co/B9FGtLksYA\nTweet by Alerta Catástrofes (@AlerCatastrofes) on 2022-01-05 21:38:06+00:00:\nMacron dice que quiere “joder” a los no vacunados https://t.co/NbOf7PbpRu https://t.co/eVJxYxO9CK\nTweet by Alerta Catástrofes (@AlerCatastrofes) on 2022-01-05 21:20:36+00:00:\nMás de 20 niños en Alemania reciben ‘por error’ vacunas contra la COVID-19 para adultos https://t.co/XUNoCz06kW https://t.co/55kxTdId5Q\nTweet by Alerta Catástrofes (@AlerCatastrofes) on 2022-01-03 22:26:03+00:00:\nLas principales potencias quieren evitar una guerra nuclear https://t.co/2piSAmSmWE https://t.co/V7FVArqM9w\nTweet by Alerta Catástrofes (@AlerCatastrofes) on 2022-01-03 21:50:38+00:00:\nMédicos israelíes predicen que Ómicron será el fin de la pandemia https://t.co/hCcSlz334A https://t.co/QgIYVK3s62\nTweet by Alerta Catástrofes (@AlerCatastrofes) on 2022-01-03 21:22:26+00:00:\nCataluña detecta varios casos de «flurona» https://t.co/ntzwHdivBb https://t.co/olFuxW2lHv\nTweet by Alerta Catástrofes (@AlerCatastrofes) on 2022-01-02 23:00:29+00:00:\nAustria legaliza el suicidio asi",
+  "analysis": {
+    "created": 1719426134,
+    "model": "mixtral-8x22b-instruct",
+    "usage": {
+      "prompt_tokens": 1018,
+      "completion_tokens": 82,
+      "total_tokens": 1100
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "1. Emoción principal: Neutral\n2. Elementos específicos: El tono neutral se debe a que los tweets presentan información objetiva sobre eventos y noticias, sin mostrar una emoción clara o un juicio de valor. Los temas incluyen lanzamientos de misiles, accidentes, desastres naturales y noticias relacionadas con la pandemia de COVID-19",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 51.35764193534851
+}

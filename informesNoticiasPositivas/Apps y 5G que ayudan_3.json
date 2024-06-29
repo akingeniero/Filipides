@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: Apps y 5G que ayudan a empezar de cero en otro país Contenido: ",
+    "analysis": {
+        "created": 1719440369,
+        "model": "llama3-70b",
+        "usage": {
+            "prompt_tokens": 248,
+            "completion_tokens": 100,
+            "total_tokens": 348
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "A continuación, se presenta el análisis de sentimiento de la noticia proporcionada:\n\n**1. Emoción principal:** Neutral\n\n**2. Elementos específicos:**\n\n* La palabra \"ayudan\" tiene una connotación positiva, sugiere que las apps y el 5G son beneficiosos para alguien.\n* La frase \"empezar de cero en otro país\" puede generar una sensación de esperanza o oportunidad, lo que también",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 3.151495933532715
+}

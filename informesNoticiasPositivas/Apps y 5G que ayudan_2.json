@@ -1,0 +1,10 @@
+{
+    "review": "Titulo: Apps y 5G que ayudan a empezar de cero en otro país Contenido: ",
+    "analysis": {
+        "model": "gpt-3.5-turbo",
+        "message": {
+            "content": "Análisis de sentimiento:\n\n1. Emoción principal: Neutral\n\n2. Elementos específicos:\n- \"Apps y 5G que ayudan a empezar de cero en otro país\": La idea de utilizar aplicaciones y tecnología 5G para facilitar la adaptación y el inicio de una nueva vida en otro país puede generar una sensación de interés y utilidad.\n  \n3. Explicación del sentimiento:\nEl texto proporciona información sobre el uso de aplicaciones móviles y tecnología 5G para ayudar a las personas a comenzar de cero en otro país. Esta temática no genera una emoción claramente positiva o negativa, sino que se percibe de manera neutral. La neutralidad se debe a que la noticia se enfoca en una herramienta tecnológica que puede resultar beneficiosa para quienes se encuentran en esa situación, sin incluir elementos emocionales fuertes que inclinen la balanza hacia lo positivo o negativo.\n\n4. Matices o cambios de tono:\nDado que el texto proporcionado es breve y no contiene detalles adicionales, no se observan matices o cambios de tono en la noticia. Sin embargo, si se agregaran ejemplos concretos de cómo estas aplicaciones y tecnología 5G han impactado positiva o negativamente en la vida de las personas que han emigrado, podrían surgir matices emocionales que modificarían la percepción neutral inicial."
+        }
+    },
+    "elapsed_time": 4.339835166931152
+}
