@@ -1,0 +1,10 @@
+{
+    "review": "Titulo: En busca de la vacuna perfecta contra la tuberculosis Contenido: ",
+    "analysis": {
+        "model": "gpt-3.5-turbo",
+        "message": {
+            "content": "Análisis de sentimiento:\n\n1. Emoción principal:\nLa emoción principal en el texto proporcionado es neutra.\n\n2. Elementos específicos:\n- El título menciona la búsqueda de la vacuna perfecta contra la tuberculosis, lo cual denota un enfoque positivo en la lucha contra esta enfermedad.\n- Sin embargo, al no proporcionar más detalles en el contenido, la neutralidad se mantiene ya que no se expresan opiniones o emociones específicas.\n\n3. Explicación del sentimiento:\nEl sentimiento se clasifica como neutral debido a que el texto presenta información de manera objetiva y descriptiva sobre la búsqueda de una vacuna contra la tuberculosis. Aunque el título sugiere un enfoque positivo al mencionar la búsqueda de una vacuna perfecta, al no ofrecer más detalles en el contenido, no se puede inferir una emoción claramente positiva o negativa.\n\n4. Matices o cambios de tono:\nDado que el texto es breve y no ofrece más información que el título, no se identifican matices o cambios de tono en la noticia. La neutralidad se mantiene a lo largo del texto al no expresar opiniones o juicios que puedan cambiar la percepción inicial de la búsqueda de la vacuna contra la tuberculosis."
+        }
+    },
+    "elapsed_time": 4.529029130935669
+}

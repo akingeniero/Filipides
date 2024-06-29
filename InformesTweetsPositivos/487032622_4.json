@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Helados Nestlé (@HeladosNestle) on 2023-09-15 09:00:37+00:00:\nRT @maxibon: Ya estáis tardando en apuntaros 🔥\nTweet by Maxibon (@maxibon) on 2023-09-15 08:28:43+00:00:\nYa estáis tardando en apuntaros 🔥\nTweet by Maxibon (@maxibon) on 2023-09-13 10:59:59+00:00:\nInfojobs y #Maxibon presentan el Cool Job definitivo: 500€ al día por probar Maxibones. \nUna experiencia única que durará 2 días y, además, el primero, te dejaremos teletrabajarlo. Así somos 😉 \n\n¿Te interesa? Claro que sí. @InfoJobs \nInscríbete 👉 https://t.co/Md7FjQ1W9d https://t.co/FlIat127lx\nTweet by Helados Nestlé (@HeladosNestle) on 2023-05-22 10:26:47+00:00:\n¡SORTEO! ¿Estás listo para vivir una experiencia EXTRÊME en el Festival de Les Arts en Valencia? ✨🍦\n1- Síguenos por aquí.\n2-Comenta qué look EXTREMO llevarías y\n3- Menciona al menos a un amigo en tu comentario \n¡Suerte! Tienes hasta el 28\nBBLL: https://t.co/KTaAgBjuSQ https://t.co/9QC4auOV0Z\nTweet by Helados Nestlé (@HeladosNestle) on 2023-05-29 13:16:43+00:00:\n🎉Ganadores del sorteo🎉\n🥳🎫 ¡Felicidades a @daviiiiiiii8, @Tamele96, @cristihara, @gerardamigo y @cosmocatband! 🎫🥳\n¡Preparad esos looks festivaleros para disfrutar del #FestivalDeLesArts2023! 🎵🎉🎶\n\nEnviadnos un DM con vuestros datos 😉\n\n🌟¡Gracias a todos por participar! 🌟\nTweet by Helados Nestlé (@HeladosNestle) on 2022-08-23 07:47:01+00:00:\n❤️🚀\nTweet by dolcett (@DolcettSecret) on 2022-08-22 20:55:16+00:00:\nEl mejor polo de todos los tiempos por siempre ❤️#colajet @HeladosNestle https://t.co/w2t7N2PrUs\nTweet by Helados Nestlé (@HeladosNestle) on 2022-05-12 08:15:23+00:00:\nLlega el Maxibon más salvaje, con trocitos del auténtico chocolate Jungly y galleta Maxibon. ¿Te lo vas a perder? #100x100Único #ElMaxibonMásSalvaje https://t.co/0Z76OAx66C\nTweet by Helados Nestlé (@HeladosNestle) on 2022-05-05 13:48:47+00:00:\nRT @TeamHeretics: ¿Eres el mejor JUNGLA de tu casa? Ha llegado tu momento.\n\nSi eres uno de los que carrilea con tus amigos, inscríbete en la JUNGLY CUP y demuestra tu talento de la m",
+  "analysis": {
+    "created": 1719423701,
+    "model": "mixtral-8x22b-instruct",
+    "usage": {
+      "prompt_tokens": 994,
+      "completion_tokens": 92,
+      "total_tokens": 1086
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "1. Emoción principal: Positiva\n2. Elementos específicos: El sentimiento positivo se deriva de la promoción de un trabajo único y bien remunerado, así como de la emoción generada por el sorteo de entradas para un festival. Los emojis utilizados, como el fuego (🔥), la cara sonriente con ojos guiñados (😉), y",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 5.463246822357178
+}

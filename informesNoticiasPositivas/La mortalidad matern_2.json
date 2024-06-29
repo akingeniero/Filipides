@@ -1,0 +1,10 @@
+{
+    "review": "Titulo: La mortalidad materna se ha reducido en el mundo en un 44 % desde 1990 Contenido: ",
+    "analysis": {
+        "model": "gpt-3.5-turbo",
+        "message": {
+            "content": "Análisis de sentimiento:\n\n1. Emoción principal:\nLa emoción principal en la noticia es positiva.\n\n2. Elementos específicos:\n- La reducción del 44% en la mortalidad materna desde 1990 es un dato positivo y alentador.\n- El hecho de que se mencione una disminución en la mortalidad materna implica progreso en la atención médica y en las condiciones de salud de las mujeres en el mundo.\n\n3. Explicación del sentimiento:\nEl sentimiento positivo se deriva de la buena noticia de que la mortalidad materna ha disminuido en un 44% desde 1990. Este dato refleja avances en la atención médica, enfoque en la salud materna y posiblemente mejor acceso a servicios de salud para las mujeres en diferentes partes del mundo. La reducción de la mortalidad materna es un indicador de mejora en las condiciones de vida y de salud de las mujeres, lo cual es motivo de celebración y optimismo.\n\n4. Matices o cambios de tono:\nDado que la noticia se centra en una reducción significativa en la mortalidad materna, no se observan matices negativos en el texto proporcionado. Sin embargo, se podría mencionar que el tono podría cambiar si se incluyeran detalles sobre desafíos persistentes en la atención materna o si se destacaran disparidades regionales en la reducción de la mortalidad, lo que podría añadir matices más complejos a la noticia."
+        }
+    },
+    "elapsed_time": 5.416574239730835
+}

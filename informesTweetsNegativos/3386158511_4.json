@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Emergencias Sevilla (@EmergenciasSev) on 2023-12-01 22:16:15+00:00:\n📲¿Nos sigues ya en el nuevo canal de #Whatsapp?\n⬇️ Abre este enlace y pulsa SEGUIR ⬇️\nhttps://t.co/PIaNewgRXQ\n🟥Únete para recibir todas la #InfoOficial sobre #Emergencias y #ServicioPúblico en #Sevilla.\nPara usuarios sin redes sociales y con información redundante ante caídas de otras plataformas.\nActívalo también en los teléfonos de tus mayores 👴🧓y tus peques\n🔔 Activa las notificaciones del canal\nComparte esta info entre tus contactos.\n#SeguridadCiudadana @Ayto_Sevilla\nTweet by Emergencias Sevilla (@EmergenciasSev) on 2024-06-24 16:40:11+00:00:\nDos agentes de #PolicíaSevilla heridos leves, 7 vehículos afectados y 70 botellas de butano recuperadas tras la intervención conjunta de #PolicíaSevilla y @policia \nEl #Metrocentro quedó normalizado.\n#SeguridadCiudadana @Ayto_Sevilla https://t.co/WkcB5YNVKt\nTweet by Emergencias Sevilla (@EmergenciasSev) on 2024-06-24 12:59:36+00:00:\n🔴 Ampliación: Medio centenar de botellas de butano han caído a la calzada durante la persecución. En algunos casos han causado daños a vehículos estacionados.\n#Metrocentro ha quedado cortado en Av. Carlos. Una vez retiradas las botellas se restablecerá el servicio.\nPolicía Local y Policia Nacional están recabando información de los afectados.\nEl detenido, un delincuente habitual, se encuentra en dependencias policiales.\n#Bomberos está inspeccionando la mercancía para garantizar la seguridad de las actuaciones.\n#SeguridadCiudadana @Ayto_Sevilla \nhttps://t.co/NOuqhc2htR\nTweet by Emergencias Sevilla (@EmergenciasSev) on 2024-06-24 12:38:41+00:00:\n🟥Un amplio dispositivo de #PoliciaSevilla y @policia ha intervenido en la persecución y detención de un varón de unos 50 años que sustrajo un camión de reparto de butano en la Av. Menéndez Pelayo #Sevilla.\nDesde la Av. Menéndez hasta el barrio del Porvenir, el conductor fue golpeando a algunos vehículos y tirando bombonas de butano que ha causado daños a vehículos estacionados.\nLa ",
+  "analysis": {
+    "created": 1719428290,
+    "model": "mixtral-8x22b-instruct",
+    "usage": {
+      "prompt_tokens": 815,
+      "completion_tokens": 79,
+      "total_tokens": 894
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "1. Emoción principal: Neutral\n2. Elementos específicos: El tono neutral se mantiene a lo largo de los tweets, ya que se trata de información objetiva y precisa sobre emergencias y servicios públicos en Sevilla. Los elementos específicos que contribuyen a este sentimiento incluyen la descripción de los eventos, como la persecución y detenc",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 4.88677978515625
+}

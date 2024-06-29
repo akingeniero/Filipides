@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: Casi 13 millones de personas se encuentran en riesgo de pobreza y/o exclusión social en España Contenido: Casi 13 millones de personas (12,7) se encuentran en riesgo de pobreza y/o exclusión social en España, según el XIV Informe 'El Estado de la Pobreza en España', presentado este martes 4 de junio por la Red de Lucha contra la Pobreza y la Exclusión Social en el Estado Español (EAPN-ES). Según el Informe, el riesgo de pobreza o exclusión social -tasa AROPE- ha pasado del 26% en 2022 al 26,5% en 2023, 400.000 personas más, debido sobre todo al encarecimiento de la vida. En concreto, el estudio muestra los efectos de la guerra en Ucrania, de la inflación y de la crisis energética en el conjunto de la población, con especial atención a factores específicos asociados con la generación de pobreza en España, especialmente la vivienda, la precariedad laboral, la brecha de género o tener una discapacidad. Respecto al riesgo de pobreza y baja intensidad en el empleo, el informe refleja que estos indicadores se han mantenido prácticamente estables. Aun así, EAPN señala que preocupa que 9,7 millones de personas vivan en riesgo de pobreza, con menos de 916 euros al mes por unidad de consumo. Además, los datos muestran que la feminización de la pobreza es un \"problema estructural\": hay 5,1 millones de mujeres pobres en España, 300.000 más que de hombres. Del estudio también se desprende que el 37,1% de los hogares no tienen capacidad para afrontar gastos imprevistos y que casi la mitad de la población (48,7%) presenta dificultades para llegar a fin de mes. En todo caso, el informe revela que el impacto de la pobreza severa, la población que vive en hogares con ingresos menores a 611 euros al mes, mejora en 2023 y prácticamente alcanza el cumplimiento proporcional de los objetivos anuales de la Agenda 2030. Sin embargo, apunta que afecta todavía a 3,9 millones de personas.",
+    "analysis": {
+        "created": 1719489681,
+        "model": "llama3-70b",
+        "usage": {
+            "prompt_tokens": 762,
+            "completion_tokens": 100,
+            "total_tokens": 862
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Análisis de sentimiento:\n\n**1. Emoción principal:** Negativa\n\n**2. Elementos específicos:**\n\n* La cifra alarmante de 13 millones de personas en riesgo de pobreza y/o exclusión social en España.\n* El aumento del 26% al 26,5% en la tasa de riesgo de pobreza o exclusión social en un año.\n* La mención a la \"feminización de la pobre",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 15.79346513748169
+}

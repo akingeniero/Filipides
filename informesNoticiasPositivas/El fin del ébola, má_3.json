@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: El fin del ébola, más cerca que nunca Contenido: ",
+    "analysis": {
+        "created": 1719442014,
+        "model": "llama3-70b",
+        "usage": {
+            "prompt_tokens": 242,
+            "completion_tokens": 100,
+            "total_tokens": 342
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "A continuación, se presenta el análisis de sentimiento de la noticia proporcionada:\n\n**1. Emoción principal:** Positiva\n\n**2. Elementos específicos:**\n\n* La palabra \"fin\" en el título, que implica una resolución o conclusión positiva.\n* La expresión \"más cerca que nunca\", que sugiere un avance significativo y esperanzador en la lucha contra el ébola.\n\n**3. Explic",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 3.8500030040740967
+}

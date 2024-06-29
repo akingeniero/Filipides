@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by sad (@lonesfeels) on 2024-06-22 05:31:09+00:00:\nOne of the Toughest lessons I’ve had to learn. https://t.co/wzynysC6NN\nTweet by sad (@lonesfeels) on 2024-06-26 17:39:22+00:00:\ni'm giving out what im receiving if it's fuck me its fuck you too.\nTweet by sad (@lonesfeels) on 2024-06-26 17:09:14+00:00:\nRT @lieslmao: need a vacation from wanting to kill myself\nTweet by Jimmy (@lieslmao) on 2024-06-26 13:20:26+00:00:\nneed a vacation from wanting to kill myself\nTweet by sad (@lonesfeels) on 2024-06-26 17:09:11+00:00:\nRT @lieslmao: god i am not one of ur strongest soldiers deadass stop i ain’t do anything to u\nTweet by Jimmy (@lieslmao) on 2024-06-26 08:38:21+00:00:\ngod i am not one of ur strongest soldiers deadass stop i ain’t do anything to u\nTweet by sad (@lonesfeels) on 2024-06-26 14:25:36+00:00:\nif you get mad at me for overthinking instead of reassuring me ima assume im right\nTweet by sad (@lonesfeels) on 2024-06-26 14:25:09+00:00:\nIN ORDER TO BE IN A HEALTHY RELATIONSHIP YOU GOTTA COMMUNICATE ABOUT THE THINGS THAT BOTHER YOU... EVEN IF YOU AGREE TO DISAGREE...RELATIONSHIPS AREN'T ALWAYS PERFECT\nTweet by sad (@lonesfeels) on 2024-06-26 13:37:27+00:00:\nIdc how busy you are.. YOU make time for who you want\nTweet by sad (@lonesfeels) on 2024-06-26 13:32:32+00:00:\nRT @lonesfeels: @user0000O0 depressed\nTweet by sad (@lonesfeels) on 2024-06-24 19:29:34+00:00:\n@user0000O0 depressed\nTweet by sad (@lonesfeels) on 2024-06-26 13:13:58+00:00:\nfollowing back all my active loyals today.. i been slacking BIG time. let's keep pushing. ❤️‍🩹\nTweet by sad (@lonesfeels) on 2024-06-26 13:07:13+00:00:\nI think when ur transitioning from being a people pleaser to someone with more boundaries it’s so weird, because it’s hard to tell if you’re being mean or if you’re just listening to your own feelings because you’re so used to this &amp; only thinking about others\nTweet by sad (@lonesfeels) on 2024-06-26 12:59:21+00:00:\nI love intimacy. I love intimate moments. I love intimate settin",
+  "analysis": {
+    "created": 1719425237,
+    "model": "mixtral-8x22b-instruct",
+    "usage": {
+      "prompt_tokens": 883,
+      "completion_tokens": 89,
+      "total_tokens": 972
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "1. Emoción principal: Negativa\n2. Elementos específicos:\n   - Uso de palabras y frases como \"toughest lessons\", \"fuck me its fuck you too\", \"wanting to kill myself\", \"mad at me\", \"overthinking\", \"depressed\", \"transitioning from being a people pleaser\", \"hard to tell if you’re being mean\".\n   - Temas recurrentes de",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 5.541456937789917
+}

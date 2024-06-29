@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Frases Felices (@iFelicesFrases) on 2015-10-21 00:41:55+00:00:\nFREE Social Promotion - #AddMeFast https://t.co/863K1Dfm0t\nTweet by Frases Felices (@iFelicesFrases) on 2014-08-20 19:56:42+00:00:\nLa mayor parte de los fracasos llegan por querer adelantar la hora del éxito. Pasciencia + constancia = ¡ÉXITO!.\nTweet by Frases Felices (@iFelicesFrases) on 2014-08-20 19:53:20+00:00:\nQuédate con un amor que te de respuestas y no más preguntas; seguridad y no temor; confianza y no más dudas.\nTweet by Frases Felices (@iFelicesFrases) on 2014-08-06 23:30:13+00:00:\n“Los sueños de ayer son las esperanzas de hoy y pueden convertirse en la realidad de mañana.”\nTweet by Frases Felices (@iFelicesFrases) on 2014-08-06 23:26:12+00:00:\n#ChisteDiario Había una vez un perro llamado \"PaFuera\", donde una vez le dijeron: - ¡PaFuera Adentro!, PaFuera se confundió y exploto :).\nTweet by Frases Felices (@iFelicesFrases) on 2013-12-05 03:50:45+00:00:\nLa felicidad no se mide en sonrisas, se mide en momentos que no quieres olvidar.\nTweet by Frases Felices (@iFelicesFrases) on 2013-12-05 03:48:12+00:00:\nSonríe y se feliz, verás como la gente te pregunta, qué diablos te pasa.\nTweet by Frases Felices (@iFelicesFrases) on 2013-12-05 03:40:12+00:00:\nPara amar debes olvidar, para sufrir debes enamorarte, y para enamorarte debes ser fiel. Pero si quieres que te amen debes ser auténtico.\"\nTweet by Frases Felices (@iFelicesFrases) on 2013-11-18 19:33:10+00:00:\nLa única manera de multiplicar la felicidad es compartirla.\nTweet by Frases Felices (@iFelicesFrases) on 2013-11-18 18:53:33+00:00:\nSi sumas las estrellas del cielo, los granitos de arena en los océanos, las rosas del mundo, empezarás a tener una idea de cuanto te quiero.\nTweet by Frases Felices (@iFelicesFrases) on 2012-09-27 16:28:53+00:00:\nSi tu cuerpo fuera carcel,\ny tus brazos cadenas,\nese sería el mejor lugar,\npara cumplir mi condena.\nTweet by Frases Felices (@iFelicesFrases) on 2012-09-27 16:19:59+00:00:\nEl verdadero secreto de la fe",
+  "analysis": {
+    "created": 1719420440,
+    "model": "mixtral-8x22b-instruct",
+    "usage": {
+      "prompt_tokens": 896,
+      "completion_tokens": 77,
+      "total_tokens": 973
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "1. Emoción principal: The tweets display a mix of positive, neutral, and humorous sentiments.\n\n2. Elementos específicos:\n   - Positive: \"La mayor parte de los fracasos llegan por querer adelantar la hora del éxito. Paciencia + constancia = ¡ÉXITO!\", \"Quédate con un amor que te de respuestas",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 5.490320920944214
+}

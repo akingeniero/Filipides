@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Coordinación Nacional de Protección Civil (@CNPC_MX) on 2024-06-26 18:33:03+00:00:\nAnte #Lluvias intensas ⛈️ se pueden presentar inundaciones súbitas. Evita cruzar calles con gran inclinación, podrías ser arrastrado.\n\n@laualzua https://t.co/9CPm4Bv60f\nTweet by Coordinación Nacional de Protección Civil (@CNPC_MX) on 2024-06-26 18:31:56+00:00:\nRT @conagua_clima: Han comenzado a desplazarse por territorio nacional las #OndasTropicales. Conoce más de este fenómeno que genera #Lluvias en #México en la siguiente #Infografía https://t.co/W6lBm5LXjK\nTweet by CONAGUA Clima (@conagua_clima) on 2024-06-26 17:20:00+00:00:\nHan comenzado a desplazarse por territorio nacional las #OndasTropicales. Conoce más de este fenómeno que genera #Lluvias en #México en la siguiente #Infografía https://t.co/W6lBm5LXjK\nTweet by Coordinación Nacional de Protección Civil (@CNPC_MX) on 2024-06-26 17:02:05+00:00:\n🌬️🍃Para hoy se estiman rachas de #Viento de 50 a 70 km/h y posible formación de #Torbellinos en CHIH, COAH, SON y TAMPS, así como rachas de 40 a 60 km/h en CDMX, EDOMEX, GTO, HGO, JAL, MICH, PUE, QRO y TLAX, con posibles #Tolvaneras en AGS, BC, BCS, DGO, NL, SLP y ZAC. https://t.co/F7xnwAKXxF\nTweet by Coordinación Nacional de Protección Civil (@CNPC_MX) on 2024-06-26 16:27:02+00:00:\nPara hoy se prevén #Lluvias ☔️ de distintas intensidades en entidades federativas de México.\n\n🚘Extrema precauciones si vas a conducir\n🌳Poda árboles y recoge hojas para permitir el flujo del agua\n⚠️Infórmate a través de las cuentas de #ProtecciónCivil de tu estado https://t.co/04zh2YBKGb\nTweet by Coordinación Nacional de Protección Civil (@CNPC_MX) on 2024-06-26 15:43:02+00:00:\n⚠️ A partir de las 15:00 horas de esta tarde se prevén descargas eléctricas ⚡️ en regiones de #BajaCalifornia, la #PenínsulaDeYucatán, el norte, occidente, centro, sur y sureste de #México.\n\n¡Extrema precauciones y consulta los detalles en @conagua_clima! https://t.co/yukyw3jApP\nTweet by Coordinación Nacional de Protección Civil",
+  "analysis": {
+    "created": 1719426932,
+    "model": "llama3-70b",
+    "usage": {
+      "prompt_tokens": 964,
+      "completion_tokens": 101,
+      "total_tokens": 1065
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Análisis de sentimiento del tweet:\n\n**1. Emoción principal:** Neutral con un tono de precaución y alerta.\n\n**2. Elementos específicos:**\n\n* El uso de emojis como ⛈️, 🌬️, ☔️, ⚠️, y ⚡️ que indican una situación de alerta y precaución.\n* La mención de fenómenos naturales como lluvias intensas, ondas trop",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 6.303040027618408
+}

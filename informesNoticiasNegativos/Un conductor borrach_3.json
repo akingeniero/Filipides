@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: Un conductor borracho mata a una motorista en Oviedo tras chocar su coche contra ella Contenido: Un conductor ebrio ha acabado con la vida de una mujer en un accidente de tráfico que se ha producido en Oviedo, según informa 'La Nueva España'. La mujer conducía una moto cuando el conductor del vehículo chocó contra ella en el kilómetro 25,3 de la A-66. El hombre se despistó y arrolló con su Peugeot a la mujer, que conducía una moto Kawasaki, y ésta se golpeo con dureza contra la calzada. La mujer fue trasladada a un centro sanitario con pronóstico muy grave y falleció poco después. El suceso, por el que el conductor ha sido imputado por homicidio por imprudencia y delito contra la seguridad vial, se ha producido este viernes a última hora del día. El accidente provocó retenciones en la vía, donde fueron necesarias las intervenciones de la Guardia Civil de Tráfico y efectivos del Servicio de Atención Médica Urgente (SAMU), que trasladaron a la víctima al Hospital Universitario Central de Asturias (HUCA).",
+    "analysis": {
+        "created": 1719493988,
+        "model": "llama3-70b",
+        "usage": {
+            "prompt_tokens": 502,
+            "completion_tokens": 100,
+            "total_tokens": 602
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Análisis de sentimiento:\n\n1. Emoción principal: Negativa\n\n2. Elementos específicos:\n   - La descripción del accidente y sus consecuencias (\"acabó con la vida de una mujer\", \"se golpeó con dureza contra la calzada\", \"falleció poco después\") evocan una emoción de tristeza y conmoción.\n   - La mención a la imprudencia del conductor (\"",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 10.419646978378296
+}

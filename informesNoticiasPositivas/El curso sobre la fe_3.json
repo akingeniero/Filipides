@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: El curso sobre la felicidad que triunfa en la universidad de Yale Contenido: ",
+    "analysis": {
+        "created": 1719441287,
+        "model": "llama3-70b",
+        "usage": {
+            "prompt_tokens": 248,
+            "completion_tokens": 100,
+            "total_tokens": 348
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "A continuación, se presenta el análisis de sentimiento del título de la noticia:\n\n**1. Emoción principal:** Positiva\n\n**2. Elementos específicos:**\n\n* La palabra \"triunfa\" tiene una connotación positiva, sugiere éxito y logro.\n* La palabra \"felicidad\" es un tema atractivo y emocionalmente positivo para la mayoría de las personas.\n* La mención de la Universidad de Yale,",
+                    "function_call": null
+                },
+                "finish_reason": "stop"
+            }
+        ]
+    },
+    "elapsed_time": 5.618766784667969
+}

@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: UGT-PV premia a Pepa Bueno, directora de EL PAÍS, por su contribución a la igualdad Contenido: El sindicato UGT Serveis Públics del País Valencià ha concedido a la periodista y directora de EL PAÍS, Pepa Bueno Márquez, el premio Avançant en Igualtat, un galardón con el que la federación reconoce públicamente a aquellas personas o entidades que han destacado por su promoción, defensa o impulso de iniciativas para alcanzar la igualdad real y efectiva de mujeres y hombres. La entrega del premio tendrá lugar el próximo viernes, 28 de junio, a las 12 horas, en el salón de actos de la Casa del Pueblo de UGT en Valencia.La comisión ejecutiva nacional de UGT Serveis Públics-PV ha decidido que la XVII edición de este premio recaiga en la periodista por ser un referente en el mundo del periodismo escrito y audiovisual y porque, a lo largo de su trayectoria profesional en varios medios de comunicación, ha trabajado a favor de una comunicación no sexista y con perspectiva de género. La federación sindical considera que los medios de comunicación son agentes de socialización de primer orden y, como tales, pueden contribuir de manera efectiva en lograr una sociedad libre de machismo y estereotipos de género. De ahí la importancia de que mujeres comprometidas con la igualdad alcancen puestos de dirección.Pepa Bueno es licenciada en Ciencias de la Información, en la rama de Periodismo por la Universidad Complutense de Madrid. Comenzó su carrera profesional en los Servicios Informativos de Radio Nacional de España en Extremadura para luego trabajar en diferentes puestos de responsabilidad en varios centros territoriales de RNE y TVE. En 1996 se incorporó a la redacción central de informativos de TVE y trabajó como presentadora en programas de actualidad hasta que en 2009 se hizo cargo de la edición y presentación de la segunda edición del Telediario de TVE. En junio de 2012 se incorporó a la Cadena SER y entró a formar parte del Comité Editorial de Prisa. Hasta 2019 copresentó en la cadena radiofónica el programa Hoy por hoy, líder de la radio española para pasar después a dirigir y presentar hasta 2021 el informativo nocturno Hora 25. En agosto de 2021 fue nombrada directora del periódico EL PAÍS.Además de su actividad periodística, Pepa Bueno colabora con la Asociación Escuela para Todas, un ente sin ánimo de lucro y cuyo principal objetivo se centra en la escolarización de niñas en Camboya. Además, es embajadora de Escuela para Todas de Marie Claire. Recibió en 2015 el Premio de Comunicación no sexista de manos de la Asociación de Mujeres Periodistas de Catalunya (ADPC).Además, en el acto del próximo viernes, que será presentado por la periodista Amparo Soria, UGT Serveis Públics entregará el Premio Merche Albiach al reconocimiento de la labor sindical en favor de la igualdad a la psicóloga Tina Espí Pla, en la actualidad gestora cultural en el Ayuntamiento de Silla. El acto, que contará con la presencia de autoridades y representantes del mundo de la política, el sindicalismo, el feminismo y la sociedad civil, incluirá la actuación del grupo musical The Street Foxes.Con el reconocimiento a Pepa Bueno, el Premi Avançant en Igualtat suma ya 17 reconocimientos a mujeres referentes y entidades comprometidas por la igualdad y redobla el compromiso de UGT Serveis Públics con el feminismo. En su primera edición (2008) el premio fue concedido a la presidenta del Tribunal Constitucional, María Emilia Casas. El último, en 2023, recayó en la Asociación de Juristas Themis. Además, la jurista y ex vicepresidenta del Gobierno, Carmen Calvo, la filosofa Adela Cortina, Unifem, la Comisión de Mujeres por una Paz en Palestina-Israel, la socióloga María Ángeles Durán, la escritora Almudena Grandes, la feminista Marcela Lagarde, las exministras Carmen Alborch y Matilde Fernández o la periodista Àngels Barceló forman parte de esta prestigiosa lista de premiadas.Lo que más afecta es lo que sucede más cerca. Para no perderte nada, suscríbete.Suscríbete",
+    "analysis": {
+        "created": 1719440177,
+        "model": "mixtral-8x22b-instruct",
+        "usage": {
+            "prompt_tokens": 707,
+            "completion_tokens": 89,
+            "total_tokens": 796
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "1. Emoción principal: Positiva\n2. Elementos específicos: La noticia destaca la concesión del premio Avançant en Igualtat a la periodista y directora de EL PAÍS, Pepa Bueno Márquez, por su contribución a la promoción, defensa e impulso de iniciativas para alcanzar la igualdad real y efectiva",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 8.203510999679565
+}

@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: El fin del ébola, más cerca que nunca Contenido: ",
+    "analysis": {
+        "created": 1719442040,
+        "model": "mixtral-8x22b-instruct",
+        "usage": {
+            "prompt_tokens": 189,
+            "completion_tokens": 88,
+            "total_tokens": 277
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "1. Emoción principal: Positiva\n2. Elementos específicos: El título \"El fin del ébola, más cerca que nunca\" y el contenido que indica que la vacuna contra el ébola ha demostrado ser eficaz en un 100% en un ensayo clínico en Guinea.\n3. Explicación del sentimiento: El sentimiento positivo se debe a",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 7.631104946136475
+}

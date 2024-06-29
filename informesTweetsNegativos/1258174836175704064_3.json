@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Palestina Hoy (@HoyPalestina) on 2023-10-19 21:31:01+00:00:\nDESGARRADOR: Una niña palestina fue rescatada de los escombros de la casa de su familia que fue bombardeada por un ataque aéreo en el campo de refugiados de Shati, en el norte de la Franja de Gaza. https://t.co/Ldo2vp9im9\nTweet by Palestina Hoy (@HoyPalestina) on 2024-06-26 18:15:00+00:00:\nUna madre palestina desplazada relata las múltiples veces que su familia se vio obligada a huir debido a la ocupación israelí dirigida a áreas que habían designado como seguras para buscar refugio. https://t.co/xFIjNU2Fag\nTweet by Palestina Hoy (@HoyPalestina) on 2024-06-26 18:10:00+00:00:\nURGENTE: Un colono israelí abre fuego contra palestinos cerca del campo de refugiados de Al-Arroub, al norte de Hebrón, en la Cisjordania ocupada.\nTweet by Palestina Hoy (@HoyPalestina) on 2024-06-26 18:05:00+00:00:\nDespués de sobrevivir a un ataque aéreo israelí que tuvo como objetivo su casa, una palestina muda se queja de su herida. Su mano herida ahora le impide utilizar el lenguaje de señas con eficacia, lo que agrava las dificultades y la calidad de su vida. https://t.co/xETs9kYvVR\nTweet by Palestina Hoy (@HoyPalestina) on 2024-06-26 18:00:00+00:00:\nLas fuerzas de ocupación israelíes atacan la ciudad de Yatta, al sur de Hebrón, en la Cisjordania ocupada. https://t.co/IdsJU6PS9d\nTweet by Palestina Hoy (@HoyPalestina) on 2024-06-26 17:55:00+00:00:\nLa periodista de guerra estadounidense Arwa Damon, que informa desde Gaza, ofrece una visión de los barrios devastados por los ataques aéreos israelíes, subrayando las terribles condiciones de vida que enfrentan los palestinos que ahora se encuentran sin hogar. https://t.co/BsC6QBF4fE\nTweet by Palestina Hoy (@HoyPalestina) on 2024-06-26 17:50:00+00:00:\nEl corresponsal de Al-Manar en el sur del Líbano informa sobre un bombardeo de artillería de ocupación israelí dirigido a la ciudad de Khiam y las afueras de la ciudad de Burj Al-Muluk. https://t.co/2kLJvGvd2i\nTweet by Palestina Hoy",
+  "analysis": {
+    "created": 1719425727,
+    "model": "llama3-70b",
+    "usage": {
+      "prompt_tokens": 925,
+      "completion_tokens": 100,
+      "total_tokens": 1025
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Análisis de sentimiento de los tweets de Palestina Hoy:\n\n**1. Emoción principal:** Negativa\n\n**2. Elementos específicos:**\n\n* Uso de palabras y expresiones que evocan emociones fuertes, como \"DESGARRADOR\", \"URGENTE\", \"ataque aéreo\", \"bombardeo\", \"ocupación\", \"desplazada\", \"herida\", \"devastados\", \"terribles",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 5.822826147079468
+}

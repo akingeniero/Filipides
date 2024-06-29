@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Nestlé España (@Nestle_es) on 2024-05-24 12:04:11+00:00:\n📢 ¡Renovamos nuestra Dirección de Comunicación y Marketing! Alberto Vega es el nuevo director de Comunicación Corporativa y Relaciones Institucionales de Nestlé en España, y Elisa Riboldi se estrena como directora de Marketing para España y Portugal. \n¡Les deseamos muchos logros en sus nuevos roles! \n+ Info👉 https://t.co/w1C0jzHNrE #talento\nTweet by Nestlé España (@Nestle_es) on 2024-05-10 10:33:02+00:00:\n😍 ¡Gracias, @Randstad_es , por reconocernos como la empresa del sector de la alimentación y bebidas más atractiva para trabajar en España en los premios #RandstadAward 2024!\n¡Felicidades a todos los premiados! 👏\n+ Info ➡ https://t.co/0NXji3a08l  #BeAForceForGood #empleo https://t.co/LoL9upHCum\nTweet by Nestlé España (@Nestle_es) on 2024-04-12 12:18:42+00:00:\n¡Hemos sido reconocidos en la I Edición de los Premios Somos FANES de la Salud y el Bienestar por nuestra labor de #investigación en #nutrición!  Estos galardones, promovidos por #Lasmujeresnosmovemos, cuentan con el apoyo del @COE_es y el patrocinio de la @ComunidadMadrid https://t.co/ViJpy7L7UZ\nTweet by Nestlé España (@Nestle_es) on 2024-04-12 12:18:43+00:00:\nSu objetivo es reconocer a las personas, empresas e instituciones que ayudan a construir una sociedad más justa e igualitaria en el ámbito del bienestar y la salud, mediante el fomento de la diversidad y la inclusión, la nutrición, el autocuidado y la gestión emocional. https://t.co/d9ufyo0gSy\nTweet by Nestlé España (@Nestle_es) on 2024-04-12 12:18:45+00:00:\nEn representación de Nestlé, recogió el premio nuestro director de Comunicación Corporativa, Alberto Vega.  ¡Muchas gracias y felicidades a todos los premiados! 👏 https://t.co/DxObxqdw0w\nTweet by Nestlé España (@Nestle_es) on 2024-04-08 14:15:05+00:00:\nNuestra compañera Carolina Muro participó en “CIRCULAR FUTURE: juventud, #sostenibilidad y el desafío del futuro”, organizado por Equipo Europa y @ecoembes, para hablar sobre #economíaci",
+  "analysis": {
+    "created": 1719421051,
+    "model": "mixtral-8x22b-instruct",
+    "usage": {
+      "prompt_tokens": 837,
+      "completion_tokens": 83,
+      "total_tokens": 920
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "1. Emoción principal: Positiva\n2. Elementos específicos:\n   - Uso de emojis positivos como 😍, 👏, y 📢\n   - Frases de felicitación y reconocimiento, como \"¡Les deseamos muchos logros en sus nuevos roles!\", \"¡Felicidades a todos los premiados!\", y \"¡Muchas gracias",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 26.438514232635498
+}

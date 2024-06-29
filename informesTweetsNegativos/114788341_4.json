@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by CONRED (@ConredGuatemala) on 2024-06-26 17:44:35+00:00:\nIntegrados como Sistema CONRED, más de 25 instituciones trabajamos de forma coordinada en la prevención y atención efectiva de situaciones de emergencia y/o desastre. https://t.co/HIv0eJGc94\nTweet by CONRED (@ConredGuatemala) on 2024-06-26 17:44:37+00:00:\nAdemás, promovemos el empoderamiento local para la gestión integral del riesgo, ya que el rol de la población es fundamental para reducir el impacto de las lluvias en Guatemala. #NoSeArriesgue https://t.co/PxByrxDYem\nTweet by CONRED (@ConredGuatemala) on 2024-06-26 17:38:02+00:00:\n#Quiché Familias afectadas por incendios estructurales registrados en aldea Xecotz y aldea Cocop del municipio de Nebaj, Quiché recibieron ayuda humanitaria.\n\nCréditos: Eladio Xirum, Delegado Departamental de la CONRED. https://t.co/ZDd28nskti\nTweet by CONRED (@ConredGuatemala) on 2024-06-26 17:34:32+00:00:\n#Quiché Se hizo entrega de ayuda humanitaria a familias afectadas por lluvias registradas en aldea Xeo del municipio de Nebaj, Quiché.\n\nCréditos: Eladio Xirum, Delegado Departamental de la CONRED. https://t.co/GvWGHX09ws\nTweet by CONRED (@ConredGuatemala) on 2024-06-26 17:18:53+00:00:\n#AltaVerapaz En cumplimiento al Plan Nacional de Respuesta -PNR-, familia afectada por desprendimiento de roca registrado en caserío Secaham del municipio de Raxruhá, Alta Verapaz recibió ayuda humanitaria.\n\nCréditos: Esler Castro, Jefe del COED. https://t.co/5g4g0mud5r\nTweet by CONRED (@ConredGuatemala) on 2024-06-26 17:15:05+00:00:\n#Quiché Personal de @ASONBOMDGT realizó trabajos de limpieza por deslizamiento registrado en el kilómetro 174, RN-15, sector Xocopila del municipio de San Pedro Jocopilas, Quiché. Se reporta que el paso vehicular quedó liberado. https://t.co/1v2PAaHIit\nTweet by CONRED (@ConredGuatemala) on 2024-06-26 16:57:42+00:00:\n#Quiché Reportan derrumbe en el kilómetro 207+900 RD QUI-22, aldea Paradillo del municipio de San Pedro Jocopilas, Quiché. Se coordinan trabajos de ",
+  "analysis": {
+    "created": 1719426570,
+    "model": "mixtral-8x22b-instruct",
+    "usage": {
+      "prompt_tokens": 857,
+      "completion_tokens": 74,
+      "total_tokens": 931
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "1. Emoción principal: Neutral\n2. Elementos específicos: La mayoría de los tweets presentan información sobre la ayuda humanitaria proporcionada a las familias afectadas por diversas situaciones de emergencia en Guatemala. También se menciona la coordinación entre más de 25 instituciones para trabajar en la prevención y atención efectiva de",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 6.193575143814087
+}

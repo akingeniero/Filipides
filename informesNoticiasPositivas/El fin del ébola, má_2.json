@@ -1,0 +1,10 @@
+{
+    "review": "Titulo: El fin del ébola, más cerca que nunca Contenido: ",
+    "analysis": {
+        "model": "gpt-3.5-turbo",
+        "message": {
+            "content": "Análisis de sentimiento:\n\n1. Emoción principal:\nLa emoción principal en el texto es positiva.\n\n2. Elementos específicos:\n- El título \"El fin del ébola, más cerca que nunca\" sugiere un avance positivo en la lucha contra el ébola.\n- La expresión \"más cerca que nunca\" implica un progreso significativo hacia la erradicación de la enfermedad.\n\n3. Explicación del sentimiento:\nEl sentimiento positivo se clasifica de esta manera debido a la naturaleza optimista y esperanzadora del título y el contenido del texto. La idea de que el fin del ébola está más cerca que nunca transmite una sensación de progreso y posibilidad de éxito en la lucha contra esta enfermedad devastadora.\n\n4. Matices o cambios de tono:\nDado que el texto es breve y no proporciona más detalles, no se identifican matices o cambios de tono en este caso. Sin embargo, es importante tener en cuenta que el tono podría variar dependiendo de la información adicional proporcionada en un contexto más amplio sobre la situación actual del ébola."
+        }
+    },
+    "elapsed_time": 3.9020302295684814
+}

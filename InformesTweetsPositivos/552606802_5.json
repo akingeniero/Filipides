@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Lacasitos (@Lacasitos) on 2024-05-08 19:04:57+00:00:\nOs presentamos en exclusiva… la nueva TABLETA DE LACASITOS 💛 ¡Rellena de leche con Lacasitos en su interior! Perfectas para tomar a cualquier hora del día 🙌🏼🤩 \n\nLANZAMOS SORTEO\n1️⃣ Sigue a @lacasitos\n2️⃣ Menciona a un amigo 🍫\n\n¡El 15 anunciamos los 5 ganadores! SUERTE🍀 https://t.co/6Exx6LKJN4\nTweet by Lacasitos (@Lacasitos) on 2024-06-26 10:10:06+00:00:\n¡Qué ganas tenemos de vacaciones! No olvides meter en tu maleta lo más importante... los rotuladores y LOS LACASITOS 😱\n\n¿Vosotros ya estáis de vacaciones o todavía seguis en el colegio? 🤨 #DivierteteConLacasitos https://t.co/KWhuNWNR3i\nTweet by Lacasitos (@Lacasitos) on 2024-06-24 18:09:06+00:00:\n¡Nos encanta dibujar ! Porque significa dejar volar la imaginación, poder crear un mundo nuevo y mucha mucha diversión 💛 #DivierteteConLacasitos https://t.co/edOnKMSOU1\nTweet by Lacasitos (@Lacasitos) on 2024-06-20 17:30:55+00:00:\n¿Cuál es vuestro animal favorito de la selva? 🐵🦁🐨🐊 #DivierteteConLacasitos https://t.co/MLKEJgF3PY\nTweet by Lacasitos (@Lacasitos) on 2024-06-20 07:20:40+00:00:\nRT @CafeBaque: ¡Llegó el primer batido de Lacasitos White en cápsula! 🎉🍫 Grupo Lacasa y Cafés Baqué se unen para crear esta delicia compatible con Dolce Gusto®. \n\nDisponible en junio en tiendas online y físicas. ¡No te lo pierdas! @Lacasitos\n\n+ https://t.co/dr6paXDuc8 https://t.co/TWJ6TMmfhI\nTweet by Cafés Baqué (@CafeBaque) on 2024-06-18 07:29:21+00:00:\n¡Llegó el primer batido de Lacasitos White en cápsula! 🎉🍫 Grupo Lacasa y Cafés Baqué se unen para crear esta delicia compatible con Dolce Gusto®. \n\nDisponible en junio en tiendas online y físicas. ¡No te lo pierdas! @Lacasitos\n\n+ https://t.co/dr6paXDuc8 https://t.co/TWJ6TMmfhI\nTweet by Lacasitos (@Lacasitos) on 2024-06-13 10:02:03+00:00:\n¡ES HOY! ¡ES HOY!🥳¡HOY ES NUESTRO CUMPLE 4️⃣2️⃣ AÑOS! 💃\n\nGracias porque tú formas parte de este éxito, tú has hecho posible que durante todo este tiempo Lacasitos siga llenando de diversión el mu",
+  "analysis": {
+    "created": 1719421600,
+    "model": "mixtral-8x22b-instruct",
+    "usage": {
+      "prompt_tokens": 954,
+      "completion_tokens": 85,
+      "total_tokens": 1039
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "1. Emoción principal: Positiva\n2. Elementos específicos:\n   - Uso de signos de exclamación y emojis positivos (💛, 🙌🏼, 🤩, 🍀)\n   - Frases como \"Os presentamos en exclusiva...\", \"¡Qué ganas tenemos de vacaciones!\", \"¡Nos encanta dibujar!",
+          "function_call": null
+        },
+        "finish_reason": "stop"
+      }
+    ]
+  },
+  "elapsed_time": 7.305447816848755
+}
