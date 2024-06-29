@@ -1,5 +1,6 @@
 import json
 import os
+from datetime import datetime
 
 from project.client.llm_client.llm_manager import LlmManager
 from project.client.news_client import NewsClient
@@ -23,9 +24,11 @@ async def fetch_and_analyze_tweets(user_id: int) -> None:
     review = generate_review(tweet_data_list)
     analysis, elapsed_time = llm_manager.analyze_tweets(review)
     inform = {
+        "user_id": user_id,
         "review": review,
         "analysis": analysis,
-        "elapsed_time": elapsed_time
+        "elapsed_time": elapsed_time,
+        "timestamp": datetime.now().isoformat()
     }
     inform_str = json.dumps(inform, indent=4, ensure_ascii=False)
     save_analysis(inform_str, f"{user_id}.json")
@@ -46,9 +49,11 @@ async def fetch_and_analyze_news(url_news: str) -> None:
     review = await news_client.extract_main_news(url_news)
     analysis, elapsed_time = llm_manager.analyze_news(review[:2000])
     inform = {
+        "url": url_news,
         "review": review,
         "analysis": analysis,
-        "elapsed_time": elapsed_time
+        "elapsed_time": elapsed_time,
+        "timestamp": datetime.now().isoformat()
     }
     inform_str = json.dumps(inform, indent=4, ensure_ascii=False)
     save_analysis(inform_str, f'{review[8:28]}.json')
