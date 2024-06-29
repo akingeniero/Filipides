@@ -22,16 +22,23 @@ async def fetch_and_analyze_tweets(user_id: int) -> None:
     tweets = await twitter_client.get_user_tweets(user_id)
     tweet_data_list = await process_tweets(tweets)
     review = generate_review(tweet_data_list)
+    tweet_report = {
+        "user_id": user_id,
+        "review": review,
+        "timestamp": datetime.now().isoformat()
+    }
+    tweet_report_str = json.dumps(tweet_report, indent=4, ensure_ascii=False)
+    save_analysis(tweet_report_str, f"tweet_report_{user_id}.json", "./tweets_reports")
     analysis, elapsed_time = llm_manager.analyze_tweets(review)
-    inform = {
+    tweet_analysis_report = {
         "user_id": user_id,
         "review": review,
         "analysis": analysis,
         "elapsed_time": elapsed_time,
         "timestamp": datetime.now().isoformat()
     }
-    inform_str = json.dumps(inform, indent=4, ensure_ascii=False)
-    save_analysis(inform_str, f"{user_id}.json")
+    tweet_analysis_report_str = json.dumps(tweet_analysis_report, indent=4, ensure_ascii=False)
+    save_analysis(tweet_analysis_report_str, f"analysis_report_{user_id}.json", "./tweets_analysis_reports")
 
 
 async def fetch_and_analyze_news(url_news: str) -> None:
@@ -46,17 +53,26 @@ async def fetch_and_analyze_news(url_news: str) -> None:
     """
     news_client = NewsClient()
     llm_manager = LlmManager()
-    review = await news_client.extract_main_news(url_news)
-    analysis, elapsed_time = llm_manager.analyze_news(review[:2000])
-    inform = {
+    news = await news_client.extract_main_news(url_news)
+    title_name = news[8:28]
+    review = news[:2000]
+    news_report = {
+        "url": url_news,
+        "review": review,
+        "timestamp": datetime.now().isoformat()
+    }
+    news_report_str = json.dumps(news_report, indent=4, ensure_ascii=False)
+    save_analysis(news_report_str, f"news_report_{title_name}.json", "./news_reports")
+    analysis, elapsed_time = llm_manager.analyze_news(review)
+    new_analysis_report = {
         "url": url_news,
         "review": review,
         "analysis": analysis,
         "elapsed_time": elapsed_time,
         "timestamp": datetime.now().isoformat()
     }
-    inform_str = json.dumps(inform, indent=4, ensure_ascii=False)
-    save_analysis(inform_str, f'{review[8:28]}.json')
+    new_analysis_report_str = json.dumps(new_analysis_report, indent=4, ensure_ascii=False)
+    save_analysis(new_analysis_report_str, f'analysis_report_{title_name}.json',"./news_analysis_reports")
 
 
 async def process_tweets(tweets_coroutine) -> list:
@@ -110,23 +126,28 @@ def generate_review(tweet_data_list: list) -> str:
     return review[:2000]
 
 
-def save_analysis(analysis: str, filename: str) -> None:
+def save_analysis(analysis: str, filename: str, directory: str = '.') -> None:
     """
     Saves the analysis to a markdown file, ensuring no file overwrite.
 
     Args:
         analysis (str): The analysis content to be saved.
         filename (str): The name of the file to save the analysis in.
+        directory (str, optional): The directory where the file should be saved. Defaults to current directory ('.').
 
     Returns:
         None
     """
-    file_path = filename
+    # Ensure directory exists, create if it doesn't
+    os.makedirs(directory, exist_ok=True)
+
+    # Check for existing files and generate unique filename
+    file_path = os.path.join(directory, filename)
     if os.path.exists(file_path):
         base, ext = os.path.splitext(filename)
         counter = 1
         while os.path.exists(file_path):
-            file_path = f"{base}_{counter}{ext}"
+            file_path = os.path.join(directory, f"{base}_{counter}{ext}")
             counter += 1
 
     with open(file_path, 'w') as file:
