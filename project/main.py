@@ -6,7 +6,7 @@ from project.client.news_client import NewsClient
 from project.client.twitter_client import TwitterClient
 from project.ui.ui_manager import UiManager
 from project.utils.config import Config
-from project.utils.utils import fetch_and_analyze_tweets, fetch_and_analyze_news
+from project.utils.utils import fetch_and_analyze_tweets, fetch_and_analyze_news, load_report_from_file, analyze_llm
 
 logging.basicConfig(filename='project.log',
                     encoding='utf-8',
@@ -25,27 +25,27 @@ async def main() -> None:
     """
     global use_twitter
     while True:
-        technology_selection = ui_manager.technology_select()
-        if technology_selection == 'OpenAI':
-            llm_manager.setup_openai_client()
+        environment_selection = ui_manager.environment_select()
+        if environment_selection == 'Local':
+            file_path = ui_manager.file_select()
+            data_report = load_report_from_file(file_path)
+            tech = ui_manager.technology_select()
+            await analyze_llm(tech, data_report)
         else:
-            llm_manager.setup_llama_client()
-        mode_selection = ui_manager.mode_select()
-        if llm_manager.verify_api_key():
+            mode_selection = ui_manager.mode_select()
             if mode_selection == 'Twitter':
                 use_twitter = True
                 register_status = await twitter_client.register()
                 if register_status:
                     user_id = ui_manager.target_user_select()
-                    await fetch_and_analyze_tweets(user_id)
+                    tech = ui_manager.technology_select()
+                    await fetch_and_analyze_tweets(user_id, tech)
                 else:
                     ui_manager.error("Failed to register user")
             elif mode_selection == 'News':
                 url = ui_manager.target_url_select()
-                if llm_manager.verify_api_key():
-                    await fetch_and_analyze_news(url)
-        else:
-            ui_manager.error("Invalid OpenAI API key")
+                tech = ui_manager.technology_select()
+                await fetch_and_analyze_news(url, tech)
 
         logger.info("Operation completed")
 
