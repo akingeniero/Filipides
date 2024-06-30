@@ -87,18 +87,3 @@ class LlamaClient:
         return self._generate_response(
             self.config.get_llm_prompt("notice"), "{text_new}", review, self.config.get_llama_llm()
         )
-
-    def verify_api_key(self) -> bool:
-        """
-        Verifies if the provided API key for the Llama API is valid.
-
-        Returns:
-            bool: True if the API key is valid, False otherwise.
-        """
-        try:
-            self.client
-        except Exception as e:
-            logger.error(f"API key verification failed: {e}")
-            return False
-        else:
-            return True

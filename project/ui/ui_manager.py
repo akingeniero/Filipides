@@ -121,3 +121,22 @@ class UiManager(metaclass=SingletonMeta):
         """
         return self.ui_instance.technology_select()
 
+    def environment_select(self) -> str:
+        """
+        Allows the user to select a technology (OpenAI or Llama).
+
+        Returns:
+            str: Selected technology ('OpenAI' or 'Llama').
+        """
+        return self.ui_instance.environment_select()
+
+    def file_select(self) -> str:
+        """
+        Allows the user to select a technology (OpenAI or Llama).
+
+        Returns:
+            str: Selected technology ('OpenAI' or 'Llama').
+        """
+        return self.ui_instance.file_select()
+
+
