@@ -251,3 +251,51 @@ class TkinterUi:
         self.destroy_window()
 
         return selected_technology.get()
+
+    def environment_select(self) -> str:
+        """
+        Allows the user to select a technology (OpenAI or Llama).
+
+        Returns:
+            str: Selected technology ('OpenAI' or 'Llama').
+        """
+        self.init_window()
+        selected_technology = tk.StringVar(value="Local")
+
+        def set_environment():
+            self.window.quit()
+
+        tk.Label(self.window, text="Select technology:").pack(pady=10)
+        tk.Radiobutton(self.window, text="Local", variable=selected_technology, value="Local").pack(anchor=tk.W)
+        tk.Radiobutton(self.window, text="Online", variable=selected_technology, value="Online").pack(anchor=tk.W)
+        tk.Button(self.window, text="Select", command=set_environment).pack(pady=10)
+
+        self.window.mainloop()
+        self.destroy_window()
+
+        return selected_technology.get()
+
+    def file_select(self) -> str:
+        """
+        Allows the user to enter a target URL.
+
+        Returns:
+            str: Selected target URL.
+        """
+        self.init_window()
+        url = tk.StringVar()
+
+        def set_url():
+            if url.get():
+                self.window.quit()
+            else:
+                messagebox.showerror("Invalid Input", "Please enter a valid file.")
+
+        tk.Label(self.window, text="Enter file_path:").pack(pady=10)
+        tk.Entry(self.window, textvariable=url).pack(pady=5)
+        tk.Button(self.window, text="Submit", command=set_url).pack(pady=10)
+
+        self.window.mainloop()
+        self.destroy_window()
+
+        return url.get()
