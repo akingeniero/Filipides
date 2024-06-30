@@ -7,7 +7,51 @@ from project.client.news_client import NewsClient
 from project.client.twitter_client import TwitterClient
 
 
-async def fetch_and_analyze_tweets(user_id: int) -> None:
+def select_tech(tech, llm_manager):
+    technology_selection = tech
+    if technology_selection == 'OpenAI':
+        llm_manager.setup_openai_client()
+        llm_manager.verify_api_key()
+    else:
+        llm_manager.setup_llama_client()
+
+
+def load_report_from_file(file_path):
+    """
+    Loads and validates the report JSON from a local file.
+
+    Args:
+        file_path (str): Path to the JSON file.
+
+    Returns:
+        dict: Loaded report dictionary if valid, None otherwise.
+    """
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            report = json.load(file)
+
+        if 'type' not in report:
+            print("Invalid report structure. Missing 'type' key.")
+            return None
+
+        if report["type"] == "tweet" and all(key in report for key in ("user_id", "review", "timestamp")):
+            return report
+        elif report["type"] == "news" and all(key in report for key in ("url", "review", "timestamp")):
+            return report
+        else:
+            print("Invalid report structure. Missing required keys.")
+            return None
+
+    except FileNotFoundError:
+        print(f"File '{file_path}' not found.")
+        return None
+
+    except json.JSONDecodeError as e:
+        print(f"Error decoding JSON: {str(e)}")
+        return None
+
+
+async def fetch_and_analyze_tweets(user_id: int, tech) -> None:
     """
     Fetches tweets for a given user ID, processes the tweets, generates a review, and analyzes it using OpenAI.
 
@@ -18,30 +62,21 @@ async def fetch_and_analyze_tweets(user_id: int) -> None:
         None
     """
     twitter_client = TwitterClient()
-    llm_manager = LlmManager()
     tweets = await twitter_client.get_user_tweets(user_id)
     tweet_data_list = await process_tweets(tweets)
     review = generate_review(tweet_data_list)
     tweet_report = {
+        "type": "tweet",
         "user_id": user_id,
         "review": review,
         "timestamp": datetime.now().isoformat()
     }
     tweet_report_str = json.dumps(tweet_report, indent=4, ensure_ascii=False)
     save_analysis(tweet_report_str, f"tweet_report_{user_id}.json", "./tweets_reports")
-    analysis, elapsed_time = llm_manager.analyze_tweets(review)
-    tweet_analysis_report = {
-        "user_id": user_id,
-        "review": review,
-        "analysis": analysis,
-        "elapsed_time": elapsed_time,
-        "timestamp": datetime.now().isoformat()
-    }
-    tweet_analysis_report_str = json.dumps(tweet_analysis_report, indent=4, ensure_ascii=False)
-    save_analysis(tweet_analysis_report_str, f"analysis_report_{user_id}.json", "./tweets_analysis_reports")
+    await analyze_llm(tech, tweet_report)
 
 
-async def fetch_and_analyze_news(url_news: str) -> None:
+async def fetch_and_analyze_news(url_news: str, tech) -> None:
     """
     Fetches the main news content from a given URL, generates a review, and analyzes it using OpenAI.
 
@@ -52,27 +87,48 @@ async def fetch_and_analyze_news(url_news: str) -> None:
         None
     """
     news_client = NewsClient()
-    llm_manager = LlmManager()
     news = await news_client.extract_main_news(url_news)
     title_name = news[8:28]
     review = news[:2000]
     news_report = {
+        "type": "news",
         "url": url_news,
         "review": review,
         "timestamp": datetime.now().isoformat()
     }
     news_report_str = json.dumps(news_report, indent=4, ensure_ascii=False)
     save_analysis(news_report_str, f"news_report_{title_name}.json", "./news_reports")
-    analysis, elapsed_time = llm_manager.analyze_news(review)
-    new_analysis_report = {
-        "url": url_news,
+    await analyze_llm(tech, news_report)
+
+
+async def analyze_llm(tech, report):
+    llm_manager = LlmManager()
+    select_tech(tech, llm_manager)
+    review = report["review"]
+    report_type = report["type"]
+    data_type_raw = report["url"] if report_type == "news" else report["user_id"]
+    analysis, elapsed_time = llm_manager.analyze_tweets(review)
+
+    tweet_analysis_report = {
+        "type": report_type,
+        "tech": tech,
         "review": review,
         "analysis": analysis,
         "elapsed_time": elapsed_time,
         "timestamp": datetime.now().isoformat()
     }
-    new_analysis_report_str = json.dumps(new_analysis_report, indent=4, ensure_ascii=False)
-    save_analysis(new_analysis_report_str, f'analysis_report_{title_name}.json',"./news_analysis_reports")
+
+    if report_type == "news":
+        tweet_analysis_report["url_new"] = data_type_raw
+        title_report = review[8:20]
+        directory_report = "./news_analysis_reports"
+    else:
+        tweet_analysis_report["userid"] = data_type_raw
+        title_report = data_type_raw
+        directory_report = "./tweets_analysis_reports"
+
+    tweet_analysis_report_str = json.dumps(tweet_analysis_report, indent=4, ensure_ascii=False)
+    save_analysis(tweet_analysis_report_str, f"analysis_report_{title_report}.json", directory_report)
 
 
 async def process_tweets(tweets_coroutine) -> list:
