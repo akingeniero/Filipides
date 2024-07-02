@@ -107,23 +107,19 @@ async def analyze_llm(tech, report):
     review = report["review"]
     report_type = report["type"]
     data_type_raw = report["url"] if report_type == "news" else report["user_id"]
-    analysis, elapsed_time = llm_manager.analyze_tweets(review)
-
-    tweet_analysis_report = {
-        "type": report_type,
-        "tech": tech,
-        "review": review,
-        "analysis": analysis,
-        "elapsed_time": elapsed_time,
-        "timestamp": datetime.now().isoformat()
-    }
 
     if report_type == "news":
-        tweet_analysis_report["url_new"] = data_type_raw
+        analysis, elapsed_time = llm_manager.analyze_news(review)
+        tweet_analysis_report = {"type": report_type, "tech": tech, "review": review, "analysis": analysis,
+                                 "elapsed_time": elapsed_time, "timestamp": datetime.now().isoformat(),
+                                 "url_new": data_type_raw}
         title_report = review[8:20]
         directory_report = "./news_analysis_reports"
     else:
-        tweet_analysis_report["userid"] = data_type_raw
+        analysis, elapsed_time = llm_manager.analyze_tweets(review)
+        tweet_analysis_report = {"type": report_type, "tech": tech, "review": review, "analysis": analysis,
+                                 "elapsed_time": elapsed_time, "timestamp": datetime.now().isoformat(),
+                                 "userid": data_type_raw}
         title_report = data_type_raw
         directory_report = "./tweets_analysis_reports"
 
@@ -194,10 +190,8 @@ def save_analysis(analysis: str, filename: str, directory: str = '.') -> None:
     Returns:
         None
     """
-    # Ensure directory exists, create if it doesn't
     os.makedirs(directory, exist_ok=True)
 
-    # Check for existing files and generate unique filename
     file_path = os.path.join(directory, filename)
     if os.path.exists(file_path):
         base, ext = os.path.splitext(filename)
