@@ -12,13 +12,13 @@ class NewsClient(metaclass=SingletonMeta):
     Client to interact with news websites and extract main news content.
     """
 
-    def __init__(self: 'NewsClient') -> None:
+    def __init__(self) -> None:
         """
         Initializes the NewsClient with the necessary configurations.
         """
         logger.info("NewsClient initialized")
 
-    async def extract_main_news(self: 'TwitterClient', url_data: str) -> str | None:
+    async def extract_main_news(self, url_data: str) -> str | None:
         """
         Extracts the main news headline and content from the given URL.
 
