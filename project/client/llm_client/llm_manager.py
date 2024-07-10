@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 class LlmManager(metaclass=SingletonMeta):
     """
-    Manager class to handle user interface interactions, supporting both openai and llama.
+    Manager class to handle user interface interactions, supporting both OpenAI and Llama clients.
     """
 
     def __init__(self):
@@ -35,31 +35,31 @@ class LlmManager(metaclass=SingletonMeta):
 
     def analyze_tweets(self, text: str) -> tuple[Any, float]:
         """
-        Analyzes the given tweet review by generating a response from the Llama API.
+        Analyzes the given tweet review by generating a response from the selected LLM API.
 
         Args:
             text (str): The tweet to analyze.
 
         Returns:
-            str: The analysis result.
+            tuple[Any, float]: A tuple containing the analysis result and the elapsed time for the request.
         """
         return self.ui_instance.analyze_tweets(text)
 
     def analyze_news(self, text: str) -> str:
         """
-        Analyzes the given tweet review by generating a response from the Llama API.
+        Analyzes the given news review by generating a response from the selected LLM API.
 
         Args:
-            text (str): The tweet to analyze.
+            text (str): The news review to analyze.
 
         Returns:
-            str: The analysis result.
+            tuple[Any, float]: A tuple containing the analysis result and the elapsed time for the request.
         """
         return self.ui_instance.analyze_news(text)
 
     def verify_api_key(self) -> bool:
         """
-        Verifies the LLm API key if the current instance is OpenAIClient.
+        Verifies the LLM API key if the current instance is OpenAIClient.
 
         Returns:
             bool: True if the API key is valid, False otherwise.
