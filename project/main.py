@@ -24,13 +24,18 @@ async def main() -> None:
     Initializes clients, registers the Twitter client, selects a user, and performs tweet fetching and analysis.
     """
     global use_twitter
+    use_twitter = False
+
     while True:
         environment_selection = ui_manager.environment_select()
         if environment_selection == 'Local':
             file_path = ui_manager.file_select()
             data_report = load_report_from_file(file_path)
-            tech = ui_manager.technology_select()
-            await analyze_llm(tech, data_report, ui_manager)
+            if data_report:
+                tech = ui_manager.technology_select()
+                await analyze_llm(tech, data_report, ui_manager)
+            else:
+                ui_manager.error("Invalid report file.")
         else:
             mode_selection = ui_manager.mode_select()
             if mode_selection == 'Twitter':
@@ -66,5 +71,4 @@ if __name__ == "__main__":
     twitter_client = TwitterClient()
     news_client = NewsClient()
     config_manager = Config()
-    use_twitter = False
     asyncio.run(main())

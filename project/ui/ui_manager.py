@@ -94,9 +94,6 @@ class UiManager(metaclass=SingletonMeta):
 
         Args:
             error_text (str): The error message to display.
-
-        Returns:
-            None
         """
         self.ui_instance.error(error_text)
 
@@ -114,7 +111,7 @@ class UiManager(metaclass=SingletonMeta):
 
     def technology_select(self) -> str:
         """
-        Allows the user to select a technology (OpenAI or Llama).
+        Allows the user to select a technology (OpenAI or Llama) through the current UI instance.
 
         Returns:
             str: Selected technology ('OpenAI' or 'Llama').
@@ -123,29 +120,27 @@ class UiManager(metaclass=SingletonMeta):
 
     def environment_select(self) -> str:
         """
-        Allows the user to select a technology (OpenAI or Llama).
+        Allows the user to select an environment (Local or Online) through the current UI instance.
 
         Returns:
-            str: Selected technology ('OpenAI' or 'Llama').
+            str: Selected environment ('Local' or 'Online').
         """
         return self.ui_instance.environment_select()
 
     def file_select(self) -> str:
         """
-        Allows the user to select a technology (OpenAI or Llama).
+        Allows the user to select a file path through the current UI instance.
 
         Returns:
-            str: Selected technology ('OpenAI' or 'Llama').
+            str: Selected file path.
         """
         return self.ui_instance.file_select()
 
     def show_report(self, report_name: str):
         """
-        Allows the user to select a technology (OpenAI or Llama).
+        Displays the final screen indicating the end of the process through the current UI instance.
 
-        Returns:
-            str: Selected technology ('OpenAI' or 'Llama').
+        Args:
+            report_name (str): The name of the report generated.
         """
-        return self.ui_instance.show_report(report_name)
-
-
+        self.ui_instance.show_report(report_name)
