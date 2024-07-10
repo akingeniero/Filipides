@@ -9,6 +9,9 @@ class TkinterUi:
     """
 
     def __init__(self):
+        """
+        Initializes the TkinterUi class, setting up the main window.
+        """
         self.window = tk.Tk()
         self.window.title("UI Manager")
         self.window.geometry("400x300")
@@ -17,6 +20,9 @@ class TkinterUi:
     def switch_frame(self, new_frame):
         """
         Switches the current frame to a new frame.
+
+        Args:
+            new_frame (tk.Frame): The new frame to switch to.
         """
         if self.current_frame:
             self.current_frame.destroy()
@@ -60,7 +66,7 @@ class TkinterUi:
         tk.Label(frame, text="Seleccione la fuente para la extracción de información:").pack(pady=10)
         modes = [("Twitter Mode", "Twitter"), ("News Mode", "News")]
         for text, value in modes:
-            tk.Checkbutton(frame, text=text, variable=selected_mode, onvalue=value).pack(anchor=tk.W)
+            tk.Radiobutton(frame, text=text, variable=selected_mode, value=value).pack(anchor=tk.W)
         tk.Button(frame, text="Continuar", command=set_mode).pack(pady=10)
 
         self.add_info_button(frame, "Seleccione 'Twitter' para extraer información de un usuario de Twitter "
@@ -127,13 +133,13 @@ class TkinterUi:
         def set_prompt():
             self.window.quit()
 
-        tk.Label(frame, text="Seleccione el  promptel prompt para relaizar el informe:").pack(pady=10)
+        tk.Label(frame, text="Seleccione el prompt para realizar el informe:").pack(pady=10)
         prompt_menu = ttk.Combobox(frame, textvariable=selected_prompt, values=list(prompts.keys()))
         prompt_menu.pack(pady=5)
         prompt_menu.bind("<FocusIn>", lambda args: prompt_menu.selection_range(0, 'end'))
         tk.Button(frame, text="Continuar", command=set_prompt).pack(pady=10)
 
-        self.add_info_button(frame, "Seleccione el prompt para relaizar el informe. Luego, haga clic en Continuar")
+        self.add_info_button(frame, "Seleccione el prompt para realizar el informe. Luego, haga clic en Continuar")
         self.switch_frame(frame)
         self.window.mainloop()
         return prompts[selected_prompt.get()]
@@ -154,7 +160,7 @@ class TkinterUi:
             else:
                 messagebox.showerror("Entrada Invalida", "Por favor introduce un número válido")
 
-        tk.Label(frame, text="Introduce el ID Twitter del cual quieres extraer información:").pack(pady=10)
+        tk.Label(frame, text="Introduce el ID de Twitter del cual quieres extraer información:").pack(pady=10)
         user_entry = tk.Entry(frame, textvariable=user_id)
         user_entry.pack(pady=5)
         user_entry.insert(0, "Enter user ID here")
@@ -184,9 +190,7 @@ class TkinterUi:
             else:
                 messagebox.showerror("Entrada Invalida", "Por favor introduce una URL correcta")
 
-        tk.Label(frame,
-                 text="Introduce la URL de la noticia de la que quieres extraer información:").pack(
-            pady=10)
+        tk.Label(frame, text="Introduce la URL de la noticia de la que quieres extraer información:").pack(pady=10)
         url_entry = tk.Entry(frame, textvariable=url)
         url_entry.pack(pady=5)
         url_entry.insert(0, "Enter URL here")
@@ -216,7 +220,7 @@ class TkinterUi:
         tk.Label(frame, text="¿Quiéres realizar más informes?").pack(pady=10)
         options = [("Yes", "y"), ("No", "n")]
         for text, value in options:
-            tk.Checkbutton(frame, text=text, variable=response, onvalue=value).pack(anchor=tk.W)
+            tk.Radiobutton(frame, text=text, variable=response, value=value).pack(anchor=tk.W)
         tk.Button(frame, text="Continuar", command=set_response).pack(pady=10)
 
         self.add_info_button(frame, "Seleccione 'Sí' para realizar otra operación o 'No' para salir. Luego, "
@@ -241,14 +245,13 @@ class TkinterUi:
         def set_model():
             self.window.quit()
 
-        tk.Label(frame, text="Seleciona el llm con el que quieres realizar el informe:").pack(pady=10)
+        tk.Label(frame, text="Selecciona el LLM con el que quieres realizar el informe:").pack(pady=10)
         model_menu = ttk.Combobox(frame, textvariable=selected_model, values=models)
         model_menu.pack(pady=5)
         model_menu.bind("<FocusIn>", lambda args: model_menu.selection_range(0, 'end'))
         tk.Button(frame, text="Continuar", command=set_model).pack(pady=10)
 
-        self.add_info_button(frame, "Elija un modelo en el menú desplegable.  Luego, "
-                                    "haga clic en Continuar")
+        self.add_info_button(frame, "Elija un modelo en el menú desplegable. Luego, haga clic en Continuar")
         self.switch_frame(frame)
         self.window.mainloop()
         return selected_model.get()
@@ -259,9 +262,6 @@ class TkinterUi:
 
         Args:
             error_text (str): The error message to display.
-
-        Returns:
-            None
         """
         frame = tk.Frame(self.window)
         tk.Label(frame, text=error_text, fg="red").pack(pady=20)
@@ -287,11 +287,11 @@ class TkinterUi:
         tk.Label(frame, text="Selecciona la tecnología con el que quiere realizar el informe:").pack(pady=10)
         technologies = [("OpenAI", "OpenAI"), ("Llama", "Llama")]
         for text, value in technologies:
-            tk.Checkbutton(frame, text=text, variable=selected_technology, onvalue=value).pack(anchor=tk.W)
+            tk.Radiobutton(frame, text=text, variable=selected_technology, value=value).pack(anchor=tk.W)
         tk.Button(frame, text="Continuar", command=set_technology).pack(pady=10)
 
-        self.add_info_button(frame, "Selecciona 'OpenAI' o 'Llama' como tecnología a utilizar. Luego, "
-                                    "haga clic en Continuar.")
+        self.add_info_button(frame, "Selecciona 'OpenAI' o 'Llama' como tecnología a utilizar. Luego, haga clic en "
+                                    "Continuar.")
         self.switch_frame(frame)
         self.window.mainloop()
         return selected_technology.get()
@@ -312,11 +312,10 @@ class TkinterUi:
         tk.Label(frame, text="Seleccione el entorno:").pack(pady=10)
         environments = [("Local", "Local"), ("Online", "Online")]
         for text, value in environments:
-            tk.Checkbutton(frame, text=text, variable=selected_environment, onvalue=value).pack(anchor=tk.W)
+            tk.Radiobutton(frame, text=text, variable=selected_environment, value=value).pack(anchor=tk.W)
         tk.Button(frame, text="Continuar", command=set_environment).pack(pady=10)
 
-        self.add_info_button(frame,
-                             "Seleccione 'Local' para generar un informe a partir de información ya extraída, "
+        self.add_info_button(frame, "Seleccione 'Local' para generar un informe a partir de información ya extraída, "
                              "u 'Online' para realizar la extracción y luego el análisis. Luego, haga clic en "
                              "'Continuar'")
         self.switch_frame(frame)
@@ -342,13 +341,12 @@ class TkinterUi:
         tk.Label(frame, text="Enter the file path:").pack(pady=10)
         file_entry = tk.Entry(frame, textvariable=file_path)
         file_entry.pack(pady=5)
-        file_entry.insert(0, "Introduce la ruta de un informe de information")
+        file_entry.insert(0, "Introduce la ruta de un informe de información")
         file_entry.bind("<FocusIn>", lambda args: file_entry.selection_range(0, 'end'))
         tk.Button(frame, text="Continuar", command=set_file_path).pack(pady=10)
 
         self.add_info_button(frame, "La ruta debe ser de un informe en formato JSON creado por el programa en una "
-                                    "ejecución anterior. Introduce la ruta del archivo y luego haga clic en "
-                                    "'Continuar'.")
+                             "ejecución anterior. Introduce la ruta del archivo y luego haga clic en 'Continuar'.")
 
         self.switch_frame(frame)
         self.window.mainloop()
@@ -357,6 +355,9 @@ class TkinterUi:
     def show_report(self, report_type: str):
         """
         Shows a final screen indicating the end of the process.
+
+        Args:
+            report_type (str): The type of report generated.
         """
         frame = tk.Frame(self.window)
         tk.Label(frame, text=f"Se ha escrito {report_type}").pack(pady=20)
