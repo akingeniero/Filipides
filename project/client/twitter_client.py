@@ -19,7 +19,7 @@ class TwitterClient(metaclass=SingletonMeta):
         users (dict): Dictionary containing user account information.
     """
 
-    def __init__(self: 'TwitterClient') -> None:
+    def __init__(self) -> None:
         """
         Initializes the OpenAIClient with the necessary configurations.
         """
@@ -28,12 +28,9 @@ class TwitterClient(metaclass=SingletonMeta):
         logger.info("TwitterClient initialized")
         self.users: dict = {}
 
-    async def register(self: 'TwitterClient') -> bool:
+    async def register(self) -> bool:
         """
         Registers the user accounts for the Twitter API.
-
-        Args:
-            self: Instance of TwitterClient.
 
         Returns:
             bool: True if registration is successful, False otherwise.
@@ -50,12 +47,11 @@ class TwitterClient(metaclass=SingletonMeta):
             await sleep(0.1)
             return True
 
-    async def get_user_tweets(self: 'TwitterClient', user_id: int, limit: int = 20):
+    async def get_user_tweets(self, user_id: int, limit: int = 20):
         """
         Retrieves tweets for a given user ID up to the specified limit.
 
         Args:
-            self: Instance of TwitterClient.
             user_id (int): The user ID to fetch tweets for.
             limit (int): The maximum number of tweets to retrieve. Default is 20.
 
@@ -69,12 +65,6 @@ class TwitterClient(metaclass=SingletonMeta):
     async def close(self):
         """
         Closes the TwitterClient and deletes the registered user accounts.
-
-        Args:
-            self: Instance of TwitterClient.
-
-        Returns:
-            None
         """
         await self.api.pool.delete_accounts(self.users["username"])
         pass
