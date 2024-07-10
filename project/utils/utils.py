@@ -5,6 +5,7 @@ from datetime import datetime
 from project.client.llm_client.llm_manager import LlmManager
 from project.client.news_client import NewsClient
 from project.client.twitter_client import TwitterClient
+from project.ui.ui_manager import UiManager
 
 
 def select_tech(tech, llm_manager):
@@ -51,7 +52,7 @@ def load_report_from_file(file_path):
         return None
 
 
-async def fetch_and_analyze_tweets(user_id: int, tech) -> None:
+async def fetch_and_analyze_tweets(user_id: int, ui_manager) -> None:
     """
     Fetches tweets for a given user ID, processes the tweets, generates a review, and analyzes it using OpenAI.
 
@@ -72,11 +73,13 @@ async def fetch_and_analyze_tweets(user_id: int, tech) -> None:
         "timestamp": datetime.now().isoformat()
     }
     tweet_report_str = json.dumps(tweet_report, indent=4, ensure_ascii=False)
-    save_analysis(tweet_report_str, f"tweet_report_{user_id}.json", "./tweets_reports")
-    await analyze_llm(tech, tweet_report)
+    save_analysis(tweet_report_str, f"tweet_report_{user_id}.json", ui_manager, "./tweets_reports")
+    ui_manager.show_report(f"tweet_report_{user_id}.json")
+    tech = ui_manager.technology_select()
+    await analyze_llm(tech, tweet_report, ui_manager)
 
 
-async def fetch_and_analyze_news(url_news: str, tech) -> None:
+async def fetch_and_analyze_news(url_news: str, ui_manager) -> None:
     """
     Fetches the main news content from a given URL, generates a review, and analyzes it using OpenAI.
 
@@ -97,11 +100,12 @@ async def fetch_and_analyze_news(url_news: str, tech) -> None:
         "timestamp": datetime.now().isoformat()
     }
     news_report_str = json.dumps(news_report, indent=4, ensure_ascii=False)
-    save_analysis(news_report_str, f"news_report_{title_name}.json", "./news_reports")
-    await analyze_llm(tech, news_report)
+    save_analysis(news_report_str, f"news_report_{title_name}.json",  ui_manager, "./news_reports")
+    tech = ui_manager.technology_select()
+    await analyze_llm(tech, news_report, ui_manager)
 
 
-async def analyze_llm(tech, report):
+async def analyze_llm(tech, report, ui_manager):
     llm_manager = LlmManager()
     select_tech(tech, llm_manager)
     review = report["review"]
@@ -124,7 +128,7 @@ async def analyze_llm(tech, report):
         directory_report = "./tweets_analysis_reports"
 
     tweet_analysis_report_str = json.dumps(tweet_analysis_report, indent=4, ensure_ascii=False)
-    save_analysis(tweet_analysis_report_str, f"analysis_report_{title_report}.json", directory_report)
+    save_analysis(tweet_analysis_report_str, f"analysis_report_{title_report}.json", ui_manager, directory_report)
 
 
 async def process_tweets(tweets_coroutine) -> list:
@@ -178,7 +182,7 @@ def generate_review(tweet_data_list: list) -> str:
     return review[:2000]
 
 
-def save_analysis(analysis: str, filename: str, directory: str = '.') -> None:
+def save_analysis(analysis: str, filename: str, uimanager: UiManager, directory: str = '.') -> None:
     """
     Saves the analysis to a markdown file, ensuring no file overwrite.
 
@@ -189,6 +193,7 @@ def save_analysis(analysis: str, filename: str, directory: str = '.') -> None:
 
     Returns:
         None
+        :param uimanager:
     """
     os.makedirs(directory, exist_ok=True)
 
@@ -202,3 +207,5 @@ def save_analysis(analysis: str, filename: str, directory: str = '.') -> None:
 
     with open(file_path, 'w') as file:
         file.write(analysis.strip())
+
+    uimanager.show_report(filename)
