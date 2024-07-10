@@ -81,7 +81,6 @@ async def fetch_and_analyze_tweets(user_id: int, ui_manager: UiManager) -> None:
     }
     tweet_report_str = json.dumps(tweet_report, indent=4, ensure_ascii=False)
     save_analysis(tweet_report_str, f"tweet_report_{user_id}.json", ui_manager, "./tweets_reports")
-    ui_manager.show_report(f"tweet_report_{user_id}.json")
     tech = ui_manager.technology_select()
     await analyze_llm(tech, tweet_report, ui_manager)
 
