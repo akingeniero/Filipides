@@ -139,4 +139,13 @@ class UiManager(metaclass=SingletonMeta):
         """
         return self.ui_instance.file_select()
 
+    def show_report(self, report_name: str):
+        """
+        Allows the user to select a technology (OpenAI or Llama).
+
+        Returns:
+            str: Selected technology ('OpenAI' or 'Llama').
+        """
+        return self.ui_instance.show_report(report_name)
+
 
