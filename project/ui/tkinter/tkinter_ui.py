@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox, ttk
 from PIL import Image, ImageTk
+import os
 
 
 class TkinterUi:
@@ -42,7 +43,10 @@ class TkinterUi:
         def show_info():
             messagebox.showinfo("Information", info_text)
 
-        icon = Image.open("/project/ui/tkinter/information-button.png")
+        current_dir = os.path.dirname(__file__)
+        icon_path = os.path.join(current_dir, "information-button.png")
+
+        icon = Image.open(icon_path)
         icon = icon.resize((25, 25), Image.LANCZOS)
         icon_image = ImageTk.PhotoImage(icon)
 
@@ -163,7 +167,7 @@ class TkinterUi:
         tk.Label(frame, text="Introduce el ID de Twitter del cual quieres extraer información:").pack(pady=10)
         user_entry = tk.Entry(frame, textvariable=user_id)
         user_entry.pack(pady=5)
-        user_entry.insert(0, "Enter user ID here")
+        user_entry.insert(0, "Introduce user ID")
         user_entry.bind("<FocusIn>", lambda args: user_entry.selection_range(0, 'end'))
         tk.Button(frame, text="Continuar", command=set_user_id).pack(pady=10)
 
@@ -193,7 +197,7 @@ class TkinterUi:
         tk.Label(frame, text="Introduce la URL de la noticia de la que quieres extraer información:").pack(pady=10)
         url_entry = tk.Entry(frame, textvariable=url)
         url_entry.pack(pady=5)
-        url_entry.insert(0, "Enter URL here")
+        url_entry.insert(0, "Introduce la URL")
         url_entry.bind("<FocusIn>", lambda args: url_entry.selection_range(0, 'end'))
         tk.Button(frame, text="Continuar", command=set_url).pack(pady=10)
 
@@ -218,7 +222,7 @@ class TkinterUi:
             self.window.quit()
 
         tk.Label(frame, text="¿Quiéres realizar más informes?").pack(pady=10)
-        options = [("Yes", "y"), ("No", "n")]
+        options = [("Sí", "y"), ("No", "n")]
         for text, value in options:
             tk.Radiobutton(frame, text=text, variable=response, value=value).pack(anchor=tk.W)
         tk.Button(frame, text="Continuar", command=set_response).pack(pady=10)

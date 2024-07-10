@@ -7,96 +7,89 @@ class CommandLineUi:
         """
         Allows the user to select a mode (Twitter or News).
 
-        Args:
-            self: Instance of CommandLineUi.
-
         Returns:
             str: Selected mode ('Twitter' or 'News').
         """
         while True:
-            print("Select mode:")
-            print("1. Twitter mode")
-            print("2. News mode")
-            mode_choice = input("Enter mode choice (1 or 2): ").strip()
+            print("Seleccione el modo:")
+            print("1. Modo Twitter")
+            print("2. Modo Noticias")
+            mode_choice = input("Ingrese la opción de modo (1 o 2): ").strip()
 
             if mode_choice == '1':
                 return 'Twitter'
             elif mode_choice == '2':
-                return 'News'
+                return 'Noticias'
             else:
-                print("Invalid mode choice. Please enter 1 or 2.")
+                print("Opción de modo inválida. Por favor ingrese 1 o 2.")
 
-    def personal_user_select(self: 'CommandLineUi', users: dict) -> dict:
+    def personal_user_select(self, users: dict) -> dict:
         """
         Allows the user to select a personal user from the given dictionary of users.
 
         Args:
-            self: Instance of CommandLineUi.
             users (dict): Dictionary of users where keys are user IDs and values are user details.
 
         Returns:
             dict: Selected user's details.
         """
-        available_users = users.keys()
+        available_users = list(users.keys())
         while True:
-            print("Available users:", ', '.join(available_users))
-            user = input("Enter the user for setup: ").strip()
-            if user in available_users:
-                return users[user]
-            else:
-                print("Invalid user. Please select a valid user from the list.")
+            print("Usuarios disponibles:")
+            for i, user in enumerate(available_users):
+                print(f"{i + 1}. {user}")
 
-    def prompt_select(self: 'CommandLineUi', prompts: dict) -> str:
+            user_choice = input("Ingrese el número del usuario para configurar: ").strip()
+            if user_choice.isdigit() and 1 <= int(user_choice) <= len(available_users):
+                return users[available_users[int(user_choice) - 1]]
+            else:
+                print("Número de usuario inválido. Por favor seleccione un usuario válido de la lista.")
+
+    def prompt_select(self, prompts: dict) -> str:
         """
         Allows the user to select a prompt from the given dictionary of prompts.
 
         Args:
-            self: Instance of CommandLineUi.
             prompts (dict): Dictionary of available prompts.
 
         Returns:
             str: Selected prompt.
         """
+        prompt_keys = list(prompts.keys())
         while True:
-            print("Available prompts:")
-            for key in prompts.keys():
-                print(f"- {key}")
+            print("Prompts disponibles:")
+            for i, key in enumerate(prompt_keys):
+                print(f"{i + 1}. {key}")
 
-            prompt_key = input("Please enter the key of the prompt you want to use: ").strip()
-            if prompt_key in prompts:
-                return prompts[prompt_key]
+            choice = input("Por favor ingrese el número del prompt que desea usar: ").strip()
+            if choice.isdigit() and 1 <= int(choice) <= len(prompt_keys):
+                return prompts[prompt_keys[int(choice) - 1]]
             else:
-                print("Invalid prompt key. Please try again.")
+                print("Número de prompt inválido. Por favor intente de nuevo.")
 
-    def target_user_select(self: 'CommandLineUi') -> int:
+    def target_user_select(self) -> int:
         """
         Allows the user to enter a target user's ID.
-
-        Args:
-            self: Instance of CommandLineUi.
 
         Returns:
             int: Selected target user's ID.
         """
         while True:
-            user_input = input("Enter the target user (numbers only): ").strip()
+            user_input = input("Ingrese el usuario objetivo (solo números): ").strip()
             if user_input.isdigit():
                 return int(user_input)
             else:
-                print("Invalid input. Please enter a number.")
+                print("Entrada inválida. Por favor ingrese un número.")
 
-    def target_url_select(self: 'CommandLineUi') -> str:
+    def target_url_select(self) -> str:
         """
         Allows the user to enter a target URL.
-
-        Args:
-            self: Instance of CommandLineUi.
 
         Returns:
             str: Selected target URL.
         """
         while True:
-            url_input = input("Enter the target url: ").strip()
+            url_input = input("Ingrese la URL objetivo: ").strip()
             return url_input
 
     def continue_select(self) -> str:
@@ -107,69 +100,105 @@ class CommandLineUi:
             str: The user's response in lowercase ('y' or 'n').
         """
         while True:
-            response = input("Do you want to perform another operation? (y/n): ").strip().lower()
-            if response in ['y', 'n']:
+            response = input("¿Desea realizar otra operación? (s/n): ").strip().lower()
+            if response in ['s', 'n']:
                 return response
             else:
-                print("Invalid answer. Please enter 'y' for yes or 'n' for no.")
+                print("Respuesta inválida. Por favor ingrese 's' para sí o 'n' para no.")
 
-    def model_select(self: 'CommandLineUi', models: list) -> str:
+    def model_select(self, models: list) -> str:
         """
         Allows the user to select a model from the given list of models.
 
         Args:
-            self: Instance of CommandLineUi.
             models (list): List of available models.
 
         Returns:
             str: Selected model.
         """
         while True:
-            print("Available models:")
+            print("Modelos disponibles:")
             for i, model in enumerate(models):
                 print(f"{i + 1}: {model}")
 
             try:
-                model_index = int(input("Please enter the number of the model you want to use: ").strip())
+                model_index = int(input("Por favor ingrese el número del modelo que desea usar: ").strip())
                 if 1 <= model_index <= len(models):
                     return models[model_index - 1]
                 else:
-                    print("Invalid number. Please try again.")
+                    print("Número inválido. Por favor intente de nuevo.")
             except ValueError:
-                print("Invalid input. Please enter a number.")
+                print("Entrada inválida. Por favor ingrese un número.")
 
     def error(self, error_text: str):
         """
         Displays an error message.
 
         Args:
-            self: Instance of CommandLineUi.
             error_text (str): The error message to display.
-
-        Returns:
-            None
         """
-        print(error_text)
+        print(f"Error: {error_text}")
 
-    def technology_select(self: 'CommandLineUi') -> str:
+    def technology_select(self) -> str:
         """
         Allows the user to select a technology (OpenAI or Llama).
-
-        Args:
-            self: Instance of CommandLineUi.
 
         Returns:
             str: Selected technology ('OpenAI' or 'Llama').
         """
         while True:
-            print("Select technology:")
+            print("Seleccione la tecnología:")
             print("1. OpenAI")
             print("2. Llama")
-            tech_choice = input("Enter technology choice (1 or 2): ").strip()
+            tech_choice = input("Ingrese la opción de tecnología (1 o 2): ").strip()
 
             if tech_choice == '1':
                 return 'OpenAI'
             elif tech_choice == '2':
                 return 'Llama'
             else:
-                print("Invalid technology choice. Please enter 1 or 2.")
+                print("Opción de tecnología inválida. Por favor ingrese 1 o 2.")
+
+    def environment_select(self) -> str:
+        """
+        Allows the user to select an environment (Local or Online).
+
+        Returns:
+            str: Selected environment ('Local' or 'Online').
+        """
+        while True:
+            print("Seleccione el entorno:")
+            print("1. Local")
+            print("2. Online")
+            env_choice = input("Ingrese la opción de entorno (1 o 2): ").strip()
+
+            if env_choice == '1':
+                return 'Local'
+            elif env_choice == '2':
+                return 'Online'
+            else:
+                print("Opción de entorno inválida. Por favor ingrese 1 o 2.")
+
+    def file_select(self) -> str:
+        """
+        Allows the user to enter a file path.
+
+        Returns:
+            str: Selected file path.
+        """
+        while True:
+            file_path = input("Ingrese la ruta del archivo: ").strip()
+            if file_path:
+                return file_path
+            else:
+                print("Por favor ingrese una ruta de archivo válida.")
+
+    def show_report(self, report_type: str):
+        """
+        Shows a final screen indicating the end of the process.
+
+        Args:
+            report_type (str): The type of report generated.
+        """
+        print(f"Se ha escrito el informe: {report_type}")
+        input("Presione Enter para continuar...")
