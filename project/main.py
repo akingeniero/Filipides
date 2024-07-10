@@ -30,7 +30,7 @@ async def main() -> None:
             file_path = ui_manager.file_select()
             data_report = load_report_from_file(file_path)
             tech = ui_manager.technology_select()
-            await analyze_llm(tech, data_report)
+            await analyze_llm(tech, data_report, ui_manager)
         else:
             mode_selection = ui_manager.mode_select()
             if mode_selection == 'Twitter':
@@ -38,14 +38,12 @@ async def main() -> None:
                 register_status = await twitter_client.register()
                 if register_status:
                     user_id = ui_manager.target_user_select()
-                    tech = ui_manager.technology_select()
-                    await fetch_and_analyze_tweets(user_id, tech)
+                    await fetch_and_analyze_tweets(user_id, ui_manager)
                 else:
                     ui_manager.error("Failed to register user")
             elif mode_selection == 'News':
                 url = ui_manager.target_url_select()
-                tech = ui_manager.technology_select()
-                await fetch_and_analyze_news(url, tech)
+                await fetch_and_analyze_news(url, ui_manager)
 
         logger.info("Operation completed")
 
