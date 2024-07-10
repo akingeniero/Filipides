@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import messagebox, ttk
 from PIL import Image, ImageTk
 import os
+import re
 
 
 class TkinterUi:
@@ -68,7 +69,7 @@ class TkinterUi:
             self.window.quit()
 
         tk.Label(frame, text="Seleccione la fuente para la extracción de información:").pack(pady=10)
-        modes = [("Twitter Mode", "Twitter"), ("News Mode", "News")]
+        modes = [("Twitter", "Twitter"), ("Periódicos", "News")]
         for text, value in modes:
             tk.Radiobutton(frame, text=text, variable=selected_mode, value=value).pack(anchor=tk.W)
         tk.Button(frame, text="Continuar", command=set_mode).pack(pady=10)
@@ -188,11 +189,15 @@ class TkinterUi:
         frame = tk.Frame(self.window)
         url = tk.StringVar()
 
+        def is_valid_url(url: str) -> bool:
+            pattern = re.compile(r"https?://(www\.)?(larazon|elmundo|elpais)\.(es|com)/.*")
+            return bool(pattern.match(url))
+
         def set_url():
-            if url.get():
+            if is_valid_url(url.get()):
                 self.window.quit()
             else:
-                messagebox.showerror("Entrada Invalida", "Por favor introduce una URL correcta")
+                messagebox.showerror("URL no válida", "Solo se permiten URLs de los periódicos La Razón, El Mundo y El País.")
 
         tk.Label(frame, text="Introduce la URL de la noticia de la que quieres extraer información:").pack(pady=10)
         url_entry = tk.Entry(frame, textvariable=url)
@@ -202,7 +207,7 @@ class TkinterUi:
         tk.Button(frame, text="Continuar", command=set_url).pack(pady=10)
 
         self.add_info_button(frame, "Introduce la URL de la noticia del periódico en línea de la que quieres extraer "
-                                    "información. Los periódicos compatibles son: El País, El Mundo. Luego, "
+                                    "información. Los periódicos compatibles son: La Razón, El Mundo, El País. Luego, "
                                     "haga clic en Continuar")
         self.switch_frame(frame)
         self.window.mainloop()

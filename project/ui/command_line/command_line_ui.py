@@ -1,3 +1,6 @@
+import re
+
+
 class CommandLineUi:
     """
     Command-line interface for user interaction.
@@ -88,9 +91,18 @@ class CommandLineUi:
         Returns:
             str: Selected target URL.
         """
+
+        def is_valid_url(url: str) -> bool:
+            # Define the regex pattern for allowed URLs
+            pattern = re.compile(r"https?://(www\.)?(larazon|elmundo|elpais)\.(es|com)/.*")
+            return bool(pattern.match(url))
+
         while True:
             url_input = input("Ingrese la URL objetivo: ").strip()
-            return url_input
+            if is_valid_url(url_input):
+                return url_input
+            else:
+                print("URL no válida. Solo se permiten URLs de los periódicos La Razón, El Mundo y El País.")
 
     def continue_select(self) -> str:
         """
