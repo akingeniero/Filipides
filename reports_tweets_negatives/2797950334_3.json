@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by RNE SANTIAGO - Emergencias (@RNESANTIAGO) on 2024-06-24 02:18:08+00:00:\n🔴PARO MAQUINISTAS EFE\nSe informa que se mantendría el #Paro de maquinistas de la empresa @EFETrenesChile @EFENos_ para el día de mañana.\nTe dejamos el Plan de Contingencia para mañana.\nComparte HAZ RT \n#TodosSomosRNE\n\n@reddeemergencia https://t.co/tGfNBEyJl5\nTweet by RNE SANTIAGO - Emergencias (@RNESANTIAGO) on 2024-06-23 17:06:20+00:00:\n⚠️PARO METROTREN NOS\nEn estos momentos el servicio MetroTren Nos-Alameda de @EFENos_ se encuentra suspendido por paro indefinido de Maquinistas de este servicio.\nEn el transcurso del día empresa debería informar acciones a seguir para el día de mañana en caso de continuar el paro https://t.co/hMSDO1AFMm\nTweet by RNE SANTIAGO - Emergencias (@RNESANTIAGO) on 2024-06-22 18:55:07+00:00:\nRT @DPPTalagante: ✅ Ya se encuentra habilitada la #CuestaBarriga en ambas direcciones en #PadreHurtado y #Curacaví, gracias a finalización de labores de despeje de vía, llevadas a cabo por Vialidad MOP, y con apoyo y resguardo de funcionarios @mph_chile y Carabineros de la 56ª Comisaría https://t.co/qQEoZJhnaA\nTweet by Delegación Presidencial Provincial de Talagante🏛 (@DPPTalagante) on 2024-06-22 17:57:02+00:00:\n✅ Ya se encuentra habilitada la #CuestaBarriga en ambas direcciones en #PadreHurtado y #Curacaví, gracias a finalización de labores de despeje de vía, llevadas a cabo por Vialidad MOP, y con apoyo y resguardo de funcionarios @mph_chile y Carabineros de la 56ª Comisaría https://t.co/qQEoZJhnaA\nTweet by RNE SANTIAGO - Emergencias (@RNESANTIAGO) on 2024-06-22 18:54:57+00:00:\nRT @RadioPrensa: #SiempreAlerta\nMELIPILLA. Sistema Frontal: Familias de Villa Alegre continúan aisladas y claman por ayuda. https://t.co/dBun2h5pVr\nTweet by RadioPrensa #SiempreAlerta 🔴 (@RadioPrensa) on 2024-06-22 14:04:41+00:00:\n#SiempreAlerta\nMELIPILLA. Sistema Frontal: Familias de Villa Alegre continúan aisladas y claman por ayuda. https://t.co/dBun2h5pVr\nTweet by RNE SANTIAGO - Emergencias (@RN",
+  "analysis": {
+    "created": 1719427852,
+    "model": "llama3-70b",
+    "usage": {
+      "prompt_tokens": 954,
+      "completion_tokens": 100,
+      "total_tokens": 1054
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Análisis de sentimiento del tweet:\n\n**1. Emoción principal:** Neutral\n\n**2. Elementos específicos:**\n\n* La mayoría de los tweets informan sobre situaciones de emergencia o problemas en el transporte público (paro de maquinistas, suspensión del servicio MetroTren Nos-Alameda, etc.).\n* Los tweets incluyen información objetiva y factual, sin expresiones emocionales ni juicios de valor.\n* La presencia de emojis como",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 10.30931806564331
+}

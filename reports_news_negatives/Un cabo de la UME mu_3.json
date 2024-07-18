@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: Un cabo de la UME muere en accidente de moto cuando se dirigía a la base de Torrejón de Ardoz Contenido: David V. M., un cabo de la UME (Unidad Militar de Emergencias) de 39 años de edad, ha fallecido este miércoles en el día de su cumpleaños en un accidente de moto camino de la base de Torrejón de Ardoz (Madrid), donde trabajaba. El siniestro ha tenido lugar sobre las 06.20 horas en la carretera M-50, a la altura del cruce con la M-21, según Emergencias 112 Comunidad de Madrid. A tenor de los primeros datos, el motorista ha perdido el control de su vehículo y ha chocado contra un camión. Hasta el lugar se han desplazado los sanitarios del Summa 112, que tan solo han podido certificar su fallecimiento. La Guardia Civil de Tráfico ha abierto una investigación para esclarecer las circunstancias en que se ha producido el accidente mortal. Los agentes tratan de averiguar como se ha producido el percance y si el camión involucrado tiene algo que ver con los hechos. Al tratarse de un percance camino del trabajo será tratado el caso como un accidente in itinere y de la misma forma que si se hubiese producido en el centro de trabajo. El cadáver de David ha sido trasladado al Instituto de Medicina Legal de Valdebebas para practicarle la autopsia. Al recinto han acudido varios mandos de la UME, amigos y familiares. Desde la UME no han querido manifestarse sobre este hecho que ha causado una gran consternación entre sus compañeros. David, que tenía una hija pequeña, era muy popular y muy querido en la base y pertenecía a uno de los batallones de la unidad militar.",
+    "analysis": {
+        "created": 1719443411,
+        "model": "llama3-70b",
+        "usage": {
+            "prompt_tokens": 663,
+            "completion_tokens": 100,
+            "total_tokens": 763
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Análisis de sentimiento:\n\n1. Emoción principal: Negativa\n\nLa emoción principal en este tweet es negativa debido a la noticia de la muerte de un cabo de la UME en un accidente de moto. La pérdida de una vida humana es un evento trágico que evoca sentimientos de tristeza, dolor y consternación.\n\n2. Elementos específicos:\n* La palabra \"fallecido\" y \"mu",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 5.8323328495025635
+}

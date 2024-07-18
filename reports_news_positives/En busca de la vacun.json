@@ -1,0 +1,10 @@
+{
+    "review": "Titulo: En busca de la vacuna perfecta contra la tuberculosis Contenido: ",
+    "analysis": {
+        "model": "gpt-4-turbo",
+        "message": {
+            "content": "Análisis de sentimiento:\n\n1. **Emoción principal:**\n   La emoción principal de la noticia es positiva.\n\n2. **Elementos específicos:**\n   - Título: \"En busca de la vacuna perfecta contra la tuberculosis\". El uso de la palabra \"perfecta\" y la frase \"en busca de\" sugieren un enfoque proactivo y optimista hacia la resolución de un problema grave de salud pública.\n   - Contenido: Aunque no se proporciona el contenido detallado de la noticia, el título en sí implica un esfuerzo activo y esperanzador para mejorar las medidas de salud.\n\n3. **Explicación del sentimiento:**\n   La clasificación como positiva se debe a que la búsqueda de una \"vacuna perfecta\" contra una enfermedad como la tuberculosis sugiere un progreso y una dedicación a mejorar la salud y el bienestar global. La palabra \"perfecta\" implica un alto nivel de eficacia esperada, lo que genera un tono de esperanza y avance.\n\n4. **Matices o cambios de tono:**\n   Sin más contenido del artículo, es difícil determinar si hay matices o cambios de tono dentro de la noticia completa. Sin embargo, el título en sí no muestra variaciones de tono, manteniendo un enfoque uniformemente optimista hacia la búsqueda de una solución médica significativa.\n\nEn resumen, la noticia proyecta un sentimiento positivo debido a su enfoque en la mejora y la innovación en el campo de la salud, específicamente en la lucha contra la tuberculosis."
+        }
+    },
+    "elapsed_time": 15.080366849899292
+}

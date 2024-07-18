@@ -1,0 +1,10 @@
+{
+    "review": "Titulo: La mortalidad materna se ha reducido en el mundo en un 44 % desde 1990 Contenido: ",
+    "analysis": {
+        "model": "gpt-4-turbo",
+        "message": {
+            "content": "Análisis de sentimiento:\n\n1. **Emoción principal:** Positiva\n\n2. **Elementos específicos:**\n   - **Título del artículo:** \"La mortalidad materna se ha reducido en el mundo en un 44 % desde 1990\". El uso de las palabras \"reducido\" y \"44 %\" son indicativos de una mejora significativa.\n   - **Contenido implícito:** Aunque el contenido explícito no está desarrollado en la noticia proporcionada, el contexto de la reducción de la mortalidad materna sugiere una mejora en la salud y el bienestar de las madres a nivel mundial.\n\n3. **Explicación del sentimiento:**\n   - La reducción de la mortalidad materna es claramente una noticia positiva, ya que implica un avance en la salud pública y en la seguridad de las madres durante el embarazo y el parto. Este tipo de avances son generalmente recibidos con optimismo y esperanza, ya que indican progreso en áreas críticas de la salud y el bienestar humano.\n   - El porcentaje significativo de reducción (44%) subraya un cambio considerable y exitoso en las políticas de salud, atención médica, y/o acceso a servicios de salud, lo cual contribuye directamente al sentimiento positivo.\n\n4. **Matices o cambios de tono:**\n   - No se detectan matices o cambios de tono en la breve noticia proporcionada. El mensaje se mantiene uniformemente positivo, enfocado en la mejora de la mortalidad materna. Sin embargo, sería necesario analizar el contenido completo para detectar posibles matices relacionados con desafíos o áreas que aún necesitan mejora."
+        }
+    },
+    "elapsed_time": 12.850116729736328
+}

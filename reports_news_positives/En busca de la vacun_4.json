@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: En busca de la vacuna perfecta contra la tuberculosis Contenido: ",
+    "analysis": {
+        "created": 1719441553,
+        "model": "mixtral-8x22b-instruct",
+        "usage": {
+            "prompt_tokens": 189,
+            "completion_tokens": 86,
+            "total_tokens": 275
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "1. Emoción principal: Neutral\n2. Elementos específicos: El título y el contenido de la noticia no muestran una emoción clara, ya que se enfoca en la búsqueda de una vacuna contra la tuberculosis. No hay palabras que indiquen una emoción positiva o negativa.\n3. Explicación del sentimiento: El sentimiento se clasifica como",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 7.15332293510437
+}

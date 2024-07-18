@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by EL PAÍS España (@elpais_espana) on 2024-06-26 08:01:15+00:00:\nEl juez que investiga a Begoña Gómez pide a la SEPI el expediente del rescate de Air Europa https://t.co/MjEaSwCNFS\nTweet by EL PAÍS España (@elpais_espana) on 2024-06-26 01:10:19+00:00:\nLa fiscalía se opone a que el Tribunal de Cuentas consulte a Bruselas sobre la amnistía https://t.co/n22Vr5aLR3\nTweet by EL PAÍS España (@elpais_espana) on 2024-06-25 20:16:51+00:00:\n¿Cuáles son los próximos pasos tras el acuerdo para renovar el Poder Judicial? https://t.co/wyie4v3Qet\nTweet by EL PAÍS España (@elpais_espana) on 2024-06-25 20:10:59+00:00:\nEl Constitucional acusa al Supremo de haberse “extralimitado” en la sentencia de los ERE https://t.co/IHo4dbVWMs\nTweet by EL PAÍS España (@elpais_espana) on 2024-06-25 20:05:46+00:00:\nFeijóo se anticipa a las críticas: “Asumo todos los costes que significa la coherencia política” https://t.co/6GkklSGU7n\nTweet by EL PAÍS España (@elpais_espana) on 2024-06-19 06:51:34+00:00:\nRull apunta a una investidura al límite del plazo legal: “A Puigdemont se le votó en el último día” https://t.co/oLPCRKZqNN\nTweet by EL PAÍS España (@elpais_espana) on 2024-06-19 03:52:57+00:00:\nEl presidente del Parlamento balear, de Vox, rompe la foto de una víctima de la Guerra Civil y expulsa a dos diputadas socialistas https://t.co/mVtEqSml9t\nTweet by EL PAÍS España (@elpais_espana) on 2024-06-19 00:54:23+00:00:\nLa Junta de Fiscales avala el criterio de García Ortiz de aplicar la amnistía total al ‘procés’ https://t.co/pyziP7DqO1\nTweet by EL PAÍS España (@elpais_espana) on 2024-06-18 21:54:47+00:00:\nBegoña Gómez recurre al juez Peinado para que aclare qué investiga y le pide que no alargue la investigación https://t.co/nZTYZcfO8Z\nTweet by EL PAÍS España (@elpais_espana) on 2024-06-18 18:53:56+00:00:\nSánchez, obligado a retrasar su regreso a España desde Bruselas por una avería del Falcon https://t.co/TdLLykOYPp\nTweet by EL PAÍS España (@elpais_espana) on 2024-06-15 05:25:40+00:00:\nLa Guard",
+  "analysis": {
+    "created": 1719425542,
+    "model": "llama3-70b",
+    "usage": {
+      "prompt_tokens": 999,
+      "completion_tokens": 100,
+      "total_tokens": 1099
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Análisis de sentimiento:\n\n**1. Emoción principal:** Neutral\n\n**2. Elementos específicos:**\nLos tweets analizados son noticias breves y objetivas que informan sobre eventos y decisiones políticas y judiciales en España. No hay elementos emocionales explícitos, como palabras o frases que expresen sentimientos positivos o negativos. La mayoría de los tweets comienzan con un título objetivo que resume la noticia, seguido de",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 2.9367589950561523
+}

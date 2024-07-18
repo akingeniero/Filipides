@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Conguitos (@Conguitos) on 2024-04-16 19:15:19+00:00:\nAntes decían que una galleta a tiempo espabilaba. Ahora, es para espabilados. Nuevos Conguitos Galleta. No es cacahué, es galleté.\n\n#NoEsCacahuéEsGalleté #UnaGalletaATiempo https://t.co/8rvghvM6HW\nTweet by Conguitos (@Conguitos) on 2024-06-24 18:17:05+00:00:\n👼ALELUYA 😇 ¡Hemos escuchado vuestra plegarias! Después de miles y cientos de mensajes Conguitos Galleta BLANCO ¡es una realidad! 👏👏👏 https://t.co/wzZuCi7sW7\nTweet by Conguitos (@Conguitos) on 2024-05-17 10:02:17+00:00:\n¡Feliz Día de la Respostería!🍰 Queremos haceros partícipes de uno de los días más dulces del año 🍫 Os traeros un SORTEO TRIPLE\n\n1️⃣ Sigue a @conguitos @lacasaytu y a @lacasitos\n2️⃣ Menciona a tus 3 mejores amigos 🧡🤎💛\n\n¡Anunciamos el ganador el 23 de mayo! SUERTE🍀 https://t.co/pPicKBakHE\nTweet by Conguitos (@Conguitos) on 2024-05-23 06:43:13+00:00:\nLa ganadora del sorteo es: @SeleneCarringtn ¡enhorabuena! 🧡\nTweet by Conguitos (@Conguitos) on 2024-05-09 14:22:09+00:00:\nMensaje solo para espabilados... si no quieres llevarte #UnaGalletaATiempo aprovecha los ENVIOS GRATIS en nuestra tienda online, para probar los NUEVOS Conguitos Galleta y recuerda #NoEsCacahuéEsGalleté 🧡\n\n🛒 https://t.co/zqnYQgnZT9 https://t.co/IighFoSP7h\nTweet by Conguitos (@Conguitos) on 2024-04-17 16:09:26+00:00:\nHemos sacado los NUEVOS CONGUITOS GALLETA 🧡 Chocolate con leche con corazón de galleta ¿quieres probarlos?\n\n¡SORTEO! Síguenos y menciona a tu amigo \"el más espabilado\", y podrás ganar una caja llena de los NUEVOS CONGUITOS GALLETA \n\n🏆¡Anunciamos ganadores el 24! https://t.co/kdQ06A2R15\nTweet by Conguitos (@Conguitos) on 2024-04-29 07:25:59+00:00:\nLos ganadores del sorteo son: @Elegueca @JoseMariaGuinea @AguitaParaDos y @DenebPlay ¡enhorabuena! 🏆\nTweet by Conguitos (@Conguitos) on 2024-04-18 19:04:29+00:00:\n⚡ SORTEAMOS 5 ABONOS DOBLES COMPLETOS PARA EL @boombastic_fest ⚡\n\n¿Quieres disfrutar en #BoombasticPortAventura de tus cantantes favoritos de la mano de @cong",
+  "analysis": {
+    "created": 1719421215,
+    "model": "llama3-70b",
+    "usage": {
+      "prompt_tokens": 1048,
+      "completion_tokens": 100,
+      "total_tokens": 1148
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Análisis de sentimiento de los tweets de Conguitos:\n\n**Tweet 1:**\nEmoción principal: Positiva\nElementos específicos: El uso de la expresión \"espabilaba\" y \"espabilados\" tiene un tono juguetón y divertido. La presentación de los \"Nuevos Conguitos Galleta\" y el hashtag \"#NoEsCacahuéEsGalleté\" sugieren una actitud lú",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 20.532553911209106
+}

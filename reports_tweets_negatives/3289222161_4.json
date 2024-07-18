@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by 🚨Emergencias Osorno GEO (@Geosorno01) on 2024-06-26 18:27:21+00:00:\nRT @ccea8va: @biobio @RadioSago @paislobo @Geosorno01  ayuda con alguna Gestión y que reparen Esta Garita  antes que caiga encima de alguna persona.  U400  CRUCE LUMACO. y revisar las demas que construyó  la empresa x que  la de pucohihue  estaba igual la otra vez. https://t.co/fphYeCHB9v\nTweet by Cristian. 🌳 (@ccea8va) on 2024-06-26 17:02:59+00:00:\n@biobio @RadioSago @paislobo @Geosorno01  ayuda con alguna Gestión y que reparen Esta Garita  antes que caiga encima de alguna persona.  U400  CRUCE LUMACO. y revisar las demas que construyó  la empresa x que  la de pucohihue  estaba igual la otra vez. https://t.co/fphYeCHB9v\nTweet by 🚨Emergencias Osorno GEO (@Geosorno01) on 2024-06-26 15:42:05+00:00:\nRT @Carlossassarini: El mejor spot de las campañas políticas previo a las Municipales \nrealizado por Mauro .... https://t.co/MKnzhmcXuS\nTweet by CarlosDSassa (@Carlossassarini) on 2024-06-25 22:19:01+00:00:\nEl mejor spot de las campañas políticas previo a las Municipales \nrealizado por Mauro .... https://t.co/MKnzhmcXuS\nTweet by 🚨Emergencias Osorno GEO (@Geosorno01) on 2024-06-26 15:20:28+00:00:\nRT @SuralisTeAyuda: Nuestros equipos👷‍♀️🚛están y han estado trabajando en las regiones de #LosRíos y #LosLagos para atender colapsos de alcantarillado ante ingreso irregular de #aguaslluvias\n\nLa falta de obras de drenaje urbano genera estos problemas que afectan al #MedioAmbiente y a la comunidad😭🤦 https://t.co/QLjmfn9uG3\nTweet by SuralisTeAyuda (@SuralisTeAyuda) on 2024-06-26 14:41:28+00:00:\nNuestros equipos👷‍♀️🚛están y han estado trabajando en las regiones de #LosRíos y #LosLagos para atender colapsos de alcantarillado ante ingreso irregular de #aguaslluvias\n\nLa falta de obras de drenaje urbano genera estos problemas que afectan al #MedioAmbiente y a la comunidad😭🤦 https://t.co/QLjmfn9uG3\nTweet by 🚨Emergencias Osorno GEO (@Geosorno01) on 2024-06-26 15:20:08+00:00:\nRT @TTILosLagos: ⚠️❄️ #AHORA: por acumula",
+  "analysis": {
+    "created": 1719427743,
+    "model": "mixtral-8x22b-instruct",
+    "usage": {
+      "prompt_tokens": 844,
+      "completion_tokens": 82,
+      "total_tokens": 926
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "\"Totalmente de acuerdo con @ccea8va y @Geosorno01. Es crucial que se reparen las garitas antes de que causen algún daño. La seguridad de nuestra comunidad es primordial. También es importante que se revisen las demás construcciones de la empresa X para evitar futuros problemas. ¡Trabajemos juntos por un entorno más seguro y responsable",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 5.1906702518463135
+}

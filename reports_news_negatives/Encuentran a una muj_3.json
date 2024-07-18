@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: Encuentran a una mujer muerta flotando en el río pontevedrés de Lameira (Marín) Contenido: El cuerpo sin vida de una mujer ha sido encontrado la mañana de este lunes en el río Lameira, en el ayuntamiento pontevedrés de Marín. Al parecer, habría muerto ahogada tras caerse al agua. Así lo confirman a Europa Press fuentes del 112 y del 061-Urxencias Sanitarias, después de que un particular llamase a las 9.00 horas de la mañana para informar de lo ocurrido. Ha sido en la rúa do Souto de Marín. Tras el aviso, se han movilizado la Policía Nacional, la Local, los bomberos de O Morrazo, Protección Civil de Marín y los servicios del 061. Los bomberos han tenido que rescatar el cuerpo no tanto por la profundidad, sino también por la dificultad de acceso de la zona. Además, hasta el punto ha acudido un médico que solo ha podido confirmar su fallecimiento. Por el momento, las fuerzas de seguridad trabajan en la investigación para esclarecer las circunstancias de este sucedo.",
+    "analysis": {
+        "created": 1719443923,
+        "model": "llama3-70b",
+        "usage": {
+            "prompt_tokens": 505,
+            "completion_tokens": 101,
+            "total_tokens": 606
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Análisis de sentimiento:\n\n1. Emoción principal: Negativa\n\n2. Elementos específicos:\n   - La noticia comienza con la frase \"El cuerpo sin vida de una mujer ha sido encontrado\", lo que establece un tono sombrío y triste.\n   - La descripción de la muerte de la mujer, \"habría muerto ahogada tras caerse al agua\", agrega un elemento de tragedia y fatalidad.",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 6.747840881347656
+}

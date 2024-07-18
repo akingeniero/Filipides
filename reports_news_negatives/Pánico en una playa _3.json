@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: Pánico en una playa de Gran Canaria por la presencia de un tiburón en plena orilla Contenido: Un tiburón ha causado pánico y caos en la costa de Gran Canaria. Los bañistas de la playa de Melenara, en Telde, se sorprendían este sábado al ver a escualo junto a la orilla. El animal ha estado tan cerca de la arena que la Policía Local ha llegado a cerrar al baño la playa, como informan desde Diario de Avisos. El aviso se produjo alrededor de las 17:00 horas de la tarde, cuando los socorristas de la zona dieron la voz de alerta ante la estupefacción de los bañistas. En ese momento, un dispositivo de búsqueda con motos acuáticas comenzó la persecución del animal, aunque sin resultados. La playa ha permanecido cerrada hasta las 10:00 de la mañana de este domingo cuando las concejalías de Playas y Seguridad Ciudadana del Ayuntamiento de Telde han acordado la reapertura al baño \"tras la marcha del tiburón que se acercó este sábado a la costa\", informa Efe. Aún así, los servicios de Policía Local, Protección Civil y Proactiva, empresa que presta el servicio de socorrismo en el litoral del municipio, trabajan de manera coordinada para supervisar que el animal no vuelva a acercarse, añade la agencia.",
+    "analysis": {
+        "created": 1719488584,
+        "model": "llama3-70b",
+        "usage": {
+            "prompt_tokens": 560,
+            "completion_tokens": 100,
+            "total_tokens": 660
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Análisis de sentimiento:\n\n1. Emoción principal: Negativa\n\n2. Elementos específicos:\n   - La palabra \"pánico\" en el título y en el contenido, que evoca una emoción fuerte y negativa.\n   - La descripción de la situación como \"caos\" en la costa de Gran Canaria.\n   - La mención a la \"estupefacción\" de los bañistas, que sugiere sorpresa",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 4.245743751525879
+}

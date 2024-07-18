@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: 30 años de condena para la doctora falsa que inyectó silicona a 37 mujeres en Canarias Contenido: Una falsa doctora que inyectó silicona a 37 mujeres ha sido condenada a 29 años y siete meses de cárcel por la Audiencia Provincial de Las Palmas, así ha sido notificada la sentencia este martes. Los hechos por los que fue procesada ocurrieron en la isla de Gran Canaria entre los años 2016 y 2019, y les hacía creer a sus víctimas que era ácido hialurónico. Además se le condena a una multa de 4.500 euros e indemnizaciones que suman 181.000 euros por ser autora de un delito de intrusismo profesional (al que se le imponen 15 meses de multa con una cuota diaria de 10 euros), de 20 delitos de lesiones del artículo 152.1.1º (por cada uno se le condena a cinco meses de prisión), y por 17 delitos de lesiones del artículo 152.1.3º (a cada uno se le impone un año y tres meses de prisión). Además el fallo absuelve a la falsa doctora de los delitos de estafa y contra la salud pública que se le imputaban, así como la responsabiliza del pago de las costas procesales y la obliga a abonar indemnizaciones a sus víctimas por un valor total de 181.000 euros, según ha informado la Oficina de Comunicación del Tribunal Superior de Justicia de Canarias (TSJC). La sentencia recoge como probado que entre los años 2016 y 2019 la acusada, en su domicilio de Las Palmas de Gran Canaria y en ocasiones en un bungalow de Playa del Inglés, se dedicaba \"careciendo de cualquier formación específica, no habiendo cursado estudio al respecto, y por tanto careciendo de cualquier tipo de autorización y cualificación que le permitiera tal actividad\", a efectuar infiltraciones en los labios y en ocasiones en el rostro de las clientas que acudían a dichos inmuebles previa cita por WhatsApp. Asimismo estas personas se ponían en manos de la acusada creyendo que se les iba a inyectar ácido hialurónico \"cuando en realidad la acusada les inyectó silicona líquida, sustancia de relleno cuyo uso en tratamientos estéticos no está autorizado ni por la Agencia Española del Medicamento ni por la Sociedad Española de Medicina Estética\". La infiltración en los labios la hacía en dos sesiones, expone el Tribunal, y lo realizaba en una habitación carente de cualquier equipamiento sanitario y estando ya las jeringuillas precargadas con el producto, abonándose en la primera sesión, en la que se efectuaba la infiltración, 150 euros, mientras que en la segunda, de retoque, que lo realizaba días después, abonaban 50 euros. Pasado un tiempo, concluye el fallo, como \"mínimo\" 37 mujeres que habían sido infiltradas por la acusada \"comenzaron a sentir molestias, como hinchazón excesiva, granulosis, dolor intenso ante cualquier golpe por mínimo que este fuera\", lo que era comunicado a la acusada \"siempre\" vía WhatsApp. Ella les exponía, por la misma vía, que esas molestias eran \"normales y que se masajearan los labios, se aplicaran hielo y en algunas ocasiones que se aplicaran antiinflamatorios\". La Sala no aprecia el delito de estafa al entender que el elemento esencial del engaño que define este tipo penal ya está subsumido en el delito de intrusismo, así como tampoco ve aplicable el delito contra la salud pública porque considera probado que las lesiones no fueron dolosas, sino causadas por imprudencia. La sentencia es susceptible de recurso de apelación ante la Sala de lo Penal del Tribunal Superior de Justicia de Canarias.",
+    "analysis": {
+        "created": 1719488289,
+        "model": "llama3-70b",
+        "usage": {
+            "prompt_tokens": 791,
+            "completion_tokens": 100,
+            "total_tokens": 891
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Análisis de sentimiento:\n\n1. Emoción principal: Negativa\n\nLa emoción principal en este tweet es negativa debido a la naturaleza del delito cometido por la falsa doctora y las consecuencias graves para las víctimas.\n\n2. Elementos específicos:\n* La descripción de la falsa doctora como alguien que \"carecía de cualquier formación específica\" y que \"no habiendo cursado estudio al respecto\" sug",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 6.468903064727783
+}

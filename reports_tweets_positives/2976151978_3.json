@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Pictolín (@PictolinOficial) on 2024-06-20 07:29:28+00:00:\nEn Instagram estamos de 𝗦𝗢𝗥𝗧𝗘𝗢 𝗘𝗫𝗣𝗥𝗘𝗦𝗦 ⚠️ \n\n¡EMPIEZA EL VERANO! Solo durante estas 24h.\n\n#ComparteMomentos #Picto #ElSaborDePictolín #SORTEO #FelizJueves https://t.co/Gt4KwbpFZn\nTweet by Pictolín (@PictolinOficial) on 2024-06-18 08:39:37+00:00:\n¡Los colores y la diversión definen al verano!\n\nEn Pictolín hemos querido transformarlo en esta toalla llena de helados de colores, para que te transmita la esencia del verano 🍦\n\n¡Con CLIC te llega a casa!\n\n#Pictolin\n#Picto\n#FelizMartes\n#LaFelicidadEnTuBolsillo https://t.co/cFJzLlVXKu\nTweet by Pictolín (@PictolinOficial) on 2024-06-10 11:14:10+00:00:\nCarlos Alcaraz, gana el #RolandGarros y nosotros no podemos estar más orgullosos 💚\n\n#BeReal @carlosalcaraz https://t.co/nCRXo4BTzy\nTweet by Pictolín (@PictolinOficial) on 2024-06-07 11:46:59+00:00:\nCreo que es momento de hacer la pregunta…\nTweet by Pictolín (@PictolinOficial) on 2024-06-05 10:00:40+00:00:\nHoy en la #EBAU pensaba que sabía mucho… pero mis respuestas decían lo contrario. \n\n#Selectividad24\nTweet by Pictolín (@PictolinOficial) on 2024-06-05 07:36:01+00:00:\nUn descansito nunca viene mal\n¡Y más si el descansito me persigue!\n\n#Pictolin\n#Picto\n#ElSaborDePictolín\n#LaFelicidadEnTuBolsillo\n#FelizMiércoles https://t.co/Wh4y6eCMKT\nTweet by Pictolín (@PictolinOficial) on 2024-05-20 09:03:32+00:00:\nMy 9pm vs 9 am\n\nDespués de un fin de semana de desfase... Picto tiene que descansar para poder seguir ofreciendo los mejores sabores ✨\n\n#Pictolin #Picto #ElSaborDePictolín #LaFelicidadEnTuBolsillo https://t.co/XNEjyrvhaK\nTweet by Pictolín (@PictolinOficial) on 2024-05-16 14:06:37+00:00:\n😎¿Quién sabe qué sorpresas pueden surgir después de un Picotlin Fullmint?\n\n¡𝗗𝗲́𝗷𝗮𝘁𝗲 𝗹𝗹𝗲𝘃𝗮𝗿 𝘆 𝗱𝗲𝘀𝗰𝘂́𝗯𝗿𝗲𝗹𝗼 𝘁𝘂́ 𝗺𝗶𝘀𝗺𝗼!\n\n#Pictolin #Picto #ElSaborDePictolín #LaFelicidadEnTuBolsillo https://t.co/iFvz5LsdbQ\nTweet by Pictolín (@PictolinOficial) on 2024-04-24 14:17:41+00:00:\n🍬 Cuando la tentación llama a la puerta, Pictolín responde.\n¡𝗥𝗼𝗯𝗮𝗿 𝗮",
+  "analysis": {
+    "created": 1719423148,
+    "model": "llama3-70b",
+    "usage": {
+      "prompt_tokens": 1155,
+      "completion_tokens": 100,
+      "total_tokens": 1255
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Análisis de sentimiento del tweet:\n\n**1. Emoción principal:** Positiva\n\n**2. Elementos específicos:**\n\n* Uso de emojis como ⚠️, 🍦, 💚, ✨, 😎, que transmiten emociones positivas como entusiasmo, alegría y diversión.\n* Palabras y frases como \"¡EMPIEZA EL VERANO!\", \"¡Los colores y la diversión",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 7.43422532081604
+}

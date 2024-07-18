@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: Un conductor borracho mata a una motorista en Oviedo tras chocar su coche contra ella Contenido: Un conductor ebrio ha acabado con la vida de una mujer en un accidente de tráfico que se ha producido en Oviedo, según informa 'La Nueva España'. La mujer conducía una moto cuando el conductor del vehículo chocó contra ella en el kilómetro 25,3 de la A-66. El hombre se despistó y arrolló con su Peugeot a la mujer, que conducía una moto Kawasaki, y ésta se golpeo con dureza contra la calzada. La mujer fue trasladada a un centro sanitario con pronóstico muy grave y falleció poco después. El suceso, por el que el conductor ha sido imputado por homicidio por imprudencia y delito contra la seguridad vial, se ha producido este viernes a última hora del día. El accidente provocó retenciones en la vía, donde fueron necesarias las intervenciones de la Guardia Civil de Tráfico y efectivos del Servicio de Atención Médica Urgente (SAMU), que trasladaron a la víctima al Hospital Universitario Central de Asturias (HUCA).",
+    "analysis": {
+        "created": 1719494005,
+        "model": "mixtral-8x22b-instruct",
+        "usage": {
+            "prompt_tokens": 449,
+            "completion_tokens": 88,
+            "total_tokens": 537
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "1. Emoción principal: Negativa\n2. Elementos específicos: La noticia presenta un accidente de tráfico en el que un conductor ebrio ha acabado con la vida de una mujer que conducía una moto. La gravedad del accidente se refleja en el hecho de que la mujer fue trasladada a un centro sanitario con pronóstico muy grave y falleció poco",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 4.630299091339111
+}

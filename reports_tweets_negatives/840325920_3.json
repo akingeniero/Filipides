@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Sinae (@sinae_oficial) on 2024-06-25 21:22:42+00:00:\nContinúan 107 personas desplazadas en Cerro Largo\n\nLa laguna Merín aumentó 5 cm respecto a la medición de ayer y se ubica 25 cm por debajo de la cota de seguridad.\n\nEl río Yaguarón se encuentra 8 cm por debajo de la cota de seguridad establecida en 4 m.\n\n👉https://t.co/R2AlvAimio https://t.co/ZnjjnNkoBP\nTweet by Sinae (@sinae_oficial) on 2024-06-24 21:09:56+00:00:\nTodavía permanecen 107 personas desplazadas a causa de las inundaciones en Cerro Largo.\n\nLa laguna Merín bajó 10 cm respecto a la medición de ayer y se ubica en los 5.70 m, 30 cm por debajo de la cota de seguridad definida en los 6 m.\n\nInforme 👉https://t.co/sgOhVvNQ9u https://t.co/kaPB4hmxWZ\nTweet by Sinae (@sinae_oficial) on 2024-06-24 18:17:50+00:00:\n🤖¿Te animás a desarrollar una herramienta para detección temprana de incendios forestales? ¡Queremos conocerla!\n\nHasta mañana tenés tiempo para inscribirte en el IA Tech Challenge 2024, ¡Participá del desafío del Sinae!\n\nAquí toda la información👉https://t.co/o2k8Q2WrnF https://t.co/EmScNOtVUj\nTweet by Sinae (@sinae_oficial) on 2024-06-24 17:38:17+00:00:\n🔸Respuesta a emergencias\n\nArtigas recibe contenedores equipados con baños y vestuarios para atender a personas desplazadas de sus viviendas por eventos adversos \n\n💬Adolfo Cuello, coordinador del Cecoed de ese departamento nos cuenta al respecto https://t.co/A6GkqyyqTF\nTweet by Sinae (@sinae_oficial) on 2024-06-23 21:43:58+00:00:\nLa situación no ha cambiado enxa0 Cerro Largo. Desde el 12 de junio se mantiene en 107 el número de personas desplazadas en ese departamento a causa de las inundaciones.\n\nEl nivel de la laguna Merín está en 5,80 m, así como el río Yaguarón en los 3,85 m.\n\n🔗https://t.co/j3GIRY37B6 https://t.co/4q4rCBGTfd\nTweet by Sinae (@sinae_oficial) on 2024-06-22 20:39:59+00:00:\nEl relevamiento de este sábado 22 de junio indica que la situación no ha cambiado en el departamento de Cerro Largo. Aún permanecenxa0107 personas desplazadas a causa ",
+  "analysis": {
+    "created": 1719428116,
+    "model": "llama3-70b",
+    "usage": {
+      "prompt_tokens": 949,
+      "completion_tokens": 100,
+      "total_tokens": 1049
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Análisis de sentimiento del tweet:\n\n**1. Emoción principal:** Neutral\n\n**2. Elementos específicos:**\n\n* La información presentada en el tweet es objetiva y se centra en informar sobre la situación actual de las inundaciones en Cerro Largo, Uruguay.\n* Se proporcionan datos específicos sobre el nivel de la laguna Merín y el río Yaguarón, lo que sugiere un enfoque en la presentación de",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 3.3513948917388916
+}

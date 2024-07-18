@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Mr. Wonderful (@mrwonderful_) on 2021-06-04 06:49:45+00:00:\nHay amigos y luego están los amigos de los buenos que lo valen todo y MÁS. ✨\n\n#mrwonderful #felizviernes https://t.co/g14cFl8Y4h\nTweet by Mr. Wonderful (@mrwonderful_) on 2021-06-03 13:57:47+00:00:\nRT @DiamondBleu7: @mrwonderful_ 💙 por fin tengo mi maravilloso gel hidroalcoholico ☺️ https://t.co/wwzXG3o9Um\nTweet by Manu (@DiamondBleu7) on 2021-06-01 21:14:04+00:00:\n@mrwonderful_ 💙 por fin tengo mi maravilloso gel hidroalcoholico ☺️ https://t.co/wwzXG3o9Um\nTweet by Mr. Wonderful (@mrwonderful_) on 2021-06-03 13:55:17+00:00:\nHay personas que son otro rollo y la vida junto a ellas rueda sola. 🙌 \n\n#mrwonderful #frasesmrwonderful #frasedeldía https://t.co/dJO5N8xmnS\nTweet by Mr. Wonderful (@mrwonderful_) on 2021-05-17 05:15:00+00:00:\nHay lunes que son menos lunes cuando ese compi de curro aparece por la puerta. Y oye, ¡que el #teletrabajo no os impida hacer algún cafelito virtual! https://t.co/kUmDLo12ae\nTweet by Mr. Wonderful (@mrwonderful_) on 2021-05-15 07:10:00+00:00:\nEntre la pamela, las gafas de sol y la mascarilla... Este año las playas van a parecer una concentración de celebrities modo incógnito 😂\n\n#verano2021 #playasdeEspaña #mascarillas #pandemia https://t.co/ogAkXG4l50\nTweet by Mr. Wonderful (@mrwonderful_) on 2021-05-12 06:59:12+00:00:\nA todos los enfermeros y enfermeras del mundo: \n- ¡Nos faltan besos y abrazos virtuales para agradeceros lo muchísimo que hacéis por nosotr@s! \n\n#DíaInternacionalDelLaEnfermería #enfermeros #enfermeras #salud https://t.co/8eT0gArzhB\nTweet by Mr. Wonderful (@mrwonderful_) on 2021-05-11 15:14:00+00:00:\n#SORTEO DE UN VIAJAZO PARA 2 PERSONAS A #TENERIFE! ✈️🌴 Vuelos @vueling y alojamiento The Ritz Carlton Abama con desayuno incluido + 200 eurazos en boniteces Mr. Wonderful para que no os falte de nada.\nPodéis probar vuestra buena suerte y PARTICIPAR aquí: https://t.co/c4WSL5EUcf https://t.co/i2Odj7376u\nTweet by Mr. Wonderful (@mrwonderful_) on 2020-02-06 10:18:41+",
+  "analysis": {
+    "created": 1719419421,
+    "model": "llama3-70b",
+    "usage": {
+      "prompt_tokens": 994,
+      "completion_tokens": 100,
+      "total_tokens": 1094
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Análisis de sentimiento del tweet:\n\n**1. Emoción principal:** Positiva\n\n**2. Elementos específicos:**\n\n* El uso de emojis como ✨, ☺️, 🙌, 😂, que transmiten una sensación de alegría y felicidad.\n* Las palabras y frases utilizadas tienen un tono amistoso y agradecido, como \"amigos de los buenos\", \"maravilloso",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 4.8656089305877686
+}

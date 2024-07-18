@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: Sergio Antolín Zunzunegui, el militar español que desertó para luchar en Ucrania y ha muerto en el frente Contenido: En Los Corrales de Buelna, un pequeño pueblo de Cantabria, recuerdan perfectamente a los hermanos Antolín Zunzunegui. Iván, el mayor, y Sergio, el más pequeño, aunque se llevaban apenas un año. Los dos, buenos deportistas y los dos, con vocación militar. Hace años que no se les veía por este municipio de poco más de 10.000 habitantes, pero el nombre de Sergio corre desde hace días de boca en boca tras confirmarse su fallecimiento en el frente de Ucrania, víctima de la guerra desatada por Rusia tras la invasión de aquel país el 24 de febrero de 2022. Fuentes de Defensa han confirmado su muerte en el frente, un trágico desenlace que resuelve, sin embargo, el misterio sobre su paradero. Porque Sergio Antonlín Zunzunegui estaba, oficialmente, desaparecido desde diciembre de 2023. A partir de entonces se le consideraba un desertor tras no presentarse en la Brigada de Infantería de Marina Tercio de la Armada con base en San Fernando (Cádiz), donde estaba destinado. Fuentes militares explicaron a EL MUNDO que Sergio llegó allí en 2022, al poco de alistarse en el ejército y de firmar su primer contrato, por un período de tres años, que le comprometía a mantenerse en las filas hasta 2025. El cuartel del Tercio de Marina de San Fernando era su primer destino y allí, señalaron estas fuentes, ejerció como infante de marina sin incidencias, nada reseñable en su expediente. Hasta que en septiembre de 2023 pidió una excedencia de tres meses que justificó por \"asuntos personales\". Al parecer, dijo que necesitaba un descanso. Debía reincorporarse en diciembre, pero el día señalado para que volviese a su destino no se presentó. A las 72 horas, sus superiores le dieron formalmente por no presentado y pusieron el caso en manos judiciales, quedando la investigación a cargo de la Guardia Civil. Desde entonces, nada se había sabido sobre Sergio, literalmente se lo había tragado la tierra. Incluso, su madre, Elvira Zunzunegui había recurrido a los medios de comunicación para tratar de localizarle. Enferma, hace más de un año que abandonó, según relatan fuentes de la Policía Local de Los Corrales, el pueblo en el que había vivido siempre la familia para trasladarse a Potes. En un reportaje publicado en el diario El Español, la madre de Sergio contaba que no hablaba con su hijo desde hacía dos años y que fue su capitán el que la informó de que había desaparecido, que no se había presentado el día de Navidad en San Fernando. También contó que le habían informado de que su hijo había estado en Polonia y en Ucrania. Allí le localizó la investigación abierta a instancia judicial, que también constató cómo el infante de marina se había desplazado a Ucrania con el objetivo de cumplir su deseo de combatir contra las fuerzas invasoras rusas, probablemente en alguno de los batallones de voluntarios extranjeros con los que cuenta el ejército de aquel país. Antes de desaparecer, dijo la madre, el soldado cerró todos sus perfiles en redes sociales y cortó todo contacto no solamente con ella, sino con amigos y conocidos. En Los Corrales, Sergio y su hermano Iván no pasaron desapercibidos en el club de atletismo local, en el que entrenaron entre los años 2013 y 2015. \"Eran buenos, aplicados, muy deportistas\", recuerda Daniel Salmones, delegado del Club Atlético Corrales Maderas Peña Lastra. Por aquellos años, señala Salmones, tenían unos once o doce años y no expresaban ningún deseo de convertirse en militares, pero, según cuentan en el pueblo, muy jóvenes se inclinaron por el ejército en lugar de continuar los estudios. De hecho, Sergio se alistó con solo 20 años y habría cumplido el próximo mes de julio los 22 años. Su hermano Iván, es un año mayor.",
+    "analysis": {
+        "created": 1719488740,
+        "model": "llama3-70b",
+        "usage": {
+            "prompt_tokens": 782,
+            "completion_tokens": 100,
+            "total_tokens": 882
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Análisis de sentimiento:\n\n1. Emoción principal: **Negativa**\n\n2. Elementos específicos:\n   - La noticia informa sobre la muerte de Sergio Antolín Zunzunegui en el frente de Ucrania, lo que evoca sentimientos de tristeza y conmoción.\n   - La descripción de Sergio como un \"desertor\" y la mención de que estaba \"oficialmente desaparecido",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 3.9110591411590576
+}

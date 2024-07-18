@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Chachifarma (@chachifarma) on 2024-06-20 09:15:43+00:00:\n🌞🎉 SORTEO DE VERANO🌞🎉\nSorteamos este protector contar los rayos UVA y UVB.\nCondiciones:\nSer seguidor de la cuenta\n@Chachifarma\nRetwittear el tweet del sorteo.\nEl sorteo finaliza el 25 de junio a las 12:00h.xa0\n\nLas bases legales están en:xa0https://t.co/xP7u28LUWh\n\n#yellowday https://t.co/h9j7y0FTVA\nTweet by Chachifarma (@chachifarma) on 2024-06-25 13:03:57+00:00:\nBuenos días ya tenemos ganadora ha sido: @mabellopezmart1 \n¡Enhorabuena! A tod@s los demás gracias por participar.\nTweet by Chachifarma (@chachifarma) on 2024-06-21 13:47:42+00:00:\nRT @chachifarma: 🌞🎉 SORTEO DE VERANO🌞🎉\nSorteamos este protector contar los rayos UVA y UVB.\nCondiciones:\nSer seguidor de la cuenta\n@Chachifarma\nRetwittear el tweet del sorteo.\nEl sorteo finaliza el 25 de junio a las 12:00h.xa0\n\nLas bases legales están en:xa0https://t.co/xP7u28LUWh\n\n#yellowday https://t.co/h9j7y0FTVA\nTweet by Chachifarma (@chachifarma) on 2024-06-18 07:46:27+00:00:\n💥✨ ¡En Chachifarma estamos que no paramos con las ofertas! ✨💥 Entra en el enlace y descubre nuestros precios increíbles. Descuentos del 30% EXTRA en la segunda unidad de la marca ENDOCARE (Cantabria Labs Endocare). \n¡No te lo pierdas! 🛍️💚 \n\nhttps://t.co/5Cggx1oi1G\n\n#ofertas https://t.co/94jtuEIqZa\nTweet by Chachifarma (@chachifarma) on 2024-06-17 11:24:49+00:00:\n🌞✨ ¡Qué bonitos días está haciendo para disfrutar al aire libre! Eso sí, ¡con mucha protección! Esta semana la radiación ultravioleta está muy alta. 🕶️🧴 Si sales, protégete. ¡Visítanos y descubre nuestros productos para cuidar tu piel! \n\nhttps://t.co/Qms0Gcg3uv\n\n #felizlunes https://t.co/rgHK0mfQHY\nTweet by Chachifarma (@chachifarma) on 2024-06-11 19:08:27+00:00:\n¿Conocéis la marca NUXE? Pues estamos seguros que cuando la probéis os enamorará.U0001fa77  \nEste aceite seco es ¡Oro puro para tu cabello, tu piel del cuerpo y cara!\nNutre, suaviza e ilumina todo a la vez ¡menudo ahorro de tiempo!\n\nhttps://t.co/WOhdnJEsyO\n\n#BuenasTardes #cuidados https",
+  "analysis": {
+    "created": 1719422153,
+    "model": "mixtral-8x22b-instruct",
+    "usage": {
+      "prompt_tokens": 954,
+      "completion_tokens": 88,
+      "total_tokens": 1042
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "1. Emoción principal: Positiva\n2. Elementos específicos:\n   - Palabras y emojis positivos, como \"celebración de verano\", \"sorteamos\", \"enhorabuena\", \"ofertas\", \"descubrir\", \"descuentos\", \"protección\", \"feliz lunes\" y \"cuidar tu piel\", así como emojis como ��",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 12.374071836471558
+}

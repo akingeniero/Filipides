@@ -1,55 +1,58 @@
 import logging
+from asyncio import sleep
+
 from twscrape import gather, API
 
 from project.utils.config import Config
+from project.utils.singleton_meta import SingletonMeta
 
 logger = logging.getLogger(__name__)
 
 
-class TwitterClient:
+class TwitterClient(metaclass=SingletonMeta):
     """
     Client to interact with the Twitter API using twscrape.
 
     Attributes:
-        api (API): The API client from twscrape.
-        config (Config): Configuration object to fetch user settings.
+        api (API): The API client for interacting with Twitter.
+        config (Config): Configuration object to fetch API keys and settings.
+        users (dict): Dictionary containing user account information.
     """
 
-    def __init__(self: 'TwitterClient') -> None:
+    def __init__(self) -> None:
         """
-        Initializes the TwitterClient with the necessary configurations and API client.
-
-        Args:
-            self: Instance of TwitterClient.
-
-        Returns:
-            None
+        Initializes the OpenAIClient with the necessary configurations.
         """
         self.api: API = API()
         self.config: Config = Config()
         logger.info("TwitterClient initialized")
+        self.users: dict = {}
 
-    async def register(self: 'TwitterClient') -> None:
+    async def register(self) -> bool:
         """
         Registers the user accounts for the Twitter API.
 
-        Args:
-            self: Instance of TwitterClient.
-
         Returns:
-            None
+            bool: True if registration is successful, False otherwise.
         """
-        users: dict = self.config.get_user_config()
-        await self.api.pool.add_account(users["username"], users["password"], users["email"], users["account_password"])
-        await self.api.pool.login_all()
+        self.users: dict = self.config.get_user_config()
+        await self.api.pool.add_account(self.users["username"], self.users["password"], self.users["email"],
+                                        self.users["account_password"])
+        user = await self.api.pool.login_all()
+        if user["failed"] == 1:
+            logger.error("Failed to register user")
+            return False
+        else:
+            logger.info("User registered")
+            await sleep(0.1)
+            return True
 
-    async def get_user_tweets(self: 'TwitterClient', user_id: int, limit: int = 20):
+    async def get_user_tweets(self, user_id: int, limit: int = 20):
         """
         Retrieves tweets for a given user ID up to the specified limit.
 
         Args:
-            self: Instance of TwitterClient.
-            user_id (str): The user ID to fetch tweets for.
+            user_id (int): The user ID to fetch tweets for.
             limit (int): The maximum number of tweets to retrieve. Default is 20.
 
         Returns:
@@ -58,3 +61,10 @@ class TwitterClient:
         await self.api.user_by_id(user_id)
         logger.info(f"Extract tweets of: {user_id}")
         return gather(self.api.user_tweets(user_id, limit=limit))
+
+    async def close(self):
+        """
+        Closes the TwitterClient and deletes the registered user accounts.
+        """
+        await self.api.pool.delete_accounts(self.users["username"])
+        pass

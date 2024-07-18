@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: El abogado de éxito que encontró su lugar en África Contenido: ",
+    "analysis": {
+        "created": 1719441385,
+        "model": "llama3-70b",
+        "usage": {
+            "prompt_tokens": 245,
+            "completion_tokens": 100,
+            "total_tokens": 345
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Análisis de sentimiento:\n\n1. Emoción principal: Positiva\n\n2. Elementos específicos:\n   - La palabra \"éxito\" tiene una connotación positiva y sugiere logros y realizaciones.\n   - La frase \"encontró su lugar\" implica un sentido de pertenencia y satisfacción.\n   - La mención a \"África\" como un lugar de realización personal puede evocar sentimientos de aventura y desc",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 3.904179096221924
+}

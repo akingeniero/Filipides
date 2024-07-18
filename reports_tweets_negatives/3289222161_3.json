@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by 🚨Emergencias Osorno GEO (@Geosorno01) on 2024-06-26 18:27:21+00:00:\nRT @ccea8va: @biobio @RadioSago @paislobo @Geosorno01  ayuda con alguna Gestión y que reparen Esta Garita  antes que caiga encima de alguna persona.  U400  CRUCE LUMACO. y revisar las demas que construyó  la empresa x que  la de pucohihue  estaba igual la otra vez. https://t.co/fphYeCHB9v\nTweet by Cristian. 🌳 (@ccea8va) on 2024-06-26 17:02:59+00:00:\n@biobio @RadioSago @paislobo @Geosorno01  ayuda con alguna Gestión y que reparen Esta Garita  antes que caiga encima de alguna persona.  U400  CRUCE LUMACO. y revisar las demas que construyó  la empresa x que  la de pucohihue  estaba igual la otra vez. https://t.co/fphYeCHB9v\nTweet by 🚨Emergencias Osorno GEO (@Geosorno01) on 2024-06-26 15:42:05+00:00:\nRT @Carlossassarini: El mejor spot de las campañas políticas previo a las Municipales \nrealizado por Mauro .... https://t.co/MKnzhmcXuS\nTweet by CarlosDSassa (@Carlossassarini) on 2024-06-25 22:19:01+00:00:\nEl mejor spot de las campañas políticas previo a las Municipales \nrealizado por Mauro .... https://t.co/MKnzhmcXuS\nTweet by 🚨Emergencias Osorno GEO (@Geosorno01) on 2024-06-26 15:20:28+00:00:\nRT @SuralisTeAyuda: Nuestros equipos👷‍♀️🚛están y han estado trabajando en las regiones de #LosRíos y #LosLagos para atender colapsos de alcantarillado ante ingreso irregular de #aguaslluvias\n\nLa falta de obras de drenaje urbano genera estos problemas que afectan al #MedioAmbiente y a la comunidad😭🤦 https://t.co/QLjmfn9uG3\nTweet by SuralisTeAyuda (@SuralisTeAyuda) on 2024-06-26 14:41:28+00:00:\nNuestros equipos👷‍♀️🚛están y han estado trabajando en las regiones de #LosRíos y #LosLagos para atender colapsos de alcantarillado ante ingreso irregular de #aguaslluvias\n\nLa falta de obras de drenaje urbano genera estos problemas que afectan al #MedioAmbiente y a la comunidad😭🤦 https://t.co/QLjmfn9uG3\nTweet by 🚨Emergencias Osorno GEO (@Geosorno01) on 2024-06-26 15:20:08+00:00:\nRT @TTILosLagos: ⚠️❄️ #AHORA: por acumula",
+  "analysis": {
+    "created": 1719427716,
+    "model": "llama3-70b",
+    "usage": {
+      "prompt_tokens": 975,
+      "completion_tokens": 100,
+      "total_tokens": 1075
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Análisis de sentimiento del tweet:\n\n**1. Emoción principal:** Negativa\n\n**2. Elementos específicos:**\n- La mención a la necesidad de reparar una garita que puede caer encima de alguien (\"ayuda con alguna Gestión y que reparen Esta Garita antes que caiga encima de alguna persona\").\n- La expresión de frustración y desesperación en el tweet de @SuralisTeAyuda (\"😭",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 6.217427968978882
+}

@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: El Rey Felipe VI ofrece una cena a Draghi en el Monasterio de Yuste en la víspera del premio europeo Carlos V Contenido: El Rey Felipe VI ha ofrecido este jueves una cena al ex presidente del Banco Central Europeo (BEC), el italiano Mario Draghi, en el Monasterio de San Jerónimo de Yuste (Cáceres) en la víspera de la entrega este viernes del XVII premio europeo Carlos V que se ha concedido este año al político italiano. Entre los comensales también se encontraban el jefe de la diplomacia europea, Josep Borrell, el ministro de Asuntos Exteriores, José Manuel Albares, y la presidenta de Extremadura, María Guardiola, que por primera vez asiste a los premios como máxima responsable autonómica. De hecho, el Rey se ha interesado por el estado de salud de Guardiola, que hace aproximadamente un mes estuvo ingresada en la UCI de un hospital de Cáceres debido a una grave infección. Además, en la cena ha participado el ex gobernador del Banco de España Pablo Hernández de Cos. Antes de la cena, los participantes, encabezados por el Rey, que es el presidente de honor de la Fundación Europea y Sudamericana de Yuste, han posado en el balcón del Monasterio y han saludado a los periodistas y miembros de la organización del evento ya presentes. Draghi ha llegado a Cuacos de Yuste procedente de Madrid, donde se ha reunido con el presidente del Gobierno, Pedro Sánchez. Este galardón es promovido por la Fundación Academia Europea e Iberoamericana de Yuste desde 1995 y reconoce la labor de aquellas personas, organizaciones o iniciativas que han contribuido al conocimiento de los valores culturales, sociales, científicos e históricos de Europa y al proceso de integración europea. Este año, el jurado ha valorado el liderazgo de Draghi (76 años) al frente del BCE para afrontar la crisis financiera con medidas \"contundentes y arriesgadas\" que lograron \"salvar el euro\" y que Europa \"saliera fortalecida de la crisis\", así como su \"manera ejemplar de promover los principios éticos europeos como ejes centrales de la gobernanza económica\". El jurado eligió a Draghi entre 15 candidaturas de 28 propuestas, procedentes de España, Francia, Italia, Andorra, Bélgica y Rumanía. Presidente del Banco Central Europeo entre los años 2011 y 2019, también ejerció esa responsabilidad en el Consejo de Ministros de Italia de 2021 a 2022. Hasta el momento, han recibido el prestigioso galardón Jacques Delors (1995), Wilfried Martens (1998), Felipe González (2000), Mijaíl Gorbachov (2002), Jorge Sampaio (2004), Helmut Kohl(2006); Simone Veil (2008), Javier Solana (2011); José Manuel Durão Barroso (2014), Sofia Corradi (2016), Marcelino Oreja Aguirre (2017), Antonio Tajani (2018), el proyecto 'Itinerarios Culturales del Consejo de Europa' (2019), Angela Merkel (2021), el Foro Europeo de la Discapacidad (2022) y António Guterres (2023). El acto de la entrega del Premio comenzará este viernes a las 11.00 horas.",
+    "analysis": {
+        "created": 1719440650,
+        "model": "mixtral-8x22b-instruct",
+        "usage": {
+            "prompt_tokens": 701,
+            "completion_tokens": 91,
+            "total_tokens": 792
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "1. Emoción principal: Positiva\n2. Elementos específicos: La noticia destaca la cena ofrecida por el Rey Felipe VI al ex presidente del Banco Central Europeo (BCE), Mario Draghi, en el Monasterio de San Jerónimo de Yuste. La presencia de otros comensales importantes, como el jefe de la diplomacia europea, Josep Borrell, y el",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 4.143747091293335
+}

@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: La mortalidad materna se ha reducido en el mundo en un 44 % desde 1990 Contenido: ",
+    "analysis": {
+        "created": 1719441659,
+        "model": "mixtral-8x22b-instruct",
+        "usage": {
+            "prompt_tokens": 199,
+            "completion_tokens": 82,
+            "total_tokens": 281
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "1. Emoción principal: Positiva\n2. Elementos específicos: La reducción del 44% en la mortalidad materna desde 1990 es el elemento clave que contribuye a la emoción positiva en esta noticia. La frase \"se ha reducido\" indica un cambio favorable en la situación, y el porcentaje específico de reducción (44",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 4.630717754364014
+}

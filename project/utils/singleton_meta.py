@@ -15,7 +15,6 @@ class SingletonMeta(type):
         Controls the instantiation of classes using this metaclass, ensuring only one instance is created.
 
         Args:
-            cls: The class being instantiated.
             *args: Variable length argument list.
             **kwargs: Arbitrary keyword arguments.
 

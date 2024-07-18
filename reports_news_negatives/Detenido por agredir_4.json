@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: Detenido por agredir e insultar a su pareja cuando realizaba un directo en redes sociales Contenido: La Guardia Civil ha detenido en Valladolid a un hombre acusado de un delito de violencia machista por agredir e insultar a su pareja mientras ella realizaba un directo en las redes sociales. La víctima se encontraba en su domicilio de Valladolid cuando el hombre entró en la habitación en la que se encontraba y comenzó a agredirla, ha explicado el instituto armado en nota de prensa. Los usuarios de la red social en la que la mujer estaba emitiendo fueron los que denunciaron los hechos a la Guardia Civil, que consiguió identificar al autor y localizarlo. Ha sido detenido por un delito de violencia de género y puesto a disposición del Juzgado de Guardia de Medina del Campo. La Guardia Civil ha actuado de oficio en el caso ya que la víctima, que se encontraba con el hombre en el momento de la detención, no quiso poner denuncia.",
+    "analysis": {
+        "created": 1719444073,
+        "model": "mixtral-8x22b-instruct",
+        "usage": {
+            "prompt_tokens": 417,
+            "completion_tokens": 88,
+            "total_tokens": 505
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "1. Emoción principal: Negativa\n2. Elementos específicos: La noticia contiene elementos que contribuyen a un sentimiento negativo, como la agresión y los insultos hacia la pareja del detenido, la naturaleza del delito de violencia machista, y la falta de voluntad de la víctima para presentar una denuncia.\n3. Explicación del sentimiento:",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 6.074883937835693
+}

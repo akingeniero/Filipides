@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: Los 12 pasos que te harán sentir más feliz Contenido: ",
+    "analysis": {
+        "created": 1719441168,
+        "model": "llama3-70b",
+        "usage": {
+            "prompt_tokens": 243,
+            "completion_tokens": 100,
+            "total_tokens": 343
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Análisis de sentimiento:\n\n1. Emoción principal: Positiva\n\n2. Elementos específicos:\n   - La palabra \"feliz\" en el título, que tiene una connotación emocional positiva y sugiere un resultado deseable.\n   - El uso de la expresión \"te harán\", que implica una acción beneficiosa y positiva para el lector.\n   - La numeración \"12 pasos\" sugiere una guía clara",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 6.405251741409302
+}

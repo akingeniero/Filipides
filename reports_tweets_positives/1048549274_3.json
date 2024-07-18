@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Vidal Golosinas (@Vidal_Golosinas) on 2024-05-15 06:37:29+00:00:\n📢BUSCAMOS CATADORES para probar y comentar nuestros productos.\n🍭Requisitos:\n- Que te encanten las golosinas\n- Perfil con +5.000 seguidores.\n🍭Ventajas:\n-¡Muchas!\nRT, comenta si eres la persona ideal o menciona si conoces el perfil perfecto. #golsinamentevidal https://t.co/Z5W6NZC6fe\nTweet by Vidal Golosinas (@Vidal_Golosinas) on 2024-06-26 11:20:05+00:00:\nRT @pescanova_es: @ferymagali @Vidal_Golosinas ¡Cuánta razón @ferymagali! Yo voto por hacerle un dulce homenaje a nuestro amigo Rodolfo. Yo me lo imagino tal que así. ¿Qué opináis @Vidal_Golosinas ? Se aceptan propuestas 🦐🤗 https://t.co/dalRV4K0Zt\nTweet by Capitán Pescanova (@pescanova_es) on 2024-06-26 11:14:12+00:00:\n@ferymagali @Vidal_Golosinas ¡Cuánta razón @ferymagali! Yo voto por hacerle un dulce homenaje a nuestro amigo Rodolfo. Yo me lo imagino tal que así. ¿Qué opináis @Vidal_Golosinas ? Se aceptan propuestas 🦐🤗 https://t.co/dalRV4K0Zt\nTweet by Vidal Golosinas (@Vidal_Golosinas) on 2024-06-26 10:54:41+00:00:\nRT @TejeiroManu: @Vidal_Golosinas Siiiiiiii 🔥🔥🔥🔥\nTweet by Manu Tejeiro (@TejeiroManu) on 2024-06-26 10:44:56+00:00:\n@Vidal_Golosinas Siiiiiiii 🔥🔥🔥🔥\nTweet by Vidal Golosinas (@Vidal_Golosinas) on 2024-06-26 10:30:20+00:00:\nRT @HOMEPARTY20: @Vidal_Golosinas Ha sido ver esta publicación y entender que Juan Luis Guerra cantara: quisiera ser un pez para poder nadar en tu pecera y hacer burbujas de amor por donde quiera... 🕺🏽🕺🏽\nPorque hablaba de comer golosinas no? 🤔🤔\nTweet by ALIAS CORPUS (@HOMEPARTY20) on 2024-06-26 10:29:46+00:00:\n@Vidal_Golosinas Ha sido ver esta publicación y entender que Juan Luis Guerra cantara: quisiera ser un pez para poder nadar en tu pecera y hacer burbujas de amor por donde quiera... 🕺🏽🕺🏽\nPorque hablaba de comer golosinas no? 🤔🤔\nTweet by Vidal Golosinas (@Vidal_Golosinas) on 2024-06-26 10:28:45+00:00:\nVosotros que opináis @pescanova_es ?\nTweet by Vidal Golosinas (@Vidal_Golosinas) on 2024-06-25 12:28:00+00:0",
+  "analysis": {
+    "created": 1719421952,
+    "model": "llama3-70b",
+    "usage": {
+      "prompt_tokens": 1054,
+      "completion_tokens": 100,
+      "total_tokens": 1154
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Análisis de sentimiento:\n\n**1. Emoción principal:** Positiva\n\n**2. Elementos específicos:**\n\n* El uso de emojis como 📢, 🍭, 🤗, 🕺🏽, y 🔥, que transmiten entusiasmo y alegría.\n* La solicitud de \"catadores\" para probar y comentar productos, lo que sugiere una oportunidad emocionante.\n* La mención",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 3.241093158721924
+}

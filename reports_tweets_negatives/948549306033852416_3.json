@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Emergencias Ec (@EmergenciasEc) on 2024-05-27 18:10:11+00:00:\nInstagram de @emergenciasec \nhttps://t.co/bPBccxTsAi\nTweet by Emergencias Ec (@EmergenciasEc) on 2024-06-26 17:56:08+00:00:\nRT @LaDataEc: 🌳🍀🌿🌾Ya tenemos los recursos es hora de actuar, presenta tu Proyecto de Acción Climática. Ingresa aquí 👇 https://t.co/qRDCwUoi0y \n\n#OrgullosamenteCuencano\n@czamoramatute \n@MunicipioCuenca https://t.co/w8RRrEeyYh\nTweet by 🇪🇨 La Data Ec (@LaDataEc) on 2024-06-26 15:21:29+00:00:\n🌳🍀🌿🌾Ya tenemos los recursos es hora de actuar, presenta tu Proyecto de Acción Climática. Ingresa aquí 👇 https://t.co/qRDCwUoi0y \n\n#OrgullosamenteCuencano\n@czamoramatute \n@MunicipioCuenca https://t.co/w8RRrEeyYh\nTweet by Emergencias Ec (@EmergenciasEc) on 2024-06-26 17:55:59+00:00:\nRT @LaDataEc: #Urgente ¡GOBIERNO ENTREGÓ 40 MIL BECAS FUTURO FEMENINO PARA EDUCACIÓN SUPERIOR!\n\nEl presidente de la República, Daniel Noboa Azín, sostuvo que este es un sueño que tenía desde que era candidato a la Asamblea.\n\n“Gracias al programa ‘Becas Futuro Femenino’ estamos otorgando 40 mil becas a todas aquellas que una vez desearon una oportunidad y se le fue negado”, afirmó el primer mandatario.\n\n@ladataec👈\n\n#LaData #DanielNoboa #becas #mujeres #Ecuador\nTweet by 🇪🇨 La Data Ec (@LaDataEc) on 2024-06-26 16:48:31+00:00:\n#Urgente ¡GOBIERNO ENTREGÓ 40 MIL BECAS FUTURO FEMENINO PARA EDUCACIÓN SUPERIOR!\n\nEl presidente de la República, Daniel Noboa Azín, sostuvo que este es un sueño que tenía desde que era candidato a la Asamblea.\n\n“Gracias al programa ‘Becas Futuro Femenino’ estamos otorgando 40 mil becas a todas aquellas que una vez desearon una oportunidad y se le fue negado”, afirmó el primer mandatario.\n\n@ladataec👈\n\n#LaData #DanielNoboa #becas #mujeres #Ecuador\nTweet by Emergencias Ec (@EmergenciasEc) on 2024-06-26 17:54:57+00:00:\nRT @LaDataEc: #Urgente ¡EL PRESIDENTE NOBOA RESALTA LA LABOR SOCIAL Y EL TRABAJO DE ANNABELLA AZÍN!\n\n“Trató a más de 800 mil personas en todos los rincones del país con sus brigadas m",
+  "analysis": {
+    "created": 1719427185,
+    "model": "llama3-70b",
+    "usage": {
+      "prompt_tokens": 969,
+      "completion_tokens": 100,
+      "total_tokens": 1069
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "Análisis de sentimiento del tweet:\n\n**1. Emoción principal:** Positiva\n\n**2. Elementos específicos:**\n\n* El uso de emojis como 🌳, 🍀, 🌿, y 🌾 en el primer tweet, que representan la naturaleza y el medio ambiente, y se asocian con sentimientos positivos.\n* La mención a la presentación de proyectos de acción climática y la llamada a la acción",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 4.836161851882935
+}

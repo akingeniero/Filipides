@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by mrwonderful_co (@mrwonderful_co) on 2019-04-13 23:48:09+00:00:\nEn el #DíaInternacionalDelBeso déjate sorprender con ese beso que te hace suspirar y te quita la respiración😘💋 #mrwonderfulshop https://t.co/j0z1r8M7e2\nTweet by mrwonderful_co (@mrwonderful_co) on 2019-04-04 13:37:03+00:00:\n¿El azul doble check será la nueva señal del amor? 📱✔️✔️❣ Por todos esos amores a primera vista....¿crees en el amor a primera vista? #mrwonderfulshop https://t.co/oYjpXn3RNf\nTweet by mrwonderful_co (@mrwonderful_co) on 2019-04-03 15:02:13+00:00:\n¿Quién es esa personita que está más deli que una torta de chocolate con helado de vainilla?  😋🧁🍰 #mrwonderfulshop https://t.co/7ZYLs2ul3W\nTweet by mrwonderful_co (@mrwonderful_co) on 2019-04-02 22:37:06+00:00:\n¡Muchas veces es mejor volver a empezar y pasar la página!  Comienza en blanco🙂 #mrwonderfulshop https://t.co/UfTVrUGv9t\nTweet by mrwonderful_co (@mrwonderful_co) on 2019-04-02 14:03:18+00:00:\nPara todas esas personas que se van de viaje, y regresan con el doble de equipaje, esta bolsa de viaje plegable es la solución perfecta para devolverte sin problemas. Encuéntrala disponible en nuestros puntos de venta &gt; https://t.co/0m49cafcs7 #mrwonderfulshop https://t.co/fZX182Sn9R\nTweet by mrwonderful_co (@mrwonderful_co) on 2019-04-01 22:33:11+00:00:\nSi naciste en el mes de abril, haces parte de nuestro “Team Unicornio”. ¡Personas únicas e inigualables! Sólo necesitas creer que para ti no hay nada imposible. 🦄🎉 #mrwonderfulshop https://t.co/7M3PYJ8rFG\nTweet by mrwonderful_co (@mrwonderful_co) on 2019-04-01 16:01:47+00:00:\nDedícale este primer post del mes a ese compañero de trabajo que hace que tus días sean los más divertidos y se pasen volando. 😉🙂  #DíaInternacionalDeLaDiversiónEnElTrabajo #mrwonderfulshop https://t.co/hcgqeA9m2l\nTweet by mrwonderful_co (@mrwonderful_co) on 2019-03-31 22:31:16+00:00:\nLlega el \"Wonder Translate\" para dejar por escrito todas esas cosas que piensas, pero no te atreves a decir 😜 #mrwonderfulshop htt",
+  "analysis": {
+    "created": 1719420594,
+    "model": "mixtral-8x22b-instruct",
+    "usage": {
+      "prompt_tokens": 919,
+      "completion_tokens": 79,
+      "total_tokens": 998
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "1. Emoción principal: Positiva\n2. Elementos específicos:\n   - Uso de emojis positivos y alegres, como 😘💋, 📱✔️✔️❣, 😋🧁🍰, 🙂, 🦄🎉, 😉🙂\n   - Frases motivadoras y optimistas,",
+          "function_call": null
+        },
+        "finish_reason": "stop"
+      }
+    ]
+  },
+  "elapsed_time": 7.366854906082153
+}

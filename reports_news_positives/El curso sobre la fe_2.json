@@ -1,0 +1,10 @@
+{
+    "review": "Titulo: El curso sobre la felicidad que triunfa en la universidad de Yale Contenido: ",
+    "analysis": {
+        "model": "gpt-3.5-turbo",
+        "message": {
+            "content": "Análisis de sentimiento:\n\n1. Emoción principal:\nLa emoción principal en el texto proporcionado es positiva.\n\n2. Elementos específicos:\n- El curso sobre la felicidad\n- Triunfa en la Universidad de Yale\n\n3. Explicación del sentimiento:\nLa presencia de palabras clave como \"felicidad\" y \"triunfa\" sugieren un tono positivo en la noticia. La idea de un curso centrado en la felicidad que está teniendo éxito en una prestigiosa institución como la Universidad de Yale transmite una sensación de optimismo y bienestar. La felicidad es un tema que generalmente evoca sentimientos positivos y, al asociarse con el éxito en una institución académica reconocida, refuerza la idea de que la noticia transmite una emoción positiva.\n\n4. Matices o cambios de tono:\nDado que el texto es breve y no proporciona información adicional, no se observan matices o cambios de tono. Sin embargo, podría haber variaciones en el tono si se incluyeran detalles sobre la recepción del curso por parte de los estudiantes, el impacto en la comunidad universitaria o cualquier controversia asociada con el tema de la felicidad en un entorno académico."
+        }
+    },
+    "elapsed_time": 4.609167098999023
+}

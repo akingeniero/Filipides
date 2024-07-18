@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by Bollycao (Oficial) (@BollycaoSpain) on 2024-05-13 14:50:02+00:00:\nRT @nocilla: esta no te la esperabas https://t.co/38i1zHMro4\nTweet by Nocilla (@nocilla) on 2024-05-10 16:29:38+00:00:\nesta no te la esperabas https://t.co/38i1zHMro4\nTweet by Bollycao (Oficial) (@BollycaoSpain) on 2024-05-13 14:49:58+00:00:\nSiempre en nuestro equipo U0001faf6🏼\nTweet by Bollycao (Oficial) (@BollycaoSpain) on 2024-05-10 09:00:01+00:00:\nMenciona dos cosas que sean la combi perfecta, empiezo yo: Bollycao y @nocilla 😜\nTweet by Bollycao (Oficial) (@BollycaoSpain) on 2024-05-09 14:23:02+00:00:\nEllas sí que son la combi perfecta #MetGala\nTweet by MOTOMAMI TOUR (@MOTOMAMlTOUR) on 2024-05-07 08:11:00+00:00:\nRosalía y Kylie Jenner llegando juntas de la mano a su hotel tras la #MetGala 2024 https://t.co/tN7ocbZhva\nTweet by Bollycao (Oficial) (@BollycaoSpain) on 2024-05-09 14:22:37+00:00:\nRT @MOTOMAMlTOUR: Rosalía y Kylie Jenner llegando juntas de la mano a su hotel tras la #MetGala 2024 https://t.co/tN7ocbZhva\nTweet by Bollycao (Oficial) (@BollycaoSpain) on 2024-05-09 14:17:50+00:00:\nNatalia y Carliyo son la combi perfecta, como Bollycao® y @nocilla 😋 https://t.co/BSRsnU0Ncr\nTweet by Bollycao (Oficial) (@BollycaoSpain) on 2023-07-18 13:06:06+00:00:\n¡Le falta un cromo!\nTweet by Broken (@Adrian_A_C) on 2023-07-17 08:45:13+00:00:\n@BollycaoSpain @Grupo_Bimbo me he encontrado un álbum de dinosaurios 😁 . Pero solo me falta un cromo \"carnotaurus\" un RT para que se me consiga el cromo U0001f979U0001f979, hagamos que se viralice 😁. Muchas gracias. https://t.co/mWD8lYL3dV\nTweet by Bollycao (Oficial) (@BollycaoSpain) on 2022-05-20 07:59:46+00:00:\n¿Recuerdas cuando te uniste a Twitter? ¡Yo sí! #MiAniversarioDeTwitter https://t.co/o4pwnp00EM\nTweet by Bollycao (Oficial) (@BollycaoSpain) on 2021-09-06 07:36:15+00:00:\nRT @laibense1892: El helado de Pantera Rosa, Bollycao, Bony y Tigretón y sus pastelitos: deliciosa combinación. Recordad que podéis encontrar estos helados en Carrefour, Alcampo, Eroski, Caprabo, Ahorramas, Supe",
+  "analysis": {
+    "created": 1719423316,
+    "model": "mixtral-8x22b-instruct",
+    "usage": {
+      "prompt_tokens": 981,
+      "completion_tokens": 81,
+      "total_tokens": 1062
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "1. Emoción principal: Positiva\n2. Elementos específicos:\n   - Uso de emojis positivos y expresivos, como U0001faf6🏼, 😜, 😋\n   - Frases como \"Siempre en nuestro equipo\", \"la combi perfecta\" y \"Recordad que podéis encontrar estos helados\"\n   - Retweets de",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 19.507349014282227
+}

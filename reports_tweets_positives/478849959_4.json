@@ -1,0 +1,24 @@
+{
+  "review": "Tweet by ColaCao (@colacao) on 2024-05-13 17:52:44+00:00:\nes que sí https://t.co/sNUyKhz8kG\nTweet by ColaCao (@colacao) on 2024-06-26 07:14:31+00:00:\nRT @Adriiann_7: he ido de compritas y ha caído 😍🙈✌🏽 https://t.co/PgEA3XHN97\nTweet by 𝐀𝐝𝐫𝐢𝐚́𝐧 (@Adriiann_7) on 2024-06-25 16:41:44+00:00:\nhe ido de compritas y ha caído 😍🙈✌🏽 https://t.co/PgEA3XHN97\nTweet by ColaCao (@colacao) on 2024-06-25 08:45:18+00:00:\nRT @ahh_bueno: Yo cualquier momento del día: 😤😠🤡😵😖😡😓😫😫😵😵🤡\n\nYo al llegar a casita y prepararme mi colacaito: U0001f979U0001f979🤗🥰😌😌😌😇🤗\nTweet by Álvaro (@ahh_bueno) on 2024-06-24 15:49:58+00:00:\nYo cualquier momento del día: 😤😠🤡😵😖😡😓😫😫😵😵🤡\n\nYo al llegar a casita y prepararme mi colacaito: U0001f979U0001f979🤗🥰😌😌😌😇🤗\nTweet by ColaCao (@colacao) on 2024-06-25 07:34:43+00:00:\nRT @elleou_: Buenos días con @colacao 🥰🥰🥰 https://t.co/PGB4QyI9wS\nTweet by 🏳️‍🌈🇵🇸aLucinada🇵🇸🏳️‍🌈 (@elleou_) on 2024-06-22 07:10:15+00:00:\nBuenos días con @colacao 🥰🥰🥰 https://t.co/PGB4QyI9wS\nTweet by ColaCao (@colacao) on 2024-06-20 09:50:40+00:00:\nRT @asieercns: chicos me acabo de hacer un colacao que sabe como los que mi abuela me hacia hace muchos años por la mañana, estoy sintiendo cosas\nTweet by U0001fabc ً (@asieercns) on 2024-06-20 04:26:18+00:00:\nchicos me acabo de hacer un colacao que sabe como los que mi abuela me hacia hace muchos años por la mañana, estoy sintiendo cosas\nTweet by ColaCao (@colacao) on 2024-06-20 07:57:06+00:00:\nRT @noisyalba: yo en casa: @colacao\nyo fuera de casa: @colacao https://t.co/UoCtkm7hAk\nTweet by alba ⚡ (@noisyalba) on 2024-06-19 08:04:40+00:00:\nyo en casa: @colacao\nyo fuera de casa: @colacao https://t.co/UoCtkm7hAk\nTweet by ColaCao (@colacao) on 2024-06-17 11:42:08+00:00:\nya tiene nombre https://t.co/HJlF621iS0\nTweet by ColaCao (@colacao) on 2024-06-13 07:49:04+00:00:\nlike al tweet y no se lo contaré a nadie\nTweet by ColaCao (@colacao) on 2024-06-11 08:41:46+00:00:\nRT @paulaaberodia: mi padre y yo metiendo sobres de colacao en la maleta porque no podemos vivir sin el ni de viaje me temo que somos perfectos",
+  "analysis": {
+    "created": 1719422692,
+    "model": "mixtral-8x22b-instruct",
+    "usage": {
+      "prompt_tokens": 1154,
+      "completion_tokens": 84,
+      "total_tokens": 1238
+    },
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "After analyzing the given tweets, here is the sentiment analysis:\n\n1. Emoción principal: The overall sentiment of the tweets is positive.\n\n2. Elementos específicos: The positive sentiment is conveyed through various elements such as emojis, hashtags, and specific phrases. For instance, in the tweet by @Adriiann_7, the use of the heart-eyes emoji (😍) and the peace sign",
+          "function_call": null
+        },
+        "finish_reason": "max_token"
+      }
+    ]
+  },
+  "elapsed_time": 6.973082780838013
+}

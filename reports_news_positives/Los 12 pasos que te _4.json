@@ -1,0 +1,24 @@
+{
+    "review": "Titulo: Los 12 pasos que te harán sentir más feliz Contenido: ",
+    "analysis": {
+        "created": 1719441198,
+        "model": "mixtral-8x22b-instruct",
+        "usage": {
+            "prompt_tokens": 190,
+            "completion_tokens": 87,
+            "total_tokens": 277
+        },
+        "choices": [
+            {
+                "index": 0,
+                "message": {
+                    "role": "assistant",
+                    "content": "Análisis de sentimiento:\n\n1. Emoción principal: Positiva\n2. Elementos específicos: El título de la noticia \"Los 12 pasos que te harán sentir más feliz\" es una clara indicación de que el contenido está destinado a mejorar el estado de ánimo del lector. La palabra \"feliz\" es un indicador de sentimiento positivo. Además",
+                    "function_call": null
+                },
+                "finish_reason": "max_token"
+            }
+        ]
+    },
+    "elapsed_time": 8.260223865509033
+}
