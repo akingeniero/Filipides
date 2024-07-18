@@ -25,6 +25,7 @@ To run the program, ensure you have the following configurations set up:
 - **Twitter Account**: A valid Twitter account to access the Twitter API.
 - **Google Account**: A valid Google account for various integrations.
 - **OpenAI API Key**: An API key from OpenAI to perform generative tasks.
+- **Llama API Key**: An API key from LlamaAPI to perform generative tasks.
 
 
 ### Configuration Requirements
@@ -33,17 +34,25 @@ To run the program, ensure you have the following configurations set up in `conf
 
 ```python
 user_dic = {
-    "twitter_user": {
-        "username": "YOUR_TWITTER_USERNAME",
-        "password": "YOUR_TWITTER_PASSWORD",
-        "email": "YOUR_EMAIL",
-        "account_password": "YOUR_EMAIL_PASSWORD"
-    }
+"twitter_user": {
+"username": "YOUR_TWITTER_USERNAME",
+"password": "YOUR_TWITTER_PASSWORD",
+"email": "YOUR_EMAIL",
+"account_password": "YOUR_EMAIL_PASSWORD"
 }
-
-llm_dict = {
-    "openAI": {
-        "key": "YOUR_OPENAI_API_KEY"}}
+}
+llama_dict = {
+"llama": {
+"key": "YOUR_LLAMA_API_KEY",
+"llms": ["llama3-70b", "llama2-70b"]
+}
+}
+openai_dict = {
+"openAI": {
+"key": "YOUR_OPENAI_API_KEY",
+"llms": ["gpt-4-turbo", "gpt-4o", "gpt-3.5-turbo"],
+}
+}
 ```
 ## Documentation
 
